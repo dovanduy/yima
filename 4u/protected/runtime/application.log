@@ -1,0 +1,2069 @@
+2012/10/26 08:57:21 [error] [php] Undefined variable: total (D:\xampp\htdocs\yima\front\protected\views\organization\index.php:46)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): OrganizationController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): OrganizationController->renderPartial()
+#2 D:\xampp\htdocs\yima\front\protected\controllers\OrganizationController.php(40): OrganizationController->render()
+#3 unknown(0): OrganizationController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): OrganizationController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): OrganizationController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): OrganizationController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\front\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh
+in D:\xampp\htdocs\yima\front\protected\views\organization\index.php (46)
+in D:\xampp\htdocs\yima\front\protected\controllers\OrganizationController.php (40)
+in D:\xampp\htdocs\yima\front\index.php (17)
+2012/10/26 10:13:56 [error] [php] include(EventModel.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(11): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(282): HomeController->init()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (11)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:14:17 [error] [php] include(EventModel.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(11): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(282): HomeController->init()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (11)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:15:23 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:15:24 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:15:24 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:15:25 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:15:25 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:15:25 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:15:25 [error] [php] include(Keyword_searching_test_Model.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php(80): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php(23): get_featured_keyword()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(131): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(5): HomeController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): HomeController->renderInternal()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): HomeController->renderFile()
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(38): HomeController->render()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\helpers\HelperGlobal.php (80)
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\footer.php (23)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (5)
+2012/10/26 10:32:48 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:03 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:04 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:05 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:15 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:23 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:24 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:24 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:24 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:24 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:40 [error] [php] Illegal string offset 'thumbnail' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:30)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (30)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 10:33:46 [error] [php] Illegal string offset 'title' (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:33)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(23): HomeController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (33)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (23)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 11:50:21 [error] [php] Use of undefined constant organizations - assumed 'organizations' (D:\xampp\htdocs\yima\4u\protected\views\post\add.php:33)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): PostController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(52): PostController->render()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionAdd()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/add
+in D:\xampp\htdocs\yima\4u\protected\views\post\add.php (33)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (52)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 14:09:12 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\yima\4u\protected\helpers\Helper.php:16)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): PostController->renderInternal()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(783): PostController->renderPartial()
+#3 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(55): PostController->render()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionAdd()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/add
+in D:\xampp\htdocs\yima\4u\protected\helpers\Helper.php (16)
+in D:\xampp\htdocs\yima\4u\protected\views\post\add.php (11)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (55)
+2012/10/26 14:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('view')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/id/1')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/view/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/add
+---
+2012/10/26 14:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('view')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/id/1')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/view/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/add
+---
+2012/10/26 14:26:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('view')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/id/2')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/view/id/2
+HTTP_REFERER=http://localhost/yima/4u/post/add
+---
+2012/10/26 16:13:38 [error] [php] Undefined index: thumbnail (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:34)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(30): HomeController->render()
+#3 unknown(0): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (34)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (30)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 16:13:53 [error] [php] Undefined variable: subject (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:52)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(30): HomeController->render()
+#3 unknown(0): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (52)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (30)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 16:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('view')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/id/3')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/view/id/3
+HTTP_REFERER=http://localhost/yima/4u/post/add/
+---
+2012/10/26 16:27:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('view')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/id/4')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/view/id/4
+HTTP_REFERER=http://localhost/yima/4u/post/add/
+---
+2012/10/26 16:29:28 [error] [php] Undefined variable: total (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:49)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(31): HomeController->render()
+#3 unknown(0): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (49)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (31)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 16:32:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "p".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('p')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('p')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('home/p/2')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/home/p/2/
+HTTP_REFERER=http://localhost/yima/4u/
+---
+2012/10/26 16:53:26 [error] [php] Object of class HomeController could not be converted to string (D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php:13)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#1 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/home/
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (13)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/26 17:17:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "front".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('front')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/front/
+---
+2012/10/29 10:44:06 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) as total
+                FROM yima_4u_comments yc                
+         ' at line 1. The SQL statement executed was: SELECT count(yc.*) as total
+                FROM yima_4u_comments yc                
+                WHERE 1
+                 AND yc.post_id = :post_id AND yc.deleted = :deleted
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php (72)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (114)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 10:44:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) as total
+                FROM yima_4u_comments yc                
+         ' at line 1. The SQL statement executed was: SELECT count(yc.*) as total
+                FROM yima_4u_comments yc                
+                WHERE 1
+                 AND yc.post_id = :post_id AND yc.deleted = :deleted
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php(72): CDbCommand->queryRow()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(114): CommentModel->counts(Array)
+#3 [internal function]: PostController->actionView('an-toan-lao-don...', 1)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/s/an-...')
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--/
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--/
+---
+2012/10/29 11:06:48 [error] [exception.CException] exception 'CException' with message 'PostModel and its behaviors do not have a method or closure named "update".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(133): CComponent->__call('update', Array)
+#1 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(133): PostModel->update(Array)
+#2 [internal function]: PostController->actionComment('1')
+#3 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('comment')
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/comment/po...')
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yima/4u/post/comment/post/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/29 11:07:55 [error] [php] Undefined index: content (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:128)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#4 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#5 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#6 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/comment/post/1
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (128)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 11:08:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\xampp\htdocs\yima\framework\web\CController.php:337
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('')
+#4 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post')
+#5 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#7 {main}
+REQUEST_URI=/yima/4u/post/
+---
+2012/10/29 13:41:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-post-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_votes(ref_id,ref_type,author_id,point,date_added) VALUES(:ref_id,:ref_type,:author_id,:point,:date_added).
+in D:\xampp\htdocs\yima\4u\protected\models\VoteModel.php (25)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (149)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 13:41:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-post-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_votes(ref_id,ref_type,author_id,point,date_added) VALUES(:ref_id,:ref_type,:author_id,:point,:date_added)' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\models\VoteModel.php(25): CDbCommand->execute()
+#1 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(149): VoteModel->add('1', 'post', '2')
+#2 [internal function]: PostController->actionVote('1')
+#3 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('vote')
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/vote/id/1')
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yima/4u/post/vote/id/1
+---
+2012/10/29 14:17:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "vote_comment/id/1".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('vote_comment/id...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/vote_comment/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/29 14:17:44 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT yc.*,ysu.lastname,ysu.firstname,ysu.thumbnail,(yv.ref_id = yc.id) as voted
+                FROM yima_4u_comments yc
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yc.author_id
+                LEFT JOIN (SELECT ref_id
+                            FROM yima_4u_votes
+                            WHERE ref_type = 'comment'
+                            AND author_id = :user_id) yv
+                ON yv.ref_id = yc.id
+                WHERE yc.deleted = 0
+                AND yc.id = :id
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php (114)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (165)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 14:17:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT yc.*,ysu.lastname,ysu.firstname,ysu.thumbnail,(yv.ref_id = yc.id) as voted
+                FROM yima_4u_comments yc
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yc.author_id
+                LEFT JOIN (SELECT ref_id
+                            FROM yima_4u_votes
+                            WHERE ref_type = 'comment'
+                            AND author_id = :user_id) yv
+                ON yv.ref_id = yc.id
+                WHERE yc.deleted = 0
+                AND yc.id = :id
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php(114): CDbCommand->queryRow()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(165): CommentModel->get('1')
+#3 [internal function]: PostController->actionVote_comment('1')
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('vote_comment')
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/vote_comme...')
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/4u/post/vote_comment/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/29 15:15:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_votes(ref_id,ref_type,author_id,point,date_added) VALUES(:ref_id,:ref_type,:author_id,:point,:date_added).
+in D:\xampp\htdocs\yima\4u\protected\models\VoteModel.php (25)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (172)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 15:15:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_votes(ref_id,ref_type,author_id,point,date_added) VALUES(:ref_id,:ref_type,:author_id,:point,:date_added)' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\models\VoteModel.php(25): CDbCommand->execute()
+#1 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(172): VoteModel->add('1', 'comment', '2')
+#2 [internal function]: PostController->actionVote_comment('1')
+#3 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('vote_comment')
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/vote_comme...')
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yima/4u/post/vote_comment/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/29 15:24:02 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'yp.total_post_like' in 'field list'. The SQL statement executed was: SELECT yc.*,ysu.lastname,ysu.firstname,ysu.thumbnail,(yv.ref_id = yc.id) as voted,yp.total_post_like,yp.total_post_dislike,count_vote.total_like
+                FROM yima_4u_comments yc
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yc.author_id
+                LEFT JOIN (SELECT ref_id
+                            FROM yima_4u_votes
+                            WHERE ref_type = 'comment'
+                            AND author_id = :user_id) yv
+                ON yv.ref_id = yc.id
+                LEFT JOIN (SELECT count(*) as total_like,ref_id
+                            FROM yima_4u_votes
+                            WHERE ref_type = 'comment'
+                            GROUP BY ref_id) count_vote
+                ON count_vote.ref_id = yc.id
+                LEFT JOIN yima_4u_posts yp
+                ON yp.id = yc.post_id
+                WHERE yc.deleted = 0
+                AND yc.id = :id
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php (128)
+in D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php (147)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (122)
+2012/10/29 15:24:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'yp.total_post_like' in 'field list'. The SQL statement executed was: SELECT yc.*,ysu.lastname,ysu.firstname,ysu.thumbnail,(yv.ref_id = yc.id) as voted,yp.total_post_like,yp.total_post_dislike,count_vote.total_like
+                FROM yima_4u_comments yc
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yc.author_id
+                LEFT JOIN (SELECT ref_id
+                            FROM yima_4u_votes
+                            WHERE ref_type = 'comment'
+                            AND author_id = :user_id) yv
+                ON yv.ref_id = yc.id
+                LEFT JOIN (SELECT count(*) as total_like,ref_id
+                            FROM yima_4u_votes
+                            WHERE ref_type = 'comment'
+                            GROUP BY ref_id) count_vote
+                ON count_vote.ref_id = yc.id
+                LEFT JOIN yima_4u_posts yp
+                ON yp.id = yc.post_id
+                WHERE yc.deleted = 0
+                AND yc.id = :id
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php(128): CDbCommand->queryRow()
+#2 D:\xampp\htdocs\yima\4u\protected\models\CommentModel.php(147): CommentModel->get('2')
+#3 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(122): CommentModel->get_best_comment('1')
+#4 [internal function]: PostController->actionView('an-toan-lao-don...', 1)
+#5 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#6 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#11 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/s/an-...')
+#12 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#14 {main}
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+HTTP_REFERER=http://localhost/yima/4u/home/
+---
+2012/10/29 15:51:02 [error] [php] Undefined variable: message (D:\xampp\htdocs\yima\4u\protected\views\post\edit.php:11)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): PostController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(104): PostController->render()
+#3 unknown(0): PostController->actionEdit()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/edit/id/1
+in D:\xampp\htdocs\yima\4u\protected\views\post\edit.php (11)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (104)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 15:51:14 [error] [php] Undefined index: ud (D:\xampp\htdocs\yima\4u\protected\views\post\edit.php:23)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): PostController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(104): PostController->render()
+#3 unknown(0): PostController->actionEdit()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/edit/id/1
+in D:\xampp\htdocs\yima\4u\protected\views\post\edit.php (23)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (104)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 16:27:52 [error] [php] Undefined variable: p (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:230)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/search
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (230)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 16:28:07 [error] [php] Undefined variable: ppp (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:230)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#4 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#5 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#6 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/search
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (230)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 17:02:58 [error] [php] Undefined variable: organizations (D:\xampp\htdocs\yima\4u\protected\views\post\search_bar.php:6)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#1 D:\xampp\htdocs\yima\4u\protected\views\post\search.php(5): PostController->renderPartial()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): PostController->renderInternal()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(783): PostController->renderPartial()
+#6 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(244): PostController->render()
+#7 unknown(0): PostController->actionSearch()
+#8 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/search/type/hay/
+in D:\xampp\htdocs\yima\4u\protected\views\post\search_bar.php (6)
+in D:\xampp\htdocs\yima\4u\protected\views\post\search.php (5)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (244)
+2012/10/29 17:06:42 [error] [php] Undefined index: keywork (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:227)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#4 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#5 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#6 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/search/type/hay/?sid=--+Ch%E1%BB%A7+%C4%91%E1%BB%81+--&oid=--+Tr%C6%B0%E1%BB%9Dng%2FTrung+t%C3%A2m+--&keyword=an+toan
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (227)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 17:07:12 [error] [php] Undefined index: s (D:\xampp\htdocs\yima\4u\protected\models\PostModel.php:23)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#5 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/search/type/hay/?sid=0&oid=0&keyword=an+toan
+in D:\xampp\htdocs\yima\4u\protected\models\PostModel.php (23)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (234)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/29 17:33:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/
+---
+2012/10/30 08:42:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_sys_organization
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (58)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (233)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/30 08:42:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_sys_organization
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(58): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(233): OrganizationModel->get_all()
+#3 [internal function]: PostController->actionSearch('hay', 1)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('search')
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/search')
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/4u/post/search/?sid=0&oid=174&keyword=
+HTTP_REFERER=http://localhost/yima/4u/post/search/?keyword=
+---
+2012/10/30 08:55:56 [error] [php] Undefined variable: v (D:\xampp\htdocs\yima\4u\protected\views\post\view.php:22)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): PostController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): PostController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(159): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+in D:\xampp\htdocs\yima\4u\protected\views\post\view.php (22)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (159)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/30 10:20:33 [error] [exception.CException] exception 'CException' with message 'TopPosts cannot find the view "top_posts".' in D:\xampp\htdocs\yima\framework\web\widgets\CWidget.php:246
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php(26): CWidget->render('top_posts', Array)
+#1 D:\xampp\htdocs\yima\framework\web\CBaseController.php(174): TopPosts->run()
+#2 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(24): CBaseController->widget('TopPosts')
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#4 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(785): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(39): CController->render('index', Array)
+#7 [internal function]: HomeController->actionHay(1)
+#8 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#9 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('')
+#14 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('home')
+#15 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/yima/4u/home/
+---
+2012/10/30 13:34:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "front/home".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('front/home')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/front/home
+---
+2012/10/30 13:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "front/home/index".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('front/home/inde...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/front/home/index/
+---
+2012/10/30 13:35:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "front/home/test".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('front/home/test')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/front/home/test/
+---
+2012/10/30 14:41:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp.
+in D:\xampp\htdocs\yima\4u\protected\models\PostModel.php (72)
+in D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php (20)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (24)
+2012/10/30 14:41:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\PostModel.php(72): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php(20): PostModel->gets(Array, 1, 10)
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(174): TopPosts->run()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(24): CBaseController->widget('TopPosts')
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(159): CController->render('view', Array)
+#9 [internal function]: PostController->actionView('an-toan-lao-don...', 1)
+#10 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#11 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#16 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/s/an-...')
+#17 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 14:41:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp.
+in D:\xampp\htdocs\yima\4u\protected\models\PostModel.php (72)
+in D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php (20)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (24)
+2012/10/30 14:41:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\PostModel.php(72): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php(20): PostModel->gets(Array, 1, 10)
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(174): TopPosts->run()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(24): CBaseController->widget('TopPosts')
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(159): CController->render('view', Array)
+#9 [internal function]: PostController->actionView('an-toan-lao-don...', 1)
+#10 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#11 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#16 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/s/an-...')
+#17 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 14:41:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp.
+in D:\xampp\htdocs\yima\4u\protected\models\PostModel.php (72)
+in D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php (20)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (24)
+2012/10/30 14:41:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\PostModel.php(72): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php(20): PostModel->gets(Array, 1, 10)
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(174): TopPosts->run()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(24): CBaseController->widget('TopPosts')
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(159): CController->render('view', Array)
+#9 [internal function]: PostController->actionView('an-toan-lao-don...', 1)
+#10 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#11 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#16 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/s/an-...')
+#17 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 14:41:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp.
+in D:\xampp\htdocs\yima\4u\protected\models\PostModel.php (72)
+in D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php (20)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (24)
+2012/10/30 14:41:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                ORDER BY RAND()
+                LIMIT 0,10' at line 10. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_4u_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted AND yp.id NOT IN ()
+                ORDER BY RAND()
+                LIMIT :page,:ppp' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\PostModel.php(72): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\widgets\TopPosts.php(20): PostModel->gets(Array, 1, 10)
+#3 D:\xampp\htdocs\yima\framework\web\CBaseController.php(174): TopPosts->run()
+#4 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(24): CBaseController->widget('TopPosts')
+#5 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require('D:\xampp\htdocs...')
+#6 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(785): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#8 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(159): CController->render('view', Array)
+#9 [internal function]: PostController->actionView('an-toan-lao-don...', 1)
+#10 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#11 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#12 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('view')
+#16 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/view/s/an-...')
+#17 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 15:33:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_reports(ref_id,ref_type,author_id,date_added) VALUES(:ref_id,:ref_type,:author_id,:date_added).
+in D:\xampp\htdocs\yima\4u\protected\models\ReportModel.php (24)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (289)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/30 15:33:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_reports(ref_id,ref_type,author_id,date_added) VALUES(:ref_id,:ref_type,:author_id,:date_added)' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\models\ReportModel.php(24): CDbCommand->execute()
+#1 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(289): ReportModel->add('1', 'comment', '2')
+#2 [internal function]: PostController->actionReport('comment', '1')
+#3 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('report')
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/report/typ...')
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yima/4u/post/report/type/comment/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 15:34:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_reports(ref_id,ref_type,author_id,date_added) VALUES(:ref_id,:ref_type,:author_id,:date_added).
+in D:\xampp\htdocs\yima\4u\protected\models\ReportModel.php (24)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (289)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/30 15:34:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_reports(ref_id,ref_type,author_id,date_added) VALUES(:ref_id,:ref_type,:author_id,:date_added)' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\models\ReportModel.php(24): CDbCommand->execute()
+#1 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(289): ReportModel->add('1', 'comment', '2')
+#2 [internal function]: PostController->actionReport('comment', '1')
+#3 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('report')
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/report/typ...')
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yima/4u/post/report/type/comment/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 15:36:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_reports(ref_id,ref_type,author_id,date_added) VALUES(:ref_id,:ref_type,:author_id,:date_added).
+in D:\xampp\htdocs\yima\4u\protected\models\ReportModel.php (24)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (289)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/10/30 15:36:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-comment-2' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO yima_4u_reports(ref_id,ref_type,author_id,date_added) VALUES(:ref_id,:ref_type,:author_id,:date_added)' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\models\ReportModel.php(24): CDbCommand->execute()
+#1 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(289): ReportModel->add('1', 'comment', '2')
+#2 [internal function]: PostController->actionReport('comment', '1')
+#3 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('report')
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/report/typ...')
+#10 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#12 {main}
+REQUEST_URI=/yima/4u/post/report/type/comment/id/1
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/an-toan-lao-dong-la-gi-vay--
+---
+2012/10/30 16:19:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in D:\xampp\htdocs\yima\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(271): CController->missingAction('')
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('')
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post')
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/4u/post/
+---
+2012/10/30 23:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/search_by_time/t/all".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/test/search_by_time/t/all
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/?
+---
+2012/10/31 00:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "info/view/page/terms-conditions".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('info/view/page/...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/info/view/page/terms-conditions
+HTTP_REFERER=http://localhost/yima/4u/
+---
+2012/10/31 00:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "info/view/page/privacy-policy".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('info/view/page/...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/info/view/page/privacy-policy
+HTTP_REFERER=http://localhost/yima/4u/info/view/page/terms-conditions
+---
+2012/11/05 14:43:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/?return=http://localhost/yima/4u/post/search/
+HTTP_REFERER=http://localhost/yima/4u/post/search/
+---
+2012/11/06 10:33:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+---
+2012/11/06 10:34:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/?return=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+---
+2012/11/06 10:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+---
+2012/11/06 10:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/?return=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+---
+2012/11/06 10:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+---
+2012/11/06 10:40:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/signin".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('user/signin')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/4u/user/signin/
+HTTP_REFERER=http://localhost/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+---
+2012/11/06 10:55:55 [error] [php] Undefined index: HTTP_REFERER (D:\xampp\htdocs\yima\4u\protected\views\_shared\header.php:36)
+Stack trace:
+#0 D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php(1): PostController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CBaseController.php(127): require()
+#2 D:\xampp\htdocs\yima\framework\web\CBaseController.php(96): PostController->renderInternal()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(785): PostController->renderFile()
+#4 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(176): PostController->render()
+#5 unknown(0): PostController->actionView()
+#6 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#7 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#10 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#11 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#12 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#13 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/view/s/bao-ve-moi-truong-la-gi
+in D:\xampp\htdocs\yima\4u\protected\views\_shared\header.php (36)
+in D:\xampp\htdocs\yima\4u\protected\views\layouts\main.php (1)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (176)
+2012/11/06 11:14:28 [error] [php] Undefined index: author_name (D:\xampp\htdocs\yima\4u\protected\views\home\index.php:24)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): HomeController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): HomeController->renderPartial()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php(33): HomeController->render()
+#3 unknown(0): HomeController->actionHay()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): HomeController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): HomeController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): HomeController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/
+in D:\xampp\htdocs\yima\4u\protected\views\home\index.php (24)
+in D:\xampp\htdocs\yima\4u\protected\controllers\HomeController.php (33)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 15:49:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (314)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 15:49:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(314): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:05:35 [error] [php] Undefined index: oid (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:307)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/filter_search/
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (307)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:05:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:05:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:05:47 [error] [php] Undefined index: oid (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:307)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/filter_search/
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (307)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:05:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:05:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/
+---
+2012/11/06 16:07:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:07:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:08:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:08:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:08:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:08:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:09:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:09:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:10:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id IN (SELECT  faculty_id
+                                FROM yima_organizatio' at line 5. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                .
+in D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php (124)
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (316)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:10:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id IN (SELECT  faculty_id
+                                FROM yima_organizatio' at line 5. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                 id IN (SELECT  faculty_id
+                                FROM yima_organization_faculty_subject
+                                WHERE organization_id = :organization_id)
+                ORDER BY title ASC
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\yima\4u\protected\models\OrganizationModel.php(124): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php(316): OrganizationModel->get_faculties(Array)
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): PostController->actionFilter_search()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('filter_search')
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('post/filter_sea...')
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\4u\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/yima/4u/post/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://localhost/yima/4u/post/search/type/hay/
+---
+2012/11/06 16:13:55 [error] [php] Undefined index: oid (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:307)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/filter_search/
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (307)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:15:20 [error] [php] Undefined index: oid (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:307)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/filter_search/
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (307)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:15:32 [error] [php] Undefined index: oid (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:307)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/filter_search/
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (307)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/06 16:17:20 [error] [php] Undefined index: oid (D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php:307)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(287): PostController->runAction()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(266): PostController->runActionWithFilters()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PostController->run()
+#3 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\htdocs\yima\4u\index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/4u/post/filter_search/
+in D:\xampp\htdocs\yima\4u\protected\controllers\PostController.php (307)
+in D:\xampp\htdocs\yima\4u\index.php (17)
+2012/11/12 13:27:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/yima/http/hosts/yima.vn/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /home/yima/http/hosts/yima.vn/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /home/yima/http/hosts/yima.vn/framework/base/CModule.php(388): CDbConnection->init()
+#3 /home/yima/http/hosts/yima.vn/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php(66): CModule->__get('db')
+#5 /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php(26): PostModel->gets(Array, 1, 10)
+#6 [internal function]: HomeController->actionHay(1)
+#7 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#8 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#13 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#14 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2012/11/12 13:28:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/yima/http/hosts/yima.vn/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /home/yima/http/hosts/yima.vn/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /home/yima/http/hosts/yima.vn/framework/base/CModule.php(388): CDbConnection->init()
+#3 /home/yima/http/hosts/yima.vn/framework/base/CModule.php(104): CModule->getComponent('db')
+#4 /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php(66): CModule->__get('db')
+#5 /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php(26): PostModel->gets(Array, 1, 10)
+#6 [internal function]: HomeController->actionHay(1)
+#7 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#8 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#13 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#14 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2012/11/12 13:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "yima/front".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('yima/front')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/
+HTTP_REFERER=http://4u.yima.vn/
+---
+2012/11/12 13:42:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "yima/front".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('yima/front')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/
+HTTP_REFERER=http://4u.yima.vn/yima/front/
+---
+2012/11/12 17:10:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "yima/front".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('yima/front')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/
+HTTP_REFERER=http://4u.yima.vn/post/search/
+---
+2012/11/12 17:10:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "yima/front".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('yima/front')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/
+HTTP_REFERER=http://4u.yima.vn/yima/front/
+---
+2012/11/14 16:25:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php (72)
+in /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php (26)
+in /home/yima/http/hosts/yima.vn/4u/index.php (17)
+2012/11/14 16:25:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php(72): CDbCommand->queryAll()
+#2 /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php(26): PostModel->gets(Array, 1, 10)
+#3 [internal function]: HomeController->actionHay(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2012/11/14 16:25:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php (72)
+in /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php (26)
+in /home/yima/http/hosts/yima.vn/4u/index.php (17)
+2012/11/14 16:25:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php(72): CDbCommand->queryAll()
+#2 /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php(26): PostModel->gets(Array, 1, 10)
+#3 [internal function]: HomeController->actionHay(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2012/11/14 16:25:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php (72)
+in /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php (26)
+in /home/yima/http/hosts/yima.vn/4u/index.php (17)
+2012/11/14 16:25:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php(72): CDbCommand->queryAll()
+#2 /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php(26): PostModel->gets(Array, 1, 10)
+#3 [internal function]: HomeController->actionHay(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---
+2012/11/14 16:25:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php (72)
+in /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php (26)
+in /home/yima/http/hosts/yima.vn/4u/index.php (17)
+2012/11/14 16:25:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_posts' doesn't exist. The SQL statement executed was: SELECT yp.*,yu.lastname,yu.firstname,yu.email,yu.thumbnail,yso.title as organization_name,yss.title as subject_name
+                FROM yima_posts yp
+                LEFT JOIN yima_sys_user yu
+                ON yu.id = yp.author_id
+                LEFT JOIN yima_sys_organization yso
+                ON yso.id = yp.organization_id
+                LEFT JOIN yima_sys_subject yss
+                ON yss.id = yp.subject_id
+                WHERE 1
+                 AND yp.deleted = :deleted
+                ORDER BY yp.total_like DESC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/4u/protected/models/PostModel.php(72): CDbCommand->queryAll()
+#2 /home/yima/http/hosts/yima.vn/4u/protected/controllers/HomeController.php(26): PostModel->gets(Array, 1, 10)
+#3 [internal function]: HomeController->actionHay(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(HomeController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/4u/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/
+---

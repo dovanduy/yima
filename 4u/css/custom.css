@@ -1,0 +1,79 @@
+
+.alert{margin: 0 18px 18px;}
+#add_location{display: inline}
+
+.table-ticket .head-ticket-name{width:1%}
+.table-ticket .head-ticket-quantity{width:10%}
+.table-ticket .head-ticket-action{width:25%;}
+.table-ticket .head-ticket-status{width:12%}
+.table-ticket .head-ticket-price{width:10%}
+.table-ticket .head-ticket-price.free{width:38%}
+
+.table-ticket .loading td{text-align: center;}
+.table-ticket .loading img{vertical-align: middle}
+
+.ticket-name{width:110px}
+
+.find-magu .toefl-link:link{color: #888}
+.find-magu .toefl-test{display: none}
+
+    .find-magu .toefl-test ul,.find-magu .toefl-test li{padding:5px;margin-left: 10px}
+    .find-magu .toefl-test li{width: 100px;border-top:0px}
+    .find-magu .toefl-test ul{float:left}
+ 
+ #test-nt .list-result{display: none} 
+ #test-nt .test{display: none}    
+ #test-nt .btn-test {float:right;margin-top: 10px;margin-right: 20px}
+ #test-nt .row-fluid{padding-bottom: 15px;margin: 10px}
+      #test-nt .row-fluid li{padding:10px}
+ #test-nt .back-test{text-align: right;padding:15px}
+ #test-nt .submit{text-align: right;padding:15px}
+ 
+ .img-polaroid{background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 4px;}
+
+ .total-vote{color: #953B39;font-weight: bold}
+.total-vote a{color: #953B39!important;font-weight: bold;text-decoration: none}
+ 
+ #post{}
+    #post .post h1{font-size: 24px;line-height: 32px}
+    #post .post .content{padding-top: 15px;color: #333}
+    #post .post .content-footer{padding-top: 15px;font-size: 11px;color: #666;}
+    #post #list-comments{padding-top: 20px}
+    #post #list-comments h3{margin-bottom: 15px;color: #222}
+    #post #list-comments .comments{padding-top: 10px}
+    #post #list-comments .comments .comment{border-top: 1px solid #d5d5d5;padding: 20px 0}
+    #post #list-comments .comments .comment .content{padding-top: 0;color: #333}
+    #post #list-comments .comments .comment .vote-info{margin-top: 10px;margin-bottom: 0}
+
+    #post #list-comments .comments .best-comment{}
+    #post #list-comments .content-footer{padding-top: 0px;font-size: 11px;color: #666;}
+    
+.home .hot-magu{margin-bottom: 0 !important;padding-bottom:0 !important}  
+.home .magu-listing .magu .title{font-size: 15px;font-weight: bold;margin-bottom: 8px;}
+.list-result .summary h4{margin-bottom: 5px;font-size: 15px}
+.list-result .date{margin-bottom: 0;width: 90px;}
+.list-result ul li:first-child{border-top: none}
+#search_bar .search-title{width: 698px;}
+#search_bar .optional{margin-bottom: 10px;}
+#search_bar .search-option{width: 289px;padding: 8px;height: 36px;margin-right: 14px}
+.subject-location{color:#666}
+.subject-location:hover{color:#666}
+
+.aside{margin-bottom: 25px}
+    .aside .head{background-color: #0095DA;color: #FFFFFF;font-size: 14px;font-weight: bold;padding: 6px 12px;}
+    .aside .list-items{}
+    .aside .list-items li{padding: 7px 12px;color:#4D4D4D;font-weight: bold}
+    .aside .list-items li:nth-child(2n){background-color: #DADBDB}
+    .aside .list-items li a{color:#4D4D4D;font-weight: bold}
+    
+    
+    
+.link{color: #0088CC!important;}
+
+.list-result .summary .sub-info{font-size: 11px}
+.search{background-color: #fff}
+
+    

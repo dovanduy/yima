@@ -1,0 +1,1800 @@
+2012/11/05 14:37:53 [error] [php] include(PostModel.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yima\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\xampp\htdocs\yima\back\protected\controllers\4u\PostController.php(23): spl_autoload_call()
+#1 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(282): PostController->init()
+#2 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#3 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/4u/post
+in D:\xampp\htdocs\yima\back\protected\controllers\4u\PostController.php (23)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/05 16:38:22 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE 1' at line 4. The SQL statement executed was: SELECT count(*) as total
+                FROM yima_trackings yt,yima_sys_user ysu
+                WHERE ysu.id = yt.user_id     
+                WHERE 1
+                
+                .
+in D:\xampp\htdocs\yima\back\protected\models\TrackingModel.php (60)
+in D:\xampp\htdocs\yima\back\protected\controllers\TrackingController.php (37)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/05 16:38:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE 1' at line 4. The SQL statement executed was: SELECT count(*) as total
+                FROM yima_trackings yt,yima_sys_user ysu
+                WHERE ysu.id = yt.user_id     
+                WHERE 1
+                
+                ' in D:\xampp\htdocs\yima\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\xampp\htdocs\yima\back\protected\models\TrackingModel.php(60): CDbCommand->queryRow()
+#2 D:\xampp\htdocs\yima\back\protected\controllers\TrackingController.php(37): TrackingModel->counts(Array)
+#3 [internal function]: TrackingController->actionIndex(1)
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(TrackingController), Array)
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(TrackingController), Object(ReflectionMethod), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('')
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('tracking')
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\back\index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/back/tracking/
+HTTP_REFERER=http://localhost/yima/back/transaction/
+---
+2012/11/05 16:38:41 [error] [php] Undefined variable: transactions (D:\xampp\htdocs\yima\back\protected\views\tracking\index.php:20)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): TrackingController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): TrackingController->renderPartial()
+#2 D:\xampp\htdocs\yima\back\protected\controllers\TrackingController.php(43): TrackingController->render()
+#3 unknown(0): TrackingController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): TrackingController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): TrackingController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): TrackingController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/tracking/
+in D:\xampp\htdocs\yima\back\protected\views\tracking\index.php (20)
+in D:\xampp\htdocs\yima\back\protected\controllers\TrackingController.php (43)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/05 17:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paypal".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('paypal')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\back\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/back/paypal/
+HTTP_REFERER=http://localhost/yima/back/tracking/
+---
+2012/11/05 17:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "paypal".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('paypal')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\back\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/back/paypal/
+HTTP_REFERER=http://localhost/yima/back/paypal/
+---
+2012/11/05 17:11:27 [error] [php] Undefined variable: trackings (D:\xampp\htdocs\yima\back\protected\views\paypal\index.php:20)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CController.php(870): PaypalController->renderFile()
+#1 D:\xampp\htdocs\yima\framework\web\CController.php(783): PaypalController->renderPartial()
+#2 D:\xampp\htdocs\yima\back\protected\controllers\PaypalController.php(47): PaypalController->render()
+#3 unknown(0): PaypalController->actionIndex()
+#4 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yima\framework\web\CController.php(287): PaypalController->runAction()
+#8 D:\xampp\htdocs\yima\framework\web\CController.php(266): PaypalController->runActionWithFilters()
+#9 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): PaypalController->run()
+#10 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/paypal/
+in D:\xampp\htdocs\yima\back\protected\views\paypal\index.php (20)
+in D:\xampp\htdocs\yima\back\protected\controllers\PaypalController.php (47)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/05 22:30:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization_subject' doesn't exist. The SQL statement executed was: SELECT kso.*,kss.title as subject_title,ksos.id as os_id
+                FROM yima_sys_organization_subject ksos 
+                LEFT JOIN yima_sys_organization kso
+                on kso.id = ksos.organization_id
+
+                LEFT JOIN yima_sys_subject kss
+                on kss.id = ksos.subject_id
+
+                WHERE ksos.disabled = 0 AND ksos.deleted = 0 AND kso.id = :id
+                
+                ORDER BY kso.title ASC
+                LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/models/OrganizationModel.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/OrganizationController.php (177)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/05 22:30:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization_subject' doesn't exist. The SQL statement executed was: SELECT kso.*,kss.title as subject_title,ksos.id as os_id
+                FROM yima_sys_organization_subject ksos 
+                LEFT JOIN yima_sys_organization kso
+                on kso.id = ksos.organization_id
+
+                LEFT JOIN yima_sys_subject kss
+                on kss.id = ksos.subject_id
+
+                WHERE ksos.disabled = 0 AND ksos.deleted = 0 AND kso.id = :id
+                
+                ORDER BY kso.title ASC
+                LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/models/OrganizationModel.php(154): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/OrganizationController.php(177): OrganizationModel->get_subject('171')
+#3 [internal function]: OrganizationController->actionAdd_subject('171', 1)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('add_subject')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/ad...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/back/organization/add_subject/id/171
+HTTP_REFERER=http://localhost/yima/back/organization/
+---
+2012/11/06 14:37:36 [error] [php] Undefined index: tracking_id (D:\xampp\htdocs\yima\back\protected\models\CardModel.php:29)
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(287): CardController->runAction()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(266): CardController->runActionWithFilters()
+#5 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CardController->run()
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#7 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/card/?tid=5
+in D:\xampp\htdocs\yima\back\protected\models\CardModel.php (29)
+in D:\xampp\htdocs\yima\back\protected\controllers\CardController.php (119)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/06 14:55:09 [error] [php] Array to string conversion (D:\xampp\htdocs\yima\framework\db\CDbCommand.php:251)
+Stack trace:
+#0 D:\xampp\htdocs\yima\back\protected\controllers\OrganizationController.php(178): OrganizationModel->counts_subject()
+#1 unknown(0): OrganizationController->actionAdd_subject()
+#2 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): OrganizationController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): OrganizationController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): OrganizationController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/organization/add_subject/id/171
+in D:\xampp\htdocs\yima\back\protected\models\OrganizationModel.php (177)
+in D:\xampp\htdocs\yima\back\protected\controllers\OrganizationController.php (178)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/07 09:16:02 [error] [php] Array to string conversion (D:\xampp\htdocs\yima\framework\db\CDbCommand.php:251)
+Stack trace:
+#0 D:\xampp\htdocs\yima\back\protected\controllers\OrganizationController.php(178): OrganizationModel->counts_subject()
+#1 unknown(0): OrganizationController->actionAdd_subject()
+#2 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): OrganizationController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): OrganizationController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): OrganizationController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/organization/add_subject/id/171
+in D:\xampp\htdocs\yima\back\protected\models\OrganizationModel.php (177)
+in D:\xampp\htdocs\yima\back\protected\controllers\OrganizationController.php (178)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/07 09:17:11 [error] [php] Array to string conversion (D:\xampp\htdocs\yima\framework\db\CDbCommand.php:251)
+Stack trace:
+#0 D:\xampp\htdocs\yima\back\protected\controllers\OrganizationController.php(178): OrganizationModel->counts_subject()
+#1 unknown(0): OrganizationController->actionAdd_subject()
+#2 D:\xampp\htdocs\yima\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(287): OrganizationController->runAction()
+#6 D:\xampp\htdocs\yima\framework\web\CController.php(266): OrganizationController->runActionWithFilters()
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): OrganizationController->run()
+#8 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yima\back\index.php(14): CWebApplication->run()
+REQUEST_URI=/yima/back/organization/add_subject/id/171
+in D:\xampp\htdocs\yima\back\protected\models\OrganizationModel.php (177)
+in D:\xampp\htdocs\yima\back\protected\controllers\OrganizationController.php (178)
+in D:\xampp\htdocs\yima\back\index.php (14)
+2012/11/09 18:40:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization_subject' doesn't exist. The SQL statement executed was: SELECT kso.*,kss.title as subject_title,ksos.id as os_id
+                FROM yima_sys_organization_subject ksos 
+                LEFT JOIN yima_sys_organization kso
+                on kso.id = ksos.organization_id
+
+                LEFT JOIN yima_sys_subject kss
+                on kss.id = ksos.subject_id
+
+                WHERE ksos.disabled = 0 AND ksos.deleted = 0 AND kso.id = :id
+                
+                ORDER BY kso.title ASC
+                LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/models/OrganizationModel.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/OrganizationController.php (177)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/09 18:40:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization_subject' doesn't exist. The SQL statement executed was: SELECT kso.*,kss.title as subject_title,ksos.id as os_id
+                FROM yima_sys_organization_subject ksos 
+                LEFT JOIN yima_sys_organization kso
+                on kso.id = ksos.organization_id
+
+                LEFT JOIN yima_sys_subject kss
+                on kss.id = ksos.subject_id
+
+                WHERE ksos.disabled = 0 AND ksos.deleted = 0 AND kso.id = :id
+                
+                ORDER BY kso.title ASC
+                LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/models/OrganizationModel.php(154): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/OrganizationController.php(177): OrganizationModel->get_subject('28', Array)
+#3 [internal function]: OrganizationController->actionAdd_subject('28', 1)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('add_subject')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/ad...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/back/organization/add_subject/id/28
+HTTP_REFERER=http://localhost/yima/back/organization/
+---
+2012/11/09 19:43:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null. The SQL statement executed was: INSERT INTO yima_sys_subject(title, slug, ma_mon_hoc, date_added, last_modified) 
+            VALUES(:title, :slug, :ma_mon_hoc, :date_added, :last_modified).
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php (366)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/09 19:43:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'title' cannot be null. The SQL statement executed was: INSERT INTO yima_sys_subject(title, slug, ma_mon_hoc, date_added, last_modified) 
+            VALUES(:title, :slug, :ma_mon_hoc, :date_added, :last_modified)' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php(366): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(50): DataController->actionGenerate_subject_from_backkhoa_student_score()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('generate_subjec...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('data/generate_s...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/yima/back/data/generate_subject_from_backkhoa_student_score
+---
+2012/11/09 20:31:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''yima_sys_subject'' at line 1. The SQL statement executed was: TRUNCATE TABLE  'yima_sys_subject'.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php (345)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/09 20:31:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''yima_sys_subject'' at line 1. The SQL statement executed was: TRUNCATE TABLE  'yima_sys_subject'' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php(345): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(50): DataController->actionGenerate_subject_from_backkhoa_student_score()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('generate_subjec...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('data/generate_s...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/yima/back/data/generate_subject_from_backkhoa_student_score
+---
+2012/11/09 20:35:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'faculty_id' cannot be null. The SQL statement executed was: INSERT INTO yima_organization_faculty_subject(organization_id, faculty_id, subject_id, sub_number) 
+            VALUES(:organization_id, :faculty_id, :subject_id, :sub_number).
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php (391)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/09 20:35:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'faculty_id' cannot be null. The SQL statement executed was: INSERT INTO yima_organization_faculty_subject(organization_id, faculty_id, subject_id, sub_number) 
+            VALUES(:organization_id, :faculty_id, :subject_id, :sub_number)' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php(391): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(50): DataController->actionGenerate_subject_from_backkhoa_student_score()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('generate_subjec...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('data/generate_s...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/yima/back/data/generate_subject_from_backkhoa_student_score
+---
+2012/11/09 20:59:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'faculty_id' cannot be null. The SQL statement executed was: INSERT INTO yima_organization_faculty_subject(organization_id, faculty_id, subject_id, sub_number) 
+            VALUES(:organization_id, :faculty_id, :subject_id, :sub_number).
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php (391)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/09 20:59:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'faculty_id' cannot be null. The SQL statement executed was: INSERT INTO yima_organization_faculty_subject(organization_id, faculty_id, subject_id, sub_number) 
+            VALUES(:organization_id, :faculty_id, :subject_id, :sub_number)' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/DataController.php(391): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(50): DataController->actionGenerate_subject_from_backkhoa_student_score()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('generate_subjec...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('data/generate_s...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/yima/back/data/generate_subject_from_backkhoa_student_score
+---
+2012/11/09 22:07:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization_subject' doesn't exist. The SQL statement executed was: SELECT kso.*,kss.title as subject_title,ksos.id as os_id
+                FROM yima_sys_organization_subject ksos 
+                LEFT JOIN yima_sys_organization kso
+                on kso.id = ksos.organization_id
+
+                LEFT JOIN yima_sys_subject kss
+                on kss.id = ksos.subject_id
+
+                WHERE ksos.disabled = 0 AND ksos.deleted = 0 AND kso.id = :id
+                
+                ORDER BY kso.title ASC
+                LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/models/OrganizationModel.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/OrganizationController.php (177)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php (14)
+2012/11/09 22:07:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yima.yima_sys_organization_subject' doesn't exist. The SQL statement executed was: SELECT kso.*,kss.title as subject_title,ksos.id as os_id
+                FROM yima_sys_organization_subject ksos 
+                LEFT JOIN yima_sys_organization kso
+                on kso.id = ksos.organization_id
+
+                LEFT JOIN yima_sys_subject kss
+                on kss.id = ksos.subject_id
+
+                WHERE ksos.disabled = 0 AND ksos.deleted = 0 AND kso.id = :id
+                
+                ORDER BY kso.title ASC
+                LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/models/OrganizationModel.php(154): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/back/protected/controllers/OrganizationController.php(177): OrganizationModel->get_subject('28', Array)
+#3 [internal function]: OrganizationController->actionAdd_subject('28', 1)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('add_subject')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/ad...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/back/organization/add_subject/id/28
+HTTP_REFERER=http://localhost/yima/back/organization/
+---
+2012/11/12 13:35:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/question
+---
+2012/11/12 13:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/12 13:35:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/listening/index/part/2".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/listening...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/listening/index/part/2
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/12 13:35:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/listening/index/part/2".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/listening...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/listening/index/part/2
+HTTP_REFERER=http://back.yima.vn/toefl/listening/index/part/2
+---
+2012/11/12 13:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/listening/index/part/2
+---
+2012/11/12 13:35:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/12 13:35:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/question
+---
+2012/11/12 13:35:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/12 13:35:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('source_test')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/source_test
+---
+2012/11/12 13:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('source_test')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/source_test
+HTTP_REFERER=http://back.yima.vn/source_test
+---
+2012/11/12 13:35:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=2
+HTTP_REFERER=http://back.yima.vn/source_test
+---
+2012/11/12 13:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=2
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=2
+---
+2012/11/12 13:36:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/listening/index/part/2".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/listening...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/listening/index/part/2
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=2
+---
+2012/11/12 13:36:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/listening/index/part/2".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/listening...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/listening/index/part/2
+HTTP_REFERER=http://back.yima.vn/toefl/listening/index/part/2
+---
+2012/11/12 13:36:08 [error] [php] Undefined variable: custom (/home/yima/http/hosts/yima.vn/back/protected/models/OrganizationModel.php:116)
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): TestNTController->runAction()
+#2 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): TestNTController->runActionWithFilters()
+#3 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): TestNTController->run()
+#4 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/yima/http/hosts/yima.vn/back/index.php(14): CWebApplication->run()
+REQUEST_URI=/testNT/add/
+in /home/yima/http/hosts/yima.vn/back/protected/models/OrganizationModel.php (116)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (123)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/12 13:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/paypal/
+---
+2012/11/12 13:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 13:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+---
+2012/11/12 13:38:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 13:38:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 13:38:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 13:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 13:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/12 13:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/12 13:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:41:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/admin/edit/id/2/?s=1
+---
+2012/11/12 13:41:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/12 13:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/12 13:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/12 13:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/organization/
+---
+2012/11/12 13:41:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 13:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/12 13:41:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:41:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/12 13:41:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:41:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:41:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:41:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/12 13:44:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/organization/
+---
+2012/11/12 13:44:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/categoryfaq
+---
+2012/11/12 13:44:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/faq
+---
+2012/11/12 13:44:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/categoryfaq
+---
+2012/11/12 13:44:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+---
+2012/11/12 13:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/categoryfaq
+---
+2012/11/12 13:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/faq
+---
+2012/11/12 13:47:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/categoryfaq
+---
+2012/11/12 13:50:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=3
+HTTP_REFERER=http://back.yima.vn/question
+---
+2012/11/12 13:50:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=3
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=3
+---
+2012/11/12 13:50:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/speaking/index/part/1".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/speaking/...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/speaking/index/part/1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=3
+---
+2012/11/12 13:50:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/speaking/index/part/1".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/speaking/...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/speaking/index/part/1
+HTTP_REFERER=http://back.yima.vn/toefl/speaking/index/part/1
+---
+2012/11/12 13:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/subject/mod/
+---
+2012/11/12 13:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 17:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/
+---
+2012/11/12 17:11:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/12 17:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/12 17:11:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/12 17:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/12 17:11:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 17:11:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/12 17:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/14 19:28:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/home/
+---
+2012/11/14 19:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/14 19:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/home/
+---
+2012/11/14 19:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/14 19:29:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/home/
+---
+2012/11/14 19:29:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/14 19:29:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testNT
+---
+2012/11/14 19:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/14 19:29:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/craw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/craw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/craw/
+---
+2012/11/14 19:29:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/craw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/craw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/craw/
+HTTP_REFERER=http://back.yima.vn/testnt/craw/
+---
+2012/11/15 08:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/home/
+---
+2012/11/15 08:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/15 08:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/question
+---
+2012/11/15 08:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/15 08:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/
+---
+2012/11/15 08:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/
+HTTP_REFERER=http://back.yima.vn/testnt/
+---
+2012/11/15 08:02:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testNT
+---
+2012/11/15 08:02:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/15 08:02:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/question
+---
+2012/11/15 08:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/15 08:02:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/15 08:02:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/15 08:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/listening/index/part/1".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/listening...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/listening/index/part/1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---
+2012/11/15 08:02:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/listening/index/part/1".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/listening...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/listening/index/part/1
+HTTP_REFERER=http://back.yima.vn/toefl/listening/index/part/1
+---
+2012/11/15 08:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/listening/index/part/1
+---
+2012/11/15 08:02:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/15 08:03:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/Source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/Source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/Source_test
+---
+2012/11/15 08:03:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/Source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/Source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/Source_test
+HTTP_REFERER=http://back.yima.vn/toefl/Source_test
+---
+2012/11/15 08:04:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/Source_test
+---
+2012/11/15 08:04:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/source_test
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/15 08:04:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/toefl/source_test
+---
+2012/11/15 08:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/15 08:06:04 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) as total
+                FROM yima_sys_subject 
+                WHERE 1
+                 AND deleted = :deleted
+                ORDER BY title ASC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/back/protected/models/SubjectModel.php (114)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/SubjectController.php (28)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/15 08:06:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) as total
+                FROM yima_sys_subject 
+                WHERE 1
+                 AND deleted = :deleted
+                ORDER BY title ASC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/SubjectModel.php(114): CDbCommand->queryRow()
+#2 /home/yima/http/hosts/yima.vn/back/protected/controllers/SubjectController.php(28): SubjectModel->counts(Array)
+#3 [internal function]: SubjectController->actionIndex(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('subject')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/subject/
+HTTP_REFERER=http://back.yima.vn/testNT/raw/
+---
+2012/11/15 08:06:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/testNT/raw/
+---
+2012/11/15 08:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfaq
+HTTP_REFERER=http://back.yima.vn/categoryfaq
+---
+2012/11/15 08:06:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfFaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfFaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfFaq
+---
+2012/11/15 08:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "categoryfFaq".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('categoryfFaq')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/categoryfFaq
+HTTP_REFERER=http://back.yima.vn/categoryfFaq
+---
+2012/11/15 08:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testNT
+---
+2012/11/15 08:06:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/15 08:06:45 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title.
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (112)
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (117)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (312)
+2012/11/15 08:06:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(112): CDbCommand->queryRow()
+#2 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(117): ImageModel->is_exist_image('raw_tests', 'de_1', 'Chrysanthemum -...')
+#3 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(312): ImageModel->sesert('raw_tests', 'de_1', 'Chrysanthemum -...', 'raw_tests/de_1/...')
+#4 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(238): TestNTController->get_images('de_1')
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(50): TestNTController->actionRaw()
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('raw')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testNT/raw')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/testNT/raw/?folder=de_1
+HTTP_REFERER=http://back.yima.vn/testNT/raw/
+---
+2012/11/15 08:29:15 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title.
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (112)
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (117)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (312)
+2012/11/15 08:29:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(112): CDbCommand->queryRow()
+#2 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(117): ImageModel->is_exist_image('raw_tests', 'de_1', 'Chrysanthemum -...')
+#3 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(312): ImageModel->sesert('raw_tests', 'de_1', 'Chrysanthemum -...', 'raw_tests/de_1/...')
+#4 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(238): TestNTController->get_images('de_1')
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(50): TestNTController->actionRaw()
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('raw')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testNT/raw')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/testNT/raw/?folder=de_1
+---
+2012/11/15 08:30:30 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title.
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (112)
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (117)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (312)
+2012/11/15 08:30:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(112): CDbCommand->queryRow()
+#2 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(117): ImageModel->is_exist_image('raw_tests', 'de_1', 'Chrysanthemum -...')
+#3 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(312): ImageModel->sesert('raw_tests', 'de_1', 'Chrysanthemum -...', 'raw_tests/de_1/...')
+#4 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(238): TestNTController->get_images('de_1')
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(50): TestNTController->actionRaw()
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('raw')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testNT/raw')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/testNT/raw/?folder=de_1
+---
+2012/11/15 08:30:32 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title.
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (112)
+in /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php (117)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (312)
+2012/11/15 08:30:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yimadb.yima_images' doesn't exist. The SQL statement executed was: SELECT *
+                FROM yima_images
+                WHERE main_folder = :main_folder
+                AND sub_folder = :sub_folder
+                AND title = :title' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(112): CDbCommand->queryRow()
+#2 /home/yima/http/hosts/yima.vn/back/protected/models/ImageModel.php(117): ImageModel->is_exist_image('raw_tests', 'de_1', 'Chrysanthemum -...')
+#3 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(312): ImageModel->sesert('raw_tests', 'de_1', 'Chrysanthemum -...', 'raw_tests/de_1/...')
+#4 /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php(238): TestNTController->get_images('de_1')
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(50): TestNTController->actionRaw()
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('raw')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testNT/raw')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/testNT/raw/?folder=de_1
+---
+2012/11/15 08:38:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/
+---
+2012/11/15 08:38:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/raw".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/raw')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/raw/
+HTTP_REFERER=http://back.yima.vn/testnt/raw/
+---
+2012/11/15 08:38:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/filter_search".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/filter_s...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_1
+---
+2012/11/15 10:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/filter_search".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/filter_s...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_1
+---
+2012/11/15 10:29:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/filter_search".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/filter_s...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/filter_search/?oid=28&fid=&sid=
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_1
+---
+2012/11/15 10:29:20 [error] [php] Undefined index: faculty (/home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php:273)
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): TestNTController->runAction()
+#2 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): TestNTController->runActionWithFilters()
+#3 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): TestNTController->run()
+#4 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/yima/http/hosts/yima.vn/back/index.php(14): CWebApplication->run()
+REQUEST_URI=/testNT/raw/?folder=de_1
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (273)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (258)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/15 10:29:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/filter_search".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/filter_s...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/filter_search/?oid=28&fid=0&sid=0
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_1
+---
+2012/11/15 10:31:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "testnt/filter_search".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('testnt/filter_s...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testnt/filter_search/?oid=0&fid=0&sid=0
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_1
+---
+2012/11/15 11:06:33 [error] [php] Undefined index: images (/home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php:277)
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): TestNTController->runAction()
+#2 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): TestNTController->runActionWithFilters()
+#3 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): TestNTController->run()
+#4 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /home/yima/http/hosts/yima.vn/back/index.php(14): CWebApplication->run()
+REQUEST_URI=/testNT/raw/?folder=de_2
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (277)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (258)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/15 11:07:43 [error] [php] json_encode() expects at least 1 parameter, 0 given (/home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php:305)
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(50): TestNTController->actionRaw()
+#1 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): TestNTController->runAction()
+#3 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): TestNTController->runActionWithFilters()
+#4 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): TestNTController->run()
+#5 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /home/yima/http/hosts/yima.vn/back/index.php(14): CWebApplication->run()
+REQUEST_URI=/testNT/raw/?folder=de_2
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (305)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/TestNTController.php (262)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/23 19:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "subjects".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('subjects')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/subjects
+---
+2012/11/23 19:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "subjects".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('subjects')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/subjects
+HTTP_REFERER=http://back.yima.vn/subjects
+---
+2012/11/23 22:58:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ksf.organization_id' in 'on clause'. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty ksf  LEFT JOIN (SELECT id as org_id, title as org_title 
+                                                     FROM yima_sys_organization)kso on ksf.organization_id = kso.org_id
+                WHERE 1
+                
+                ORDER BY ksf.title ASC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/back/protected/models/FacultyModel.php (27)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/FacultyController.php (27)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/23 22:58:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ksf.organization_id' in 'on clause'. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty ksf  LEFT JOIN (SELECT id as org_id, title as org_title 
+                                                     FROM yima_sys_organization)kso on ksf.organization_id = kso.org_id
+                WHERE 1
+                
+                ORDER BY ksf.title ASC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/FacultyModel.php(27): CDbCommand->queryAll()
+#2 /home/yima/http/hosts/yima.vn/back/protected/controllers/FacultyController.php(27): FacultyModel->gets(Array, 1, 20)
+#3 [internal function]: FacultyController->actionIndex(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(FacultyController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(FacultyController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('faculty')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/faculty/
+HTTP_REFERER=http://back.yima.vn/organization/
+---
+2012/11/24 17:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/
+---
+2012/11/24 17:17:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/24 17:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/24 17:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/24 17:17:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/11/24 17:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/listening".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/listening')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/listening
+HTTP_REFERER=http://back.yima.vn/toeic/listening
+---
+2012/11/24 23:05:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/paypal/
+---
+2012/11/24 23:05:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/25 02:12:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ksf.organization_id' in 'on clause'. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty ksf  LEFT JOIN (SELECT id as org_id, title as org_title 
+                                                     FROM yima_sys_organization)kso on ksf.organization_id = kso.org_id
+                WHERE 1
+                
+                ORDER BY ksf.title ASC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/back/protected/models/FacultyModel.php (27)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/FacultyController.php (27)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/25 02:12:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ksf.organization_id' in 'on clause'. The SQL statement executed was: SELECT *
+                FROM yima_sys_faculty ksf  LEFT JOIN (SELECT id as org_id, title as org_title 
+                                                     FROM yima_sys_organization)kso on ksf.organization_id = kso.org_id
+                WHERE 1
+                
+                ORDER BY ksf.title ASC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/FacultyModel.php(27): CDbCommand->queryAll()
+#2 /home/yima/http/hosts/yima.vn/back/protected/controllers/FacultyController.php(27): FacultyModel->gets(Array, 1, 20)
+#3 [internal function]: FacultyController->actionIndex(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(FacultyController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(FacultyController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('faculty')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/faculty/
+HTTP_REFERER=http://back.yima.vn/organization/
+---
+2012/11/25 02:12:42 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) as total
+                FROM yima_sys_subject 
+                WHERE 1
+                 AND deleted = :deleted
+                ORDER BY title ASC
+                LIMIT :page,:ppp.
+in /home/yima/http/hosts/yima.vn/back/protected/models/SubjectModel.php (114)
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/SubjectController.php (28)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/25 02:12:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) as total
+                FROM yima_sys_subject 
+                WHERE 1
+                 AND deleted = :deleted
+                ORDER BY title ASC
+                LIMIT :page,:ppp' in /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/yima/http/hosts/yima.vn/back/protected/models/SubjectModel.php(114): CDbCommand->queryRow()
+#2 /home/yima/http/hosts/yima.vn/back/protected/controllers/SubjectController.php(28): SubjectModel->counts(Array)
+#3 [internal function]: SubjectController->actionIndex(1)
+#4 /home/yima/http/hosts/yima.vn/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#5 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#6 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): CController->run('')
+#10 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('subject')
+#11 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/subject/
+HTTP_REFERER=http://back.yima.vn/organization/
+---
+2012/11/25 13:58:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/coupon/
+---
+2012/11/25 13:58:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/toeic/source_test
+---
+2012/11/25 13:58:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/source_test".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/source_te...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/source_test
+HTTP_REFERER=http://back.yima.vn/coupon/
+---
+2012/11/26 15:04:24 [error] [php] Undefined variable: organization (/home/yima/http/hosts/yima.vn/back/protected/controllers/OrganizationController.php:176)
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): OrganizationController->runAction()
+#3 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): OrganizationController->runActionWithFilters()
+#4 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): OrganizationController->run()
+#5 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /home/yima/http/hosts/yima.vn/back/index.php(14): CWebApplication->run()
+REQUEST_URI=/organization/editSearch/id/44/search/0
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/OrganizationController.php (176)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/26 15:04:25 [error] [php] Undefined variable: organization (/home/yima/http/hosts/yima.vn/back/protected/controllers/OrganizationController.php:176)
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /home/yima/http/hosts/yima.vn/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /home/yima/http/hosts/yima.vn/framework/web/CController.php(287): OrganizationController->runAction()
+#3 /home/yima/http/hosts/yima.vn/framework/web/CController.php(266): OrganizationController->runActionWithFilters()
+#4 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(283): OrganizationController->run()
+#5 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /home/yima/http/hosts/yima.vn/back/index.php(14): CWebApplication->run()
+REQUEST_URI=/organization/editSearch/id/44/search/0
+in /home/yima/http/hosts/yima.vn/back/protected/controllers/OrganizationController.php (176)
+in /home/yima/http/hosts/yima.vn/back/index.php (14)
+2012/11/27 22:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_10&s=1&msg=B%E1%BA%A1n%20%C4%91%C3%A3%20th%C3%AAm%20th%C3%A0nh%20c%C3%B4ng%20%C4%91%E1%BB%81%20%3Cstrong%3EKiem%20Tra%20HK%202007%3C/strong%3E
+---
+2012/11/27 22:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toeic/reading".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toeic/reading')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toeic/reading
+HTTP_REFERER=http://back.yima.vn/toeic/reading
+---
+2012/12/01 13:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/testNT/raw/?folder=de_13&s=1&msg=B%E1%BA%A1n%20%C4%91%C3%A3%20th%C3%AAm%20th%C3%A0nh%20c%C3%B4ng%20%C4%91%E1%BB%81%20%3Cstrong%3EKiem%20Tra%20Giua%20HK1%20(2001-2002)%3C/strong%3E
+---
+2012/12/01 13:33:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toefl/reading/index".' in /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/yima/http/hosts/yima.vn/framework/web/CWebApplication.php(142): CWebApplication->runController('toefl/reading/i...')
+#1 /home/yima/http/hosts/yima.vn/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/yima/http/hosts/yima.vn/back/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/toefl/reading/index/?part=1
+HTTP_REFERER=http://back.yima.vn/toefl/reading/index/?part=1
+---

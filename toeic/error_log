@@ -1,0 +1,3 @@
+[19-Feb-2012 20:52:47] PHP Fatal error:  Call to a member function read_newfile() on a non-object in /home/ntnhanbk/public_html/demo/codeigniter/toefl/application/controllers/listening.php on line 139
+[19-Feb-2012 20:52:52] PHP Fatal error:  Call to a member function read_newfile() on a non-object in /home/ntnhanbk/public_html/demo/codeigniter/toefl/application/controllers/listening.php on line 139
+[19-Feb-2012 20:52:54] PHP Fatal error:  Call to a member function read_newfile() on a non-object in /home/ntnhanbk/public_html/demo/codeigniter/toefl/application/controllers/listening.php on line 139
