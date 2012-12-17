@@ -6,19 +6,15 @@
             <section class="search span12">                
 
                 <div id="test-nt">
-                    <ul class="breadcrumb">
-                        <li><a href="<?php echo Yii::app()->request->baseUrl; ?>">Trang chủ</a> <span class="divider">/</span></li>
-                        <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/test/">Bài kiểm tra</a> <span class="divider">/</span></li>
-                        <li class="active"><?php echo $testnt['title']; ?> <span class="divider">/</span></li>
-                        <li class="active">Làm bài</li>
-                    </ul>
+                   
                     <form class="form-horizontal" method="post" enctype="multipart/form-data">    
 
-                        <?php foreach ($questions as $k => $q): ?>                    
+                        <?php foreach ($questions as $k => $q): ?>    
+                        <?php $question_max = $questions[max(array_keys($questions))];?>
                             <div class="test question_<?php echo $q['id'] ?> clearfix" style="<?php if ($k == 0) echo 'display:block'; ?>">
 
                                 <div class="btn-test">
-
+                                    <a class="btn btn-success review pull-left review" value="<?php echo $question_max['id']?>">Duyệt lại</a>
                                     <?php if ($k > 0): ?><a class="btn back" value="<?php echo $q['id'] ?>" href="#" >&laquo; Quay lại</a><?php endif; ?>
                                     <?php if ($k < $total - 1): ?> <a style="margin-left: 15px" class="btn btn-primary next" value="<?php echo $q['id'] ?>" href="#">Tiếp tục &raquo;</a> <?php endif; ?>
                                 </div>
@@ -49,6 +45,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    
+                                    
                                     <?php foreach ($questions as $k => $q): ?>
                                         <tr>
                                             <td><?php echo $q['question'] ?></td>
@@ -58,10 +56,12 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="submit clearfix">
-                            <a class="btn btn-success review pull-left review">Duyệt lại</a>
-                            <a class="btn pull-right review-back hide pull-left">&laquo; Quay lại</a>
-                            <input onclick="return confirm('Bạn có chắc hoàn tất bài thi này?');" class="btn btn-danger" type="submit" value="Hoàn tất">
+                        <div class="submit clearfix">         
+                             <a class="btn pull-right review-back hide pull-left">&laquo; Quay lại</a>
+                           
+                           
+                            <input onclick="return confirm('Bạn có chắc hoàn tất bài thi này?');" class="btn hide btn-danger submit-test" type="submit" value="Hoàn tất">
+                   
                         </div>
                     </form>
                 </div>

@@ -36,7 +36,7 @@
     <p>You will now begin this part of the Listening section.</p>
 </div>
 <div id="video" class="systempage systempage0" style="display: none;">
-    <div id="video_image"><img src="<?php echo base_url(); ?>admin/data/images/listening/<?php echo $listening['video']; ?>" height="200"/></div>
+    <div id="video_image"><img src="<?php echo HelperURL::upload_url(); ?>media/toefl/listening/<?php echo $listening['video']; ?>" height="200"/></div>
     <div class="progress-bar blue large">
     </div>
 </div>
@@ -167,16 +167,19 @@
             stop_all_timers();
 								
             if (replay==0){
-                lsound='<?php echo base_url(); ?>admin/data/sounds/listening/listening_page/<?php echo $listening['lsound']; ?>';
+                 lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/listening/listening_page/<?php echo $listening['lsound']; ?>';
+                console.log(lsound);
+                
                 $('#video_duration').val(<?php echo $listening['lsound_duration']; ?>);
                 $('#current_video_duration').val(0);
             }else{
-                lsound='<?php echo base_url(); ?>admin/data/sounds/listening/replay_sound/scq/' + filename;
+                lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/listening/replay_sound/scq/' + filename;
                 $('#video_duration').val(to_time);
                 $('#current_video_duration').val(from_time);
             }
 		
             var player_url='<?php echo base_url(); ?>js/player.swf';
+            console.log(player_url);
             $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
 
             //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
@@ -189,7 +192,7 @@
         function replay_sentence(){
             stop_all_timers();
 		
-            var lsound='<?php echo base_url(); ?>admin/data/sounds/listening/sentence_sound/scq/'+$('#question'+current_question+' .sentence_sound').val();
+            var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/listening/sentence_sound/scq/'+$('#question'+current_question+' .sentence_sound').val();
             //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
             var player_url='<?php echo base_url(); ?>js/player.swf';
             $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -209,7 +212,7 @@
             $('#timer').show();   
             $('.switch_timer').show();
 			
-            var lsound='<?php echo base_url(); ?>admin/data/sounds/listening/'+$('#question'+current_question+' .question_type').val()+'/'+$('#question'+current_question+' .lsound').val();
+            var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/listening/'+$('#question'+current_question+' .question_type').val()+'/'+$('#question'+current_question+' .lsound').val();
             var player_url='<?php echo base_url(); ?>js/player.swf';
             $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
             //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
@@ -239,7 +242,7 @@
 			
             switch (current_question){
                 case -2:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/system/listening_change_volume.mp3';
+                    var lsound='<?php echo base_url(); ?>admin/data/sound/system/listening_change_volume.mp3';
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -248,7 +251,7 @@
                     break;
 					
                 case -1:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/system/listening_direction1.mp3';
+                    var lsound='<?php echo base_url(); ?>admin/data/sound/system/listening_direction1.mp3';
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -385,11 +388,13 @@
                     choice_arr[i]=$('input[name=scq'+scq_arr[i]+']:checked').val();
                 }
                 scq_choice=choice_arr.join(',');
-            
+                var lid = '<?php echo $lid?>';
+                var part = '<?php echo $part?>';
+                var cid = '<?php echo $cid?>';
                 //post to listening_command
-                var url = '<?php echo base_url(); ?>listening_command';
-                $.post(url,{scq_id:scq_id,scq_choice:scq_choice,mcq_id:mcq_id,mcq_choice:mcq_choice,cq_id:cq_id,cq_choice:cq_choice, oq_id:oq_id, oq_choice:oq_choice}, function() {
-                    window.location = "<?php echo base_url(); ?>start";
+                var url = '<?php echo HelperURL::main_url(); ?>/toefl/marks_listening';
+                $.post(url,{scq_id:scq_id,scq_choice:scq_choice,mcq_id:mcq_id,mcq_choice:mcq_choice,cq_id:cq_id,cq_choice:cq_choice, oq_id:oq_id, oq_choice:oq_choice,lid:lid,part:part,cid:cid}, function(data) {
+                   window.location = "<?php echo HelperURL::main_url() ?>toefl/finished/id/"+data+"/part/listening";
                 }, 'json');
         
             });

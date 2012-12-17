@@ -3,36 +3,37 @@
 <input type="hidden" id="current_duration" value="0"/>
 <input type="hidden" id="current_question" value="1"/>
 <div class="preload" style="display: none;">
-    <img src="<?php echo base_url(); ?>admin/data/sounds/system/speaking_direction_1.mp3"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/system/speaking_direction_2.mp3"/>
+    <?php $user_id=7?>
+    <img src="<?php echo base_url(); ?>admin/data/sound/system/speaking_direction_1.mp3"/>
+    <img src="<?php echo base_url(); ?>admin/data/sound/system/speaking_direction_2.mp3"/>
 
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking1['lsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking2['lsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking3['lsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking4['lsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking5['lsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking6['lsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking1['lsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking2['lsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking3['lsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking4['lsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking5['lsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking6['lsound'] ?>"/>
 
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking1['ssound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking2['ssound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking3['ssound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking4['ssound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking5['ssound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking6['ssound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking1['ssound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking2['ssound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking3['ssound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking4['ssound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking5['ssound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking6['ssound'] ?>"/>
 
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking1['dsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking2['dsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking3['dsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking4['dsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking5['dsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking6['dsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking1['dsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking2['dsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking3['dsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking4['dsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking5['dsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking6['dsound'] ?>"/>
 
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking1['introsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking2['introsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking3['introsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking4['introsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking5['introsound'] ?>"/>
-    <img src="<?php echo base_url(); ?>admin/data/sounds/speaking/<?php echo $speaking6['introsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking1['introsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking2['introsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking3['introsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking4['introsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking5['introsound'] ?>"/>
+    <img src="<?php echo HelperURL::upload_url() ?>audio/toefl/speaking/<?php echo $speaking6['introsound'] ?>"/>
 
     <img src="<?php echo base_url(); ?>img/sound/sp1.mp3"/>
     <img src="<?php echo base_url(); ?>img/sound/sp2.mp3"/>
@@ -49,7 +50,7 @@
 <div class="sound">
     <div id="lsound">Loading the player ...</div>
     <script type="text/javascript">
-        jwplayer("lsound").setup({ flashplayer: "<?php echo base_url(); ?>js/player.swf", file: "<?php echo base_url(); ?>admin/data/sounds/system/speaking_direction_1.mp3",
+        jwplayer("lsound").setup({ flashplayer: "<?php echo base_url(); ?>js/player.swf", file: "<?php echo base_url(); ?>admin/data/sound/system/speaking_direction_1.mp3",
             height: 0,
             width: 250,
             autostart: true
@@ -221,7 +222,7 @@
     </div>
 </div>
 <div class="video_part step step22" style="display: none;">
-    <div class="video_image"><img src="<?php echo base_url(); ?>admin/data/images/speaking/<?php echo $speaking3['limg']; ?>" height="200"/></div>
+    <div class="video_image"><img src="<?php echo HelperURL::upload_url(); ?>media/toefl/speaking/2012/11/<?php echo $speaking3['limg']; ?>" height="200"/></div>
     <div class="progress-bar blue large">
         <div style="width: 0;">
             <span>0<sup>%</sup></span>
@@ -310,7 +311,7 @@
 </div>
 
 <div class="video_part step step33" style="display: none;">
-    <div class="video_image"><img src="<?php echo base_url(); ?>admin/data/images/speaking/<?php echo $speaking4['limg']; ?>" height="200"/></div>
+    <div class="video_image"><img src="<?php echo HelperURL::upload_url(); ?>media/toefl/speaking/2012/11/<?php echo $speaking4['limg']; ?>" height="200"/></div>
     <div class="progress-bar blue large">
         <div style="width: 0;">
             <span>0<sup>%</sup></span>
@@ -378,7 +379,7 @@
     <div class="video_image"><img src="<?php echo base_url(); ?>img/headset.jpg" height="200"/></div>
 </div>
 <div class="video_part step step42" style="display: none;">
-    <div class="video_image"><img src="<?php echo base_url(); ?>admin/data/images/speaking/<?php echo $speaking5['limg']; ?>" height="200"/></div>
+    <div class="video_image"><img src="<?php echo HelperURL::upload_url(); ?>media/toefl/speaking/2012/11/<?php echo $speaking5['limg']; ?>" height="200"/></div>
     <div class="progress-bar blue large">
         <div style="width: 0;">
             <span>0<sup>%</sup></span>
@@ -445,7 +446,7 @@
     <div class="video_image"><img src="<?php echo base_url(); ?>img/headset.jpg" height="200"/></div>
 </div>
 <div class="video_part step step51" style="display: none;">
-    <div class="video_image"><img src="<?php echo base_url(); ?>admin/data/images/speaking/<?php echo $speaking6['limg']; ?>" height="200"/></div>
+    <div class="video_image"><img src="<?php echo HelperURL::upload_url(); ?>media/toefl/speaking/2012/11/<?php echo $speaking6['limg']; ?>" height="200"/></div>
     <div class="progress-bar blue large">
         <div style="width: 0;">
             <span>0<sup>%</sup></span>
@@ -516,27 +517,27 @@
 
 <?php /*
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="550" height="400" id="recorder01" align="middle">
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/01/voicerecorder.swf" />
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/01/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
   <param name="play" value="true" />
   <param name="loop" value="true" />
   <param name="wmode" value="window" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/01/config.xml?2" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/01/config.xml?2" />
   <param name="scale" value="showall" />
   <param name="menu" value="true" />
   <param name="devicefont" value="false" />
   <param name="salign" value="" />
   <param name="allowScriptAccess" value="sameDomain" />
   <!--[if !IE]>-->
-  <object type="application/x-shockwave-flash" data="admin/data/student/speaking/<?php echo $session_student_id; ?>/01/voicerecorder.swf" width="550" height="400">
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/01/voicerecorder.swf" />
+  <object type="application/x-shockwave-flash" data="admin/data/student/speaking/<?php echo $user_id ?>/01/voicerecorder.swf" width="550" height="400">
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/01/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
   <param name="play" value="true" />
   <param name="loop" value="true" />
   <param name="wmode" value="window" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/01/config.xml?2" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/01/config.xml?2" />
   <param name="scale" value="showall" />
   <param name="menu" value="true" />
   <param name="devicefont" value="false" />
@@ -554,12 +555,12 @@
 <div class="recorder_container">
     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder01" align="middle">
         <param name="allowScriptAccess" value="sameDomain" />
-        <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/01/voicerecorder.swf" />
+        <param name="movie" value="<?php echo base_url()?>admin/data/student/speaking/<?php echo $user_id ?>/01/voicerecorder.swf" />
         <param name="quality" value="high" />
         <param name="bgcolor" value="#000000" />
-        <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/01/config.xml" />
+        <param name="flashvars" value="confFile=<?php echo base_url()?>admin/data/student/speaking/<?php echo $user_id ?>/01/config.xml" />
         <param name="wmode" value="transparent">
-        <embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/01/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/01/config.xml" bgcolor="#000000" width="700" height="400" id="recorder01" name="recorder01" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+        <embed src="<?php echo base_url()?>admin/data/student/speaking/<?php echo $user_id ?>/01/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/01/config.xml" bgcolor="#000000" width="700" height="400" id="recorder01" name="recorder01" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
     </object>
 </div>
 
@@ -567,52 +568,52 @@
 
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder02" align="middle">
   <param name="allowScriptAccess" value="sameDomain" />
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/02/voicerecorder.swf" />
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/02/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/02/config.xml" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/02/config.xml" />
   <param name="wmode" value="transparent">
-  <embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/02/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/02/config.xml" bgcolor="#000000" width="700" height="400" id="recorder02" name="recorder02" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+  <embed src="admin/data/student/speaking/<?php echo $user_id ?>/02/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/02/config.xml" bgcolor="#000000" width="700" height="400" id="recorder02" name="recorder02" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
   </object>
 
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder03" align="middle">
   <param name="allowScriptAccess" value="sameDomain" />
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/03/voicerecorder.swf" />
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/03/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/03/config.xml" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/03/config.xml" />
   <param name="wmode" value="transparent">
-  <embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/03/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/03/config.xml" bgcolor="#000000" width="700" height="400" id="recorder03" name="recorder03" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+  <embed src="admin/data/student/speaking/<?php echo $user_id ?>/03/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/03/config.xml" bgcolor="#000000" width="700" height="400" id="recorder03" name="recorder03" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
   </object>
 
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder04" align="middle">
   <param name="allowScriptAccess" value="sameDomain" />
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/04/voicerecorder.swf" />
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/04/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/04/config.xml" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/04/config.xml" />
   <param name="wmode" value="transparent">
-  <embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/04/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/04/config.xml" bgcolor="#000000" width="700" height="400" id="recorder04" name="recorder04" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+  <embed src="admin/data/student/speaking/<?php echo $user_id ?>/04/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/04/config.xml" bgcolor="#000000" width="700" height="400" id="recorder04" name="recorder04" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
   </object>
 
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder05" align="middle">
   <param name="allowScriptAccess" value="sameDomain" />
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/05/voicerecorder.swf" />
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/05/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/05/config.xml" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/05/config.xml" />
   <param name="wmode" value="transparent">
-  <embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/05/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/05/config.xml" bgcolor="#000000" width="700" height="400" id="recorder05" name="recorder05" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+  <embed src="admin/data/student/speaking/<?php echo $user_id ?>/05/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/05/config.xml" bgcolor="#000000" width="700" height="400" id="recorder05" name="recorder05" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
   </object>
 
   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder06" align="middle">
   <param name="allowScriptAccess" value="sameDomain" />
-  <param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/06/voicerecorder.swf" />
+  <param name="movie" value="admin/data/student/speaking/<?php echo $user_id ?>/06/voicerecorder.swf" />
   <param name="quality" value="high" />
   <param name="bgcolor" value="#000000" />
-  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/06/config.xml" />
+  <param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/06/config.xml" />
   <param name="wmode" value="transparent">
-  <embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/06/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/06/config.xml" bgcolor="#000000" width="700" height="400" id="recorder06" name="recorder06" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+  <embed src="admin/data/student/speaking/<?php echo $user_id ?>/06/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/06/config.xml" bgcolor="#000000" width="700" height="400" id="recorder06" name="recorder06" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
   </object>
  */ ?>
 
@@ -620,7 +621,7 @@
 <script src="<?php echo base_url(); ?>js/jquery.js"></script>
 <script src="<?php echo base_url(); ?>js/jquery.form.js"></script>
 <script src="<?php echo base_url(); ?>js/jquery-ui.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo base_url()?>js/jquery/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
 <script src="<?php echo base_url(); ?>js/selectivizr.js"></script>
 <script src="<?php echo base_url(); ?>js/jquery_002.js"></script>
 <script src="<?php echo base_url(); ?>js/login.js"></script>
@@ -629,12 +630,12 @@
         $('.recorder_container').html(
         '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="700" height="400" id="recorder0'+spk+'" align="middle">'+
             '<param name="allowScriptAccess" value="sameDomain" />'+
-            '<param name="movie" value="admin/data/student/speaking/<?php echo $session_student_id; ?>/0'+spk+'/voicerecorder.swf" />'+
+            '<param name="movie" value="<?php echo base_url()?>admin/data/student/speaking/<?php echo $user_id ?>/0'+spk+'/voicerecorder.swf" />'+
             '<param name="quality" value="high" />'+
             '<param name="bgcolor" value="#000000" />'+
-            '<param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/0'+spk+'/config.xml" />'+
+            '<param name="flashvars" value="confFile=./admin/data/student/speaking/<?php echo $user_id ?>/0'+spk+'/config.xml" />'+
             '<param name="wmode" value="transparent">'+
-            '<embed src="admin/data/student/speaking/<?php echo $session_student_id; ?>/0'+spk+'/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=./admin/data/student/speaking/<?php echo $session_student_id; ?>/0'+spk+'/config.xml" bgcolor="#000000" width="700" height="400" id="recorder0'+spk+'" name="recorder0'+spk+'" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />'+
+            '<embed src="<?php echo base_url()?>admin/data/student/speaking/<?php echo $user_id ?>/0'+spk+'/voicerecorder.swf" wmode="transparent" quality="high" flashvars="confFile=<?php echo base_url()?>admin/data/student/speaking/<?php echo $user_id ?>/0'+spk+'/config.xml" bgcolor="#000000" width="700" height="400" id="recorder0'+spk+'" name="recorder0'+spk+'" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />'+
             '</object>');
     }
 
@@ -828,7 +829,7 @@
             switch(current_question){
                 case 2:
                     $('.record').hide(); $('.play').hide(); $('.stop').hide();
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/system/speaking_direction_2.mp3';
+                    var lsound='<?php echo base_url(); ?>admin/data/sound/system/speaking_direction_2.mp3';
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -847,7 +848,7 @@
                     break;
 
                 case 4:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+ssound_arr[1];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+ssound_arr[1];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -903,7 +904,7 @@
                     break;
 
                 case 12:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+ssound_arr[2];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+ssound_arr[2];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -972,7 +973,7 @@
                     break;
 
                 case 22:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+lsound_arr[3];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+lsound_arr[3];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -980,7 +981,7 @@
                     break;
 
                 case 23:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+ssound_arr[3];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+ssound_arr[3];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1048,7 +1049,7 @@
                     break;
 
                 case 33:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+lsound_arr[4];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+lsound_arr[4];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1056,7 +1057,7 @@
                     break;
 
                 case 34:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+ssound_arr[4];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+ssound_arr[4];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1111,7 +1112,7 @@
                     break;
 
                 case 42:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+lsound_arr[5];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+lsound_arr[5];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1119,7 +1120,7 @@
                     break;
 
                 case 43:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+ssound_arr[5];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+ssound_arr[5];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1175,7 +1176,7 @@
                     break;
 
                 case 51:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+lsound_arr[6];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+lsound_arr[6];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1183,7 +1184,7 @@
                     break;
 
                 case 52:
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/speaking/'+ssound_arr[6];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/speaking/'+ssound_arr[6];
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
@@ -1235,7 +1236,7 @@
                     break;
 
                 case 61:
-                    window.location='<?php echo base_url(); ?>start';
+                     window.location = "<?php echo base_url(); ?>../front/toefl/";;
                     break;
                 default:
                 }

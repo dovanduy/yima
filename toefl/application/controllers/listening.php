@@ -7,37 +7,38 @@ class Listening extends CI_Controller {
 
     private $number_question = 0;
 
-    public function index($lid) {
+    public function index($lid, $part, $cid) {
         session_start();
         $this->load->helper('url');
         $this->load->database();
 
-       /* $step = $_SESSION['steps'];
-        $current_step = $_SESSION['current_step'];
 
-        if (!isset($step[$current_step]['part']) || $step[$current_step]['part'] != 'listening')
-            header('location: login');
+        /* $step = $_SESSION['steps'];
+          $current_step = $_SESSION['current_step'];
 
-        $data['session_student_id'] = $_SESSION['session_student_id'];
-        $this->db->query('UPDATE session_student set refreshL=refreshL+1 where id=' . $data['session_student_id']);
+          if (!isset($step[$current_step]['part']) || $step[$current_step]['part'] != 'listening')
+          header('location: login');
 
-        $lid = $step[$current_step]['id'];
+          $data['session_student_id'] = $_SESSION['session_student_id'];
+          $this->db->query('UPDATE session_student set refreshL=refreshL+1 where id=' . $data['session_student_id']);
 
-        $data['student_id'] = $_SESSION['student_id'];
-        $data['student_username'] = $_SESSION['student_username'];
-        $data['student_firstname'] = $_SESSION['student_firstname'];
-        $data['student_lastname'] = $_SESSION['student_lastname'];
+          $lid = $step[$current_step]['id'];
 
+          $data['student_id'] = $_SESSION['student_id'];
+          $data['student_username'] = $_SESSION['student_username'];
+          $data['student_firstname'] = $_SESSION['student_firstname'];
+          $data['student_lastname'] = $_SESSION['student_lastname'];
+         */
         $data['listening'] = $this->get_listening($lid);
         $data['listening_video'] = $this->get_video($lid);
         $data['listening_scq'] = $this->get_scq($lid);
         $data['listening_mcq'] = $this->get_mcq($lid);
         $data['listening_cq'] = $this->get_cq($lid);
-        $data['listening_oq'] = $this->get_oq($lid);*/
-
+        $data['listening_oq'] = $this->get_oq($lid);
+        $data['cid'] = $cid;
         $data['number_question'] = $this->number_question;
 
-        //SCQ
+//SCQ
         $scq_id_arr;
         if ($data['listening_scq']) {
             foreach ($data['listening_scq'] as $listening_scq) {
@@ -48,7 +49,7 @@ class Listening extends CI_Controller {
             $data['listening_scq_arr'] = '0';
         }
 
-        //MCQ
+//MCQ
         $mcq_id_arr;
         if ($data['listening_mcq']) {
             foreach ($data['listening_mcq'] as $listening_mcq) {
@@ -59,7 +60,7 @@ class Listening extends CI_Controller {
             $data['listening_mcq_arr'] = '0';
         }
 
-        //CQ
+//CQ
         $cq_id_arr;
         if ($data['listening_cq']) {
             foreach ($data['listening_cq'] as $listening_cq) {
@@ -69,8 +70,11 @@ class Listening extends CI_Controller {
         } else {
             $data['listening_cq_arr'] = '0';
         }
-        
-        //CQ
+
+        $data['lid'] = $lid;
+        $data['part'] = $part;
+
+//CQ
         $cq_id_arr;
         if ($data['listening_oq']) {
             foreach ($data['listening_oq'] as $listening_oq) {
@@ -93,7 +97,8 @@ class Listening extends CI_Controller {
     }
 
     private function get_listening($lid) {
-        $query = $this->db->query('SELECT *, (select v.limg from ' . $this->db->dbprefix('yima_toefl_listening_video') . ' v where v.lid=l.id order by time limit 0,1) as video FROM ' . $this->db->dbprefix('listening') . ' l where l.id=' . $lid);
+        $query = $this->db->query('SELECT *, (select v.limg from ' . $this->db->dbprefix('yima_toefl_listening_video') . ' v where v.lid=l.id order by time limit 0,1) as video FROM ' . $this->db->dbprefix('yima_toefl_listening') . ' l where l.id=' . $lid);
+
         foreach ($query->result() as $row) {
             $response['id'] = $row->id;
             $response['title'] = $row->title;
@@ -111,7 +116,8 @@ class Listening extends CI_Controller {
             $response['listening_type'] = $row->listening_type;
 
             $response['lsound'] = $row->lsound;
-            $f = 'admin/data/sounds/listening/listening_page/' . $row->lsound;
+            $f = HelperURL::upload_url() . "audio/toefl/listening/listening_page/" . $row->lsound;
+//$f = 'admin/data/sounds/listening/listening_page/' . $row->lsound;
             if (file_exists($f)) {
                 $response['lsound_duration'] = sound_length($f) + 3;
             } else {
@@ -140,14 +146,15 @@ class Listening extends CI_Controller {
         $question;
         $query = $this->db->query('SELECT * FROM ' . $this->db->dbprefix('yima_toefl_listening_scq') . ' where deleted=0 and lid=' . $lid);
         foreach ($query->result_array() as $rows) {
-            $f = 'admin/data/sounds/listening/scq/' . $rows['lsound'];
+            $f = HelperURL::upload_url() . "audio/toefl/listening/scq/" . $rows['lsound'];
+//$f = 'admin/data/sounds/listening/scq/' . $rows['lsound'];
             if (file_exists($f)) {
                 $length = sound_length($f) + 3;
             } else {
                 $length = 3;
             }
-
-            $f = 'admin/data/sounds/listening/sentence_sound/scq/' . $rows['sentence_sound'];
+            $f = HelperURL::upload_url() . "audio/toefl/listening/scq/" . $rows['sentence_sound'];
+// $f = 'admin/data/sounds/listening/sentence_sound/scq/' . $rows['sentence_sound'];
             if (file_exists($f)) {
                 $sentence_length = sound_length($f) + 3;
             } else {
@@ -184,14 +191,15 @@ class Listening extends CI_Controller {
         $question;
         $query = $this->db->query('SELECT * FROM ' . $this->db->dbprefix('yima_toefl_listening_mcq') . ' where deleted=0 and lid=' . $lid);
         foreach ($query->result_array() as $rows) {
-            $f = 'admin/data/sounds/listening/mcq/' . $rows['lsound'];
+            $f = HelperURL::upload_url() . "audio/toefl/listening/mcq/" . $rows['lsound'];
+//$f = 'admin/data/sounds/listening/mcq/' . $rows['lsound'];
             if (file_exists($f)) {
                 $length = sound_length($f) + 3;
             } else {
                 $length = 3;
             }
-
-            $f = 'admin/data/sounds/listening/sentence_sound/mcq/' . $rows['sentence_sound'];
+            $f = HelperURL::upload_url() . "audio/toefl/listening/mcq/" . $rows['sentence_sound'];
+            //$f = 'admin/data/sounds/listening/sentence_sound/mcq/' . $rows['sentence_sound'];
             if (file_exists($f)) {
                 $sentence_length = sound_length($f) + 3;
             } else {
@@ -227,14 +235,15 @@ class Listening extends CI_Controller {
         $question;
         $query = $this->db->query('SELECT * FROM ' . $this->db->dbprefix('yima_toefl_listening_cq') . ' where deleted=0 and lid=' . $lid);
         foreach ($query->result_array() as $rows) {
-            $f = 'admin/data/sounds/listening/cq/' . $rows['lsound'];
+            $f = HelperURL::upload_url() . "audio/toefl/listening/cq" . $rows['sentence_sound'];
+            //$f = 'admin/data/sounds/listening/cq/' . $rows['lsound'];
             if (file_exists($f)) {
                 $length = sound_length($f) + 3;
             } else {
                 $length = 3;
             }
-
-            $f = 'admin/data/sounds/listening/sentence_sound/cq/' . $rows['sentence_sound'];
+            $f = HelperURL::upload_url() . "audio/toefl/listening/cq" . $rows['sentence_sound'];
+            //$f = 'admin/data/sounds/listening/sentence_sound/cq/' . $rows['sentence_sound'];
             if (file_exists($f)) {
                 $sentence_length = sound_length($f) + 3;
             } else {
@@ -289,7 +298,8 @@ class Listening extends CI_Controller {
         $question;
         $query = $this->db->query('SELECT * FROM ' . $this->db->dbprefix('yima_toefl_listening_oq') . ' where deleted=0 and lid=' . $lid);
         foreach ($query->result_array() as $rows) {
-            $f = 'admin/data/sounds/listening/oq/' . $rows['lsound'];
+            $f = HelperURL::upload_url() . "/audio/toefl/listening/oq/" . $rows['lsound'];
+            //$f = 'admin/data/sounds/listening/oq/' . $rows['lsound'];
             if (file_exists($f)) {
                 $length = sound_length($f) + 3;
             } else {

@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 class Writing extends CI_Controller {
 
-    public function index($wid1,$wid2) {
+    public function index($wid1,$wid2,$cid) {
         session_start();
         $this->load->helper('url');
         $this->load->database();
@@ -32,6 +32,9 @@ class Writing extends CI_Controller {
 
         $data['writing1'] = $this->get_writing($wid1);
         $data['writing2'] = $this->get_writing($wid2);
+        $data['wid1']= $wid1;
+        $data['wid2']= $wid2;
+        $data['cid']= $cid;
 
         $this->load->view('header');
         $this->load->view('writing/header', $data);

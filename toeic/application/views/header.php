@@ -25,6 +25,6 @@
 
         <script src="<?php echo base_url(); ?>js/ga.js" async=""></script>
         <script src="<?php echo base_url(); ?>js/modernizr-1.js"></script>
-        <script src="<?php echo theme_url(); ?>js/jwplayer.js"></script>
+        <script src="<?php echo base_url(); ?>js/jwplayer.js"></script>
     </head>
     <body class="login">

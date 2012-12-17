@@ -14,7 +14,11 @@
           </div>
           </div> */ ?>
         <div class="row-fluid magu-home">
+            
             <div class="span12 magu-listing">
+                <div class="span4"><a href="<?php echo Yii::app()->baseUrl?>/toefl"><img src="<?php echo Yii::app()->baseUrl?>/images/menu/toefl.jpg"></a></div>
+                <div class="span4"><a href="<?php echo Yii::app()->baseUrl?>/toeic/test"><img src="<?php echo Yii::app()->baseUrl?>/images/menu/toeic.jpg"></a></div>
+                <div class="span4"><a><img src="<?php echo Yii::app()->baseUrl?>/images/menu/toefl.jpg"></a></div>
                 <?php /*
                   <h2>Tìm bài kiểm tra</h2>
                   <form class="form-search home-search" action="<?php echo Yii::app()->request->baseUrl; ?>/test/">

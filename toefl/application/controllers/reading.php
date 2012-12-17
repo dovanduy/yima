@@ -7,9 +7,9 @@ class Reading extends CI_Controller {
 
     private $number_question = 0;
 
-    public function index($rid) {
+    public function index($rid,$part,$cid) {
    
-            session_start();
+          session_start();
             
           $this->load->helper('url');
           $this->load->database();
@@ -36,9 +36,11 @@ class Reading extends CI_Controller {
         $data['reading_iq'] = $this->get_iq($rid);
         $data['reading_ddq'] = $this->get_ddq($rid);
         $data['reading_oq'] = $this->get_oq($rid);
+         $data['cid']= $cid;
 
         $data['number_question'] = $this->number_question;
-
+        $data['rid'] = $rid;
+        $data['part'] = $part;
         //SCQ
         $scq_id_arr;
         if ($data['reading_scq']) {

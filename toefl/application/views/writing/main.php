@@ -35,7 +35,7 @@
     </div>
 </div>
 <div class="video_part step step4" style="display: none;">
-    <div class="video_image"><img src="<?php echo base_url(); ?>admin/data/images/writing/<?php echo $writing1['limg']; ?>" height="200"/></div>
+    <div class="video_image"><img src="<?php echo HelperURL::upload_url(); ?>media/toefl/writing/<?php echo $writing1['limg']; ?>" height="200"/></div>
     <div class="progress-bar blue large">
         <div style="width: 0;">
             <span>0<sup>%</sup></span>
@@ -220,7 +220,7 @@
                     clearInterval(intervalHandle);
                     run_timer(lsound_duration_arr[1]);
                     $('#timer').hide();
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/writing/'+lsound_arr[1];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/writing/'+lsound_arr[1];
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
@@ -230,7 +230,7 @@
                     clearInterval(intervalHandle);
                     run_timer(1200);
                     $('#timer').show();
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/writing/'+ssound_arr[1];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/writing/'+ssound_arr[1];
                     var player_url='<?php echo base_url(); ?>js/player.swf';
                     $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
@@ -249,9 +249,10 @@
                     $('#current_position').html('2 of 2');
                     run_timer(1800);
                     $('#timer').show();
-                    var lsound='<?php echo base_url(); ?>admin/data/sounds/writing/'+ssound_arr[2];
+                    var lsound='<?php echo HelperURL::upload_url(); ?>audio/toefl/writing/'+ssound_arr[2];
                     var player_url='<?php echo base_url(); ?>js/player.swf';
-                    $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
+                    $('.sound').html("<div id='lsound'>Loading the player ...</div>\n\
+                <script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
                     //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
                     break;
                 case 9:
@@ -262,16 +263,25 @@
                     clearInterval(intervalHandle);
                     $('#timer').hide();
                     $('.button.return').hide();
-
-                    var url = '<?php echo base_url(); ?>writing_command';
-                    writing1=$('#writing1_content').val();
-                    writing2=$('#writing2_content').val();
-
-                    $.post(url,{writing1:writing1,writing2:writing2}, function() {
-                    }, 'json');
+//                    var wid1 = '<?php echo $wid1?>';
+//                    var wid2 = '<?php echo $wid2?>';
+//                    var url = '<?php echo HelperURL::main_url(); ?>/toefl/marks_writing';
+//                    writing1=$('#writing1_content').val();
+//                    writing2=$('#writing2_content').val();
+//
+//                    $.post(url,{writing1:writing1,writing2:writing2,wid1:wid1,wid2:wid2}, function() {
+//                    }, 'json');
                     break;
                 case 11:
-                    window.location='<?php echo base_url(); ?>start';
+                    var wid1 = '<?php echo $wid1?>';
+                    var wid2 = '<?php echo $wid2?>';
+                    var url = '<?php echo HelperURL::main_url(); ?>/toefl/marks_writing';
+                    var cid = '<?php echo $cid?>';
+                    writing1=$('#writing1_content').val();
+                    writing2=$('#writing2_content').val();
+                    $.post(url,{writing1:writing1,writing2:writing2,wid1:wid1,wid2:wid2,cid:cid}, function(data) {
+                    }, 'json');
+                      window.location = "<?php echo HelperURL::main_url() ?>toefl/finished/id/"+data+"/part/writing";
                     break;
                 default:
                 }

@@ -265,9 +265,11 @@
             part5_choice=choice_arr.join(',');
             
             //post to reading_command
-            var url = '<?php echo base_url(); ?>reading_command';
-            $.post(url,{part5_id:part5_id,part5_choice:part5_choice,part6_id:part6_id,part6_choice:part6_choice,part7_id:part7_id,part7_choice:part7_choice,ddq_id:ddq_id,ddq_subject:ddq_subject,ddq_choice:ddq_choice, oq_id:oq_id, oq_choice:oq_choice}, function() {
-                window.location = "<?php echo base_url(); ?>start";
+            var cid = '<?php echo $cid?>';
+            var rid = '<?php echo $rid?>';
+            var url = '<?php echo HelperURL::main_url(); ?>toeic/test/marks_reading';
+            $.post(url,{part5_id:part5_id,part5_choice:part5_choice,part6_id:part6_id,part6_choice:part6_choice,part7_id:part7_id,part7_choice:part7_choice,rid:rid,cid:cid}, function() {
+               // window.location = "<?php echo base_url(); ?>start";
             }, 'json');
             
         });

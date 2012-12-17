@@ -33,7 +33,7 @@
                                 <li class="clearfix">
 
                                     <div class="summary">
-                                        <h4><a href="#" value ="<?php echo $t['id'] ?>" class ="toeic-link"><?php echo $t['title'] ?></a></h4>
+                                        <h4><a href="<?php echo Yii::app()->baseUrl?>/toeic/test/view/id/<?php echo $t['id']?>" value ="<?php echo $t['id'] ?>" class ="toeic-link"><?php echo $t['title'] ?></a></h4>
                                         <div class ="toeic-test" id="toeic_<?php echo $t['id'] ?>">
                                             <ul>
                                                 <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toeic/reading/<?php echo $t['reading'] ?>"> Reading </a></li>

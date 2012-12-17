@@ -196,6 +196,7 @@
         
         $('.button.end_section').click(function(){
             //OQ
+            //console.log('aaaa');
             var oq_arr=[<?php echo $reading_oq_arr; ?>];
             var oq_id='<?php echo $reading_oq_arr; ?>';
             
@@ -208,7 +209,7 @@
                 oq_order_arr.push($('.oq'+oq_arr[i]+' .choice3').attr('alt'));
                 oq_order_arr.push($('.oq'+oq_arr[i]+' .choice4').attr('alt'));
                 
-                console.log(oq_order_arr);
+               // console.log(oq_order_arr);
                 
                 oq_order=oq_order_arr.join(';');
                 oq_choice_arr[i]=oq_order;
@@ -283,12 +284,18 @@
                 choice_arr[i]=$('input[name=scq'+scq_arr[i]+']:checked').val();
             }
             scq_choice=choice_arr.join(',');
-            
+            var rid = '<?php echo $rid?>';
+            var part = '<?php echo $part?>';
+            var cid = '<?php echo $cid?>';
             //post to reading_command
-            var url = '<?php echo base_url(); ?>reading_command';
-            $.post(url,{scq_id:scq_id,scq_choice:scq_choice,mcq_id:mcq_id,mcq_choice:mcq_choice,iq_id:iq_id,iq_choice:iq_choice,ddq_id:ddq_id,ddq_subject:ddq_subject,ddq_choice:ddq_choice, oq_id:oq_id, oq_choice:oq_choice}, function() {
-                window.location = "<?php echo base_url(); ?>start";
+            //var url = '<?php echo base_url(); ?>reading_command';
+            var url = '<?php echo HelperURL::main_url(); ?>toefl/marks_reading';
+            $.post(url,{scq_id:scq_id,scq_choice:scq_choice,mcq_id:mcq_id,mcq_choice:mcq_choice,iq_id:iq_id,iq_choice:iq_choice,ddq_id:ddq_id,ddq_subject:ddq_subject,ddq_choice:ddq_choice, oq_id:oq_id, oq_choice:oq_choice,rid:rid,part:part,cid:cid},
+            function(data) {
+              window.location = "<?php echo HelperURL::main_url() ?>toefl/finished/id/"+data+"/part/reading";
+               // console.log(data);
             }, 'json');
+            return false;
             
         });
 

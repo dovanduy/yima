@@ -5,34 +5,34 @@ if (!defined('BASEPATH'))
 
 class Speaking extends CI_Controller {
 
-    public function index($sid1,$sid2,$sid3,$sid4,$sid5,$sid6) {
+    public function index($sid1, $sid2, $sid3, $sid4, $sid5, $sid6, $cid) {
         session_start();
         $this->load->helper('url');
         $this->load->database();
-      /*  $params = array('filename' => '');
-        $this->load->library('mp3file', $params);
+        /*  $params = array('filename' => '');
+          $this->load->library('mp3file', $params);
 
-        $step = $_SESSION['steps'];
-        $current_step = $_SESSION['current_step'];
+          $step = $_SESSION['steps'];
+          $current_step = $_SESSION['current_step'];
 
-        if (!isset($step[$current_step]['part']) || $step[$current_step]['part'] != 'speaking')
-            header('location: login');
+          if (!isset($step[$current_step]['part']) || $step[$current_step]['part'] != 'speaking')
+          header('location: login');
 
-        $sid1 = $_SESSION['mt_speaking1'];
-        $sid2 = $_SESSION['mt_speaking2'];
-        $sid3 = $_SESSION['mt_speaking3'];
-        $sid4 = $_SESSION['mt_speaking4'];
-        $sid5 = $_SESSION['mt_speaking5'];
-        $sid6 = $_SESSION['mt_speaking6'];
+          $sid1 = $_SESSION['mt_speaking1'];
+          $sid2 = $_SESSION['mt_speaking2'];
+          $sid3 = $_SESSION['mt_speaking3'];
+          $sid4 = $_SESSION['mt_speaking4'];
+          $sid5 = $_SESSION['mt_speaking5'];
+          $sid6 = $_SESSION['mt_speaking6'];
 
-        $data['session_student_id'] = $_SESSION['session_student_id'];
+          $data['session_student_id'] = $_SESSION['session_student_id'];
 
-        $this->db->query('UPDATE session_student set refreshS=refreshS+1 where id=' . $data['session_student_id']);
+          $this->db->query('UPDATE session_student set refreshS=refreshS+1 where id=' . $data['session_student_id']);
 
-        $data['student_id'] = $_SESSION['student_id'];
-        $data['student_username'] = $_SESSION['student_username'];
-        $data['student_firstname'] = $_SESSION['student_firstname'];
-        $data['student_lastname'] = $_SESSION['student_lastname'];*/
+          $data['student_id'] = $_SESSION['student_id'];
+          $data['student_username'] = $_SESSION['student_username'];
+          $data['student_firstname'] = $_SESSION['student_firstname'];
+          $data['student_lastname'] = $_SESSION['student_lastname']; */
 
         $data['speaking1'] = $this->get_speaking($sid1);
         $data['speaking2'] = $this->get_speaking($sid2);
@@ -40,6 +40,7 @@ class Speaking extends CI_Controller {
         $data['speaking4'] = $this->get_speaking($sid4);
         $data['speaking5'] = $this->get_speaking($sid5);
         $data['speaking6'] = $this->get_speaking($sid6);
+        $data['cid'] = $cid;
 
         $this->prepare_recorder();
 

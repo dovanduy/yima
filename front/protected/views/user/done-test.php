@@ -35,7 +35,7 @@
                             Chủ đề: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/search_by_category/c/<?php echo $v['subject_id']; ?>" rel="tooltip" title="<?php echo $v['subject_title'] ?>"><?php echo Helper::string_truncate($v['subject_title'],50); ?></a><br/>
                         </td>
                         <td>
-                            <?php echo !$v['price'] ? "Miễn phí": number_format($v['price']); ?>đ
+                            <?php echo !$v['price'] ? '<span class="label label-success">miễn phí</span>' : '<span class="label label-info">' . number_format($v['price'], 0, '.', '.') . ' đ</span>' ?>
                         </td>
                         <td><span class="label label-success"><?php echo $v['total_right'] ?>/<?php echo $v['total_question'] ?></span> câu</td>
                         <td><a href="<?php echo Yii::app()->request->baseUrl; ?>/test/finished/id/<?php echo $v['relationship_id'] ?>" class="btn btn-warning">Chi tiết</a></td>

@@ -36,7 +36,7 @@
     <p>You will now begin this part of the Listening section.</p>
 </div>
 <div id="video" class="systempage systempage0" style="display: none;">
-    <div id="video_image"><img src="<?php echo base_url(); ?>admin/data/images/listening/<?php echo $listening['video']; ?>" height="200"/></div>
+
     <div class="progress-bar blue large">
     </div>
 </div>
@@ -51,6 +51,7 @@
 <script src="<?php echo base_url(); ?>js/jquery_002.js"></script>
 <script src="<?php echo base_url(); ?>js/login.js"></script>
 <script>
+ 
     $().ready(function(){
         
         $(".range").rangeinput();
@@ -82,7 +83,9 @@
         function fn_video_timer(){
             video_duration=parseInt($('#video_duration').val());
             
+            
             current_video_duration=parseInt($('#current_video_duration').val());
+            //console.log(current_video_duration);return false;
             current_video_duration++;
             $('#current_video_duration').val(current_video_duration);
             
@@ -167,11 +170,11 @@
             stop_all_timers();
 								
             if (replay==0){
-                lsound='<?php echo base_url(); ?>admin/data/sounds/listening/listening_page/<?php echo $listening['lsound']; ?>';
+                lsound='<?php echo HelperURL::upload_url() ?><?php echo $listening['lsound']; ?>';
                 $('#video_duration').val(<?php echo $listening['lsound_duration']; ?>);
                 $('#current_video_duration').val(0);
             }else{
-                lsound='<?php echo base_url(); ?>admin/data/sounds/listening/replay_sound/scq/' + filename;
+                lsound='<?php echo HelperURL::upload_url(); ?> <?php echo $listening['lsound']; ?>';
                 $('#video_duration').val(to_time);
                 $('#current_video_duration').val(from_time);
             }
@@ -200,6 +203,7 @@
         }
 		
         function play_question(current_question){
+               
             close_all_page();
             stop_all_timers();
 			
@@ -209,13 +213,16 @@
             $('#timer').show();   
             $('.switch_timer').show();
 			
-            var lsound='<?php echo base_url(); ?>admin/data/sounds/listening/'+$('#question'+current_question+' .question_type').val()+'/'+$('#question'+current_question+' .lsound').val();
+            var lsound='<?php echo HelperURL::upload_url(); ?>'+'/audio/'+$('#question'+current_question+' .lsound').val();
+            //console.log(lsound);return false;
             var player_url='<?php echo base_url(); ?>js/player.swf';
+            $('.img').html("<div id='limg'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
             $('.sound').html("<div id='lsound'>Loading the player ...</div><script type='text/javascript'>jwplayer('lsound').setup({ flashplayer: '"+player_url+"', file: '"+lsound+"',height: 0,width: 400, autostart: true});<\/script>");
             //$('.sound').html('<embed type="application/x-shockwave-flash" flashvars="'+lsound+'&autoPlay=true" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="0" quality="best"></embed>');
             $('#question_duration').val(parseInt($('#question'+current_question+' .lsound_duration').val()));
             $('#current_question_duration').val(0);
             start_question_timer();
+            
 			
             $('.button.next').html('Next');
             $('.button.next').show();
@@ -323,72 +330,27 @@
             
             });
         
-            $('.button.end_section').click(function(){
-                //OQ
-                var oq_arr=[<?php echo $listening_oq_arr; ?>];
-                var oq_id='<?php echo $listening_oq_arr; ?>';
-            
-                var oq_choice_arr=new Array();
-                for (var i = 0; i < oq_arr.length; i++){
-                    var oq_order_arr=new Array();
-                
-                    oq_order_arr.push($('.oq'+oq_arr[i]+' .choice1').attr('alt'));
-                    oq_order_arr.push($('.oq'+oq_arr[i]+' .choice2').attr('alt'));
-                    oq_order_arr.push($('.oq'+oq_arr[i]+' .choice3').attr('alt'));
-                    oq_order_arr.push($('.oq'+oq_arr[i]+' .choice4').attr('alt'));
-                
-                    console.log(oq_order_arr);
-                
-                    oq_order=oq_order_arr.join(';');
-                    oq_choice_arr[i]=oq_order;
-                }
-                oq_choice=oq_choice_arr.join(',');
-            
-                //CQ
-                var cq_arr=[<?php echo $listening_cq_arr; ?>];
-                var cq_id='<?php echo $listening_cq_arr; ?>';
-                var cq_choice_arr=new Array();
-                for (var i = 0; i < cq_arr.length; i++){
-                    var cq_rowcol_arr=new Array();
-                    $.each($('.cq'+cq_arr[i]), function() {
-                        row_id=$(this).attr('alt');
-                        col_id=$('input[name=row'+row_id+']:checked').val();
-                        cq_rowcol_arr.push(row_id+"/"+col_id);
-                    });
-                    cq_rowcol=cq_rowcol_arr.join(';');
-                    cq_choice_arr.push(cq_rowcol);
-                }
-                cq_choice=cq_choice_arr.join(',');
-            
-            
-                //MCQ
-                var mcq_arr=[<?php echo $listening_mcq_arr; ?>];
-                var mcq_id='<?php echo $listening_mcq_arr; ?>';
-                var mcq_choice_arr=new Array();
-                for (var i = 0; i < mcq_arr.length; i++){
-                    mcq_checked='';
-                    var mcq_checked_arr=new Array();
-                    $.each($('.mcq'+mcq_arr[i]), function() {
-                        if ($(this).attr('checked')=='checked') mcq_checked_arr.push($(this).val());
-                    });
-                    mcq_checked=mcq_checked_arr.join(';');
-                    mcq_choice_arr[i]=mcq_checked;
-                }
-                mcq_choice=mcq_choice_arr.join(',');
-            
-            
+            $('.button.end_section').click(function(){            
                 //SCQ
-                var scq_arr=[<?php echo $listening_scq_arr; ?>];
-                var scq_id='<?php echo $listening_scq_arr; ?>';
+                var scq_arr=[<?php echo $part1_arr; ?>];
+                var scq_id='<?php echo $part1_arr; ?>';
                 var choice_arr=new Array();
                 for (var i = 0; i < scq_arr.length; i++){
-                    choice_arr[i]=$('input[name=scq'+scq_arr[i]+']:checked').val();
+                    choice_arr[i]=$('input[name=part1_'+scq_arr[i]+']:checked').val();
                 }
                 scq_choice=choice_arr.join(',');
+                
+                var part2=[<?php echo $part2_arr; ?>];
+                var part2_id='<?php echo $part2_arr; ?>';
+                var choice_arr2=new Array();
+                for (var i = 0; i < part2.length; i++){
+                    choice_arr2[i]=$('input[name=part1_'+part2[i]+']:checked').val();
+                }
+                var part2_choice=choice_arr2.join(',');
             
                 //post to listening_command
                 var url = '<?php echo base_url(); ?>listening_command';
-                $.post(url,{scq_id:scq_id,scq_choice:scq_choice,mcq_id:mcq_id,mcq_choice:mcq_choice,cq_id:cq_id,cq_choice:cq_choice, oq_id:oq_id, oq_choice:oq_choice}, function() {
+                $.post(url,{part1_id:scq_id,part1_choice:scq_choice,part2_id:part2_id,part2_choice:part2_choice}, function() {
                     window.location = "<?php echo base_url(); ?>start";
                 }, 'json');
         

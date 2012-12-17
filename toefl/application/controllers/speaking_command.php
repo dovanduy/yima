@@ -9,7 +9,7 @@ class Speaking_command extends CI_Controller {
         session_start();
         $this->load->helper('url');
         $this->load->database();
-
+        
         $speaking_part = $this->input->post('speaking_part');
         $session_student_id = $_SESSION['session_student_id'];
 

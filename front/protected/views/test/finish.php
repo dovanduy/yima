@@ -48,8 +48,9 @@
                                 <?php
                                 $q1 = $questions[$i * 2];
                                 $q2 = isset($questions[($i * 2) + 1]) ? $questions[($i * 2) + 1] : null;
+                                
                                 ?>
-
+                               
                                 <tr>
                                     <td class="align-left"><?php echo $q1['title']; ?></td>
                                     <td><i class="<?php echo $q1['choice'] == $user_choices[$q1['id']] ? "icon-ok" : "icon-remove"; ?>"></i></td>
