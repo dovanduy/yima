@@ -25,25 +25,25 @@ class TestModel extends CFormModel {
             $custom.= " AND (kso.title like :search_own OR ksu.email like :search_own)";
             $params[] = array('name' => ':search_own', 'value' => "%$args[search_own]%", 'type' => PDO::PARAM_STR);
         }
-        
+
         if (isset($args['search_price']) && $args['search_price'] != "") {
 
-            if ($args['search_price'] == "free") 
-                $custom.= " AND knt.price = 0";                            
-            elseif($args['search_price'] == "paid")
-                $custom.= " AND knt.price > 0";                            
+            if ($args['search_price'] == "free")
+                $custom.= " AND knt.price = 0";
+            elseif ($args['search_price'] == "paid")
+                $custom.= " AND knt.price > 0";
         }
 
         if (isset($args['author_id'])) {
             $custom.= " AND knt.author_id = :author_id";
             $params[] = array('name' => ':author_id', 'value' => $args['author_id'], 'type' => PDO::PARAM_INT);
         }
-        
+
         if (isset($args['subject_id']) && $args['subject_id'] > 0) {
             $custom.= " AND kss.id = :subject_id";
             $params[] = array('name' => ':subject_id', 'value' => $args['subject_id'], 'type' => PDO::PARAM_STR);
         }
-        
+
         if (isset($args['organization_id']) && $args['organization_id'] > 0) {
             $custom.= " AND kso.id = :organization_id";
             $params[] = array('name' => ':organization_id', 'value' => $args['organization_id'], 'type' => PDO::PARAM_STR);
@@ -67,7 +67,7 @@ class TestModel extends CFormModel {
                 $custom
                 ORDER BY knt.date_added DESC
                 LIMIT :page,:ppp";
-        
+
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(':page', $page, PDO::PARAM_INT);
         $command->bindParam(':ppp', $ppp, PDO::PARAM_INT);
@@ -102,22 +102,22 @@ class TestModel extends CFormModel {
 
         if (isset($args['search_price']) && $args['search_price'] != "") {
 
-            if ($args['search_price'] == "free") 
-                $custom.= " AND knt.price = 0";                            
-            elseif($args['search_price'] == "paid")
-                $custom.= " AND knt.price > 0";                            
+            if ($args['search_price'] == "free")
+                $custom.= " AND knt.price = 0";
+            elseif ($args['search_price'] == "paid")
+                $custom.= " AND knt.price > 0";
         }
 
         if (isset($args['author_id'])) {
             $custom.= " AND knt.author_id = :author_id";
             $params[] = array('name' => ':author_id', 'value' => $args['author_id'], 'type' => PDO::PARAM_INT);
         }
-        
+
         if (isset($args['subject_id']) && $args['subject_id']) {
             $custom.= " AND kss.id = :subject_id";
             $params[] = array('name' => ':subject_id', 'value' => $args['subject_id'], 'type' => PDO::PARAM_STR);
         }
-        
+
         if (isset($args['organization_id']) && $args['organization_id'] > 0) {
             $custom.= " AND kso.id = :organization_id";
             $params[] = array('name' => ':organization_id', 'value' => $args['organization_id'], 'type' => PDO::PARAM_STR);
@@ -147,7 +147,6 @@ class TestModel extends CFormModel {
 
         return $count['total'];
     }
-
 
     public function get_test_category() {
         $sql = 'SELECT id as subject_id, title as subject_title
@@ -239,6 +238,21 @@ class TestModel extends CFormModel {
         return $command->execute();
     }
 
+    public function add_user_toefl($user_id, $test_id, $c_id, $type) {
+        $time = time();
+        $times = 1;
+        $sql = "INSERT INTO yima_user_test(user_id,ref_type,ref_id,main_id,date_added,times) VALUES(:user_id,:type,:test_id,:main_id,:date_added,:times)";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":user_id", $user_id);
+        $command->bindParam(":test_id", $test_id);
+        $command->bindParam(":main_id", $c_id);
+        $command->bindParam(":date_added", $time);
+        $command->bindParam(":type", $type);
+        $command->bindParam(":times", $times);
+        $command->execute();
+        return Yii::app()->db->lastInsertID;
+    }
+
     public function get_user_test($user_id, $test_id) {
         $sql = "SELECT *
                 FROM yima_user_test
@@ -248,6 +262,32 @@ class TestModel extends CFormModel {
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(":user_id", $user_id);
         $command->bindParam(":test_id", $test_id);
+        return $command->queryRow();
+    }
+
+    public function get_user_toefl($user_id, $test_id, $type) {
+        $sql = "SELECT *
+                FROM yima_user_test
+                WHERE user_id = :user_id
+                AND ref_type = :type
+                AND ref_id = :test_id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":user_id", $user_id);
+        $command->bindParam(":test_id", $test_id);
+        $command->bindParam(":type", $type);
+        return $command->queryRow();
+    }
+
+    public function get_user_toeic($user_id, $test_id, $type) {
+        $sql = "SELECT *
+                FROM yima_user_test
+                WHERE user_id = :user_id
+                AND ref_type = :type
+                AND ref_id = :test_id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":user_id", $user_id);
+        $command->bindParam(":test_id", $test_id);
+        $command->bindParam(":type", $type);
         return $command->queryRow();
     }
 
@@ -300,6 +340,80 @@ class TestModel extends CFormModel {
                 AND ytr.id=:id";
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(":id", $relationship_id, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    public function get_test_relationship_toefl($relationship_id,$part) {
+        
+        $type = "";
+
+        if ($part == "reading") {
+            $type= "LEFT JOIN yima_toefl_reading ynt
+                ON ynt.id = yut.ref_id";            
+        }
+        if ($part == "speaking") {
+            $type= "LEFT JOIN yima_toefl_speaking ynt
+                ON ynt.id = yut.ref_id";            
+        }        
+        if ($part == "listening") {
+            $type= "LEFT JOIN yima_toefl_listening ynt
+                ON ynt.id = yut.ref_id";            
+        }
+        if ($part == "writing") {
+            $type= "LEFT JOIN yima_toefl_writing ynt
+                ON ynt.id = yut.ref_id";            
+        }
+
+
+        $sql = "SELECT ytr.*,yut.user_id,ynt.title,yut.ref_id,yut.times,ysu.email as completor_email
+                FROM yima_test_relationship ytr,yima_user_test yut
+                
+                $type
+               
+                LEFT JOIN yima_sys_user ysu
+                ON yut.user_id = ysu.id              
+                WHERE yut.id = ytr.relationship_id               
+                AND ytr.id=:id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $relationship_id, PDO::PARAM_INT);
+
+        return $command->queryRow();
+    }
+    
+    public function get_test_relationship_toeic($relationship_id,$part) {
+        
+        $type = "";
+
+        if ($part == "reading") {
+            $type= "LEFT JOIN yima_toefl_reading ynt
+                ON ynt.id = yut.ref_id";            
+        }
+        if ($part == "speaking") {
+            $type= "LEFT JOIN yima_toefl_speaking ynt
+                ON ynt.id = yut.ref_id";            
+        }        
+        if ($part == "listening") {
+            $type= "LEFT JOIN yima_toefl_listening ynt
+                ON ynt.id = yut.ref_id";            
+        }
+        if ($part == "writing") {
+            $type= "LEFT JOIN yima_toefl_writing ynt
+                ON ynt.id = yut.ref_id";            
+        }
+
+
+        $sql = "SELECT ytr.*,yut.user_id,ynt.title,yut.ref_id,yut.times,ysu.email as completor_email
+                FROM yima_test_relationship ytr,yima_user_test yut
+                
+                $type
+               
+                LEFT JOIN yima_sys_user ysu
+                ON yut.user_id = ysu.id              
+                WHERE yut.id = ytr.relationship_id               
+                AND ytr.id=:id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $relationship_id, PDO::PARAM_INT);
+
         return $command->queryRow();
     }
 
@@ -395,6 +509,34 @@ class TestModel extends CFormModel {
             $command->bindParam($a['name'], $a['value'], $a['type']);
         $count = $command->queryRow();
         return $count['total'];
+    }
+
+    public function get_reading_scq_answer($id) {
+        $sql = "SELECT answer FROM yima_toefl_reading_scq where id = :id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    public function get_reading_mcq_answer($id) {
+        $sql = "SELECT answer FROM yima_toefl_reading_mcq where id = :id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    public function get_reading_scq_answer_toeic($id) {
+        $sql = "SELECT answer FROM yima_toefl_reading_scq where id = :id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+
+    public function get_reading_mcq_answer_toeic($id) {
+        $sql = "SELECT answer FROM yima_toefl_reading_mcq where id = :id";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $id, PDO::PARAM_INT);
+        return $command->queryRow();
     }
 
 }

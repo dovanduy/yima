@@ -24,7 +24,7 @@ $(document).ready(function(){
     init();    
     tab_active();
     model_tab();
-    toefl_test();
+   // toefl_test();
     show_subject();
     add_test();
     bind_user();
@@ -226,20 +226,29 @@ function bind_nt_test(){
     
     $('#test-nt .next').click(function(){
         var ele = $(this);
+        $('#test-nt .submit-test').hide();
         var id = ele.attr('value');
+         var total = $('.review').attr('value');
         
         $('#test-nt .question_'+id).hide();
         var id = ++id;
         $('#test-nt .question_'+id).show();
+         if(id == total)
+            $('#test-nt .submit-test').show();
         return false;
     });
     
     $('#test-nt .back').click(function(){
+        $('#test-nt .submit-test').hide();
         var ele = $(this);
         var id = ele.attr('value');
+        var total = $('.review').attr('value');
+       
         $('#test-nt .question_'+id).hide();
         var id = --id;
         $('#test-nt .question_'+id).show();
+        if(id == total)
+            $('#test-nt .submit-test').show();
         return false;
     });
     
@@ -280,14 +289,14 @@ function bind_nt_test(){
     });
     
     $(".query-search").click(function(){
-       if(!confirm('Bạn có chắc bỏ loại tìm kiếm này không?')) 
-           return false;
-       var ele = $(this);
-       var li = ele.parents('li');
-       var form = ele.parents('form');
-       li.remove();
-       form.trigger('submit');
-       return false;
+        if(!confirm('Bạn có chắc bỏ loại tìm kiếm này không?')) 
+            return false;
+        var ele = $(this);
+        var li = ele.parents('li');
+        var form = ele.parents('form');
+        li.remove();
+        form.trigger('submit');
+        return false;
     });
 }
 
@@ -393,10 +402,13 @@ function show_subject(){
 
 function toefl_test(){
     $(".find-magu a.toefl-link").click(function(){
-        $('.find-magu .toefl-test').css('display','none');
+      
+        //$('.find-magu .toefl-test').css('display','none');
         var ele = $(this);       
         var id = ele.attr('value');
-        $('#toefl_'+id).css('display','block');
+        console.log(id);
+        //        $('#toefl_'+id).css('display','block');
+        $('#toefl_'+id).toggle('slow', function() {});
         return false;
     }
     )

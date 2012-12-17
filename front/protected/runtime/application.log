@@ -8429,3 +8429,365 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/robots.txt
 ---
+2012/12/17 10:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 10:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:00:48 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:00:49 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:00:52 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:02:20 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:02:38 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:05:11 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:05:29 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:06:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:06:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:08:26 [error] [exception.CException] exception 'CException' with message 'TestModel and its behaviors do not have a method or closure named "get_user_toefl".' in D:\xampp\htdocs\yima\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): CComponent->__call('get_user_toefl', Array)
+#1 D:\xampp\htdocs\yima\front\protected\controllers\ToeflController.php(68): TestModel->get_user_toefl('7', '94', 'toefl_reading_1')
+#2 D:\xampp\htdocs\yima\framework\web\actions\CInlineAction.php(50): ToeflController->actionMarks_reading()
+#3 D:\xampp\htdocs\yima\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yima\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yima\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(283): CController->run('marks_reading')
+#7 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('toefl/marks_rea...')
+#8 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#10 {main}
+REQUEST_URI=/yima/front/toefl/marks_reading
+HTTP_REFERER=http://localhost/yima/toefl/reading/index/94/1/61
+---
+2012/12/17 11:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/toefl/listening/bBLI4PhdP.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/toefl/listening/bBLI4PhdP.jpg
+HTTP_REFERER=http://localhost/yima/toefl/listening/index/69/1/61
+---
+2012/12/17 11:12:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/toefl/listening/bBLI4PhdP.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/toefl/listening/bBLI4PhdP.jpg
+HTTP_REFERER=http://localhost/yima/toefl/listening/index/69/1/61
+---
+2012/12/17 11:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/listening_page/2012/11/4d7daYOod.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/listening_page/2012/11/4d7daYOod.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:12:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/scq/2012/11/hDCsfBWwl.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/scq/2012/11/hDCsfBWwl.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:12:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/scq/2012/11/iiThdrfpz.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/scq/2012/11/iiThdrfpz.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:12:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/scq/2012/11/1Db1KFG6N.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/scq/2012/11/1Db1KFG6N.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:12:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/replay_sound/scq/2012/11/dVCavzLjn.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/replay_sound/scq/2012/11/dVCavzLjn.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/scq/2012/11/e1gWxtkGx.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/scq/2012/11/e1gWxtkGx.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/sentence_sound/scq/2012/11/7pGiydFVr.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/sentence_sound/scq/2012/11/7pGiydFVr.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/audio/toefl/listening/cq/2012/11/kzAYy5L9z.mp3".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/audio/to...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/audio/toefl/listening/cq/2012/11/kzAYy5L9z.mp3
+HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
+---
+2012/12/17 11:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:16:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:16:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:16:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/17 11:16:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---

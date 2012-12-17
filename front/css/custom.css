@@ -15,12 +15,13 @@
 .ticket-name{width:110px}
 
 .find-magu .toefl-link:link{color: #888}
-.find-magu .toefl-test{display: none}
 
 
-.find-magu .toefl-test ul,.find-magu .toefl-test li{padding:5px;margin-left: 10px}
-.find-magu .toefl-test li{width: 100px;border-top:0px}
-.find-magu .toefl-test ul{float:left}
+
+ .toefl-test ul, .toefl-test li{padding:5px;margin-left: 10px}
+.toefl-test li{width: 100px;border-top:0px}
+.toefl-test ul{float:left}
+
 
 #test-nt{padding: 24px 20px;background-color: #FFFFFF;}
 #test-nt .list-result{display: none;padding:10px;} 
@@ -91,3 +92,5 @@
     
 
 .signin-up{padding: 25px 0}
+
+.toefl-course ul li ul li{border-bottom: #888 1px solid}

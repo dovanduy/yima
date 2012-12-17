@@ -106,6 +106,6 @@ return array(
         'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/front/upload/',
         //'upload_url' => "http://yima.vn/upload/",
         'upload_url' => "/yima/front/upload/",
-        'domain'=>'/'        
+        'domain'=>'/yima/'       
     ),
 );
