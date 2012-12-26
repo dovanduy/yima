@@ -79,9 +79,9 @@ class Create_testController extends Controller {
             $this->message['error'][] = "Bạn chưa chọn phân loại.";
         if ($this->validator->is_empty_string($price))
             $this->message['error'][] = "Giá tiền không được để trống.";
-        if (!$this->validator->is_integer($price) || $price < 1000 || $price % 500 != 0)
-            if ($price != "0")
-                $this->message['error'][] = "Giá tiền tối thiểu 1,000đ và chia hết cho 500đ";
+               if (!$this->validator->is_integer($price))
+            $this->message['error'][] = "Giá tiền phải là số";
+      
         if (!$this->validator->is_empty_string($attach_file['name']) && $attach_file['type'] != "application/pdf" || (int) $attach_file['size'] > 3145728)
             $this->message['error'][] = "Tài liệu scan định dạng PDF, dung lượng tối đa 3MB";
 
@@ -96,6 +96,10 @@ class Create_testController extends Controller {
         if (count($this->message['error'])) {
             $this->message['success'] = false;
             return false;
+        }
+        
+        if($price == ""){
+            $price =0;
         }
 
         $pdf_file = "";
@@ -317,8 +321,8 @@ class Create_testController extends Controller {
             $this->message['error'][] = "Bạn chưa chọn phân loại.";
         if ($this->validator->is_empty_string($price))
             $this->message['error'][] = "Giá tiền không được để trống.";
-        if (!$this->validator->is_integer($price) || $price < 1000 || $price % 500 != 0)
-            $this->message['error'][] = "Giá tiền tối thiểu 1000đ và chia hết cho 500đ";
+        if (!$this->validator->is_integer($price))
+            $this->message['error'][] = "Giá tiền phải là số";
         if (!$this->validator->is_empty_string($attach_file['name']) && $attach_file['type'] != "application/pdf" || (int) $attach_file['size'] > 3145728)
             $this->message['error'][] = "Tài liệu scan định dạng PDF, dung lượng tối đa 3MB";
 
@@ -326,6 +330,9 @@ class Create_testController extends Controller {
             $this->message['success'] = false;
             return false;
         }
+        
+
+
 
         if (!$this->OrganizationModel->is_exist_group($organization, $faculty, $subject))
             $this->message['error'][] = "Bạn vui lòng chọn Trường/Trung tâm, Khoa, Chủ đề chính xác.";
