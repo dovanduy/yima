@@ -8791,3 +8791,129 @@ Stack trace:
 REQUEST_URI=/yima/front/images/menu/toefl.jpg
 HTTP_REFERER=http://localhost/yima/front/
 ---
+2012/12/26 09:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/26 09:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/26 09:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2012/12/26 09:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2012/12/26 09:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/26 09:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/26 09:13:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2012/12/26 09:13:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2012/12/26 09:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/26 09:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2012/12/26 09:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tiny_mce/plugins/equation/editor_plugin.js".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('js/tiny_mce/plu...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/js/tiny_mce/plugins/equation/editor_plugin.js
+HTTP_REFERER=http://localhost/yima/front/create_test/edit/id/729
+---
+2012/12/26 09:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tiny_mce/plugins/imagemanager/editor_plugin.js".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('js/tiny_mce/plu...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/js/tiny_mce/plugins/imagemanager/editor_plugin.js
+HTTP_REFERER=http://localhost/yima/front/create_test/edit/id/729
+---
+2012/12/26 09:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tiny_mce/plugins/equation/editor_plugin.js".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('js/tiny_mce/plu...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/js/tiny_mce/plugins/equation/editor_plugin.js
+HTTP_REFERER=http://localhost/yima/front/create_test/edit/id/728
+---
+2012/12/26 09:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/tiny_mce/plugins/imagemanager/editor_plugin.js".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('js/tiny_mce/plu...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/js/tiny_mce/plugins/imagemanager/editor_plugin.js
+HTTP_REFERER=http://localhost/yima/front/create_test/edit/id/728
+---

@@ -184,7 +184,8 @@ function bind_nt_test(){
         dataType:'json'
     });    
     
-    $('.add-quest .get-number').click(function(){        
+    $('.add-quest .get-number').click(function(){
+              
         var ele = $('.number-question');
         var number = ele.val();
         var length = $(".list-question .questions").length;
@@ -203,7 +204,10 @@ function bind_nt_test(){
             $(response).insertBefore($(".list-question form .form-actions"));
             $(".list-question").show();
             $(".list-question .questions.hide").fadeIn(300);
+            bind_mce();
         });
+        
+        
         return false;
         
     });
@@ -422,10 +426,10 @@ function bind_mce(){
         theme : "advanced",        
         
         mode : "specific_textareas",
-        plugins : "fullpage, equation",
-        theme_advanced_buttons1 : "equation,save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull",
-        theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,forecolor,backcolor",
-        theme_advanced_buttons3 : "formatselect,fontselect,fontsizeselect",
+        //plugins : "fullpage, equation",
+        plugins:"autolink,equation,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,imagemanager",
+        theme_advanced_buttons1 : "equation",
+        
         theme_advanced_toolbar_location : "top",
         theme_advanced_toolbar_align : "left",
         theme_advanced_statusbar_location : "bottom",

@@ -20,7 +20,7 @@
         <div class="control-group">
             <label class="control-label">Description</label>
             <div class="controls">
-                <textarea name="description" rows="12" class="span11 tinymce"><?php if (isset($_POST['description'])) echo $_POST['description']; ?></textarea>
+                <textarea name="description" rows="12" class="span11"><?php if (isset($_POST['description'])) echo $_POST['description']; ?></textarea>
             </div>
         </div>
 

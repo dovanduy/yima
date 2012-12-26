@@ -46,15 +46,15 @@ return array(
         ),
         // uncomment the following to use a MySQL database
 
-        /*'db' => array(
-            'connectionString' => 'mysql:host=127.0.0.1;dbname=yimadb',
-            'emulatePrepare' => true,
-            //'enableProfiling' => true,
-            //'enableParamLogging' => true,
-            'username' => 'yima',
-            'password' => '8$mdKKq5ngZQ',
-            'charset' => 'utf8',
-        ),*/
+        /* 'db' => array(
+          'connectionString' => 'mysql:host=127.0.0.1;dbname=yimadb',
+          'emulatePrepare' => true,
+          //'enableProfiling' => true,
+          //'enableParamLogging' => true,
+          'username' => 'yima',
+          'password' => '8$mdKKq5ngZQ',
+          'charset' => 'utf8',
+          ), */
         'db' => array(
             'connectionString' => 'mysql:host=127.0.0.1;dbname=yima',
             'emulatePrepare' => true,
@@ -92,11 +92,13 @@ return array(
         'ppp' => 20,
         'lang' => 'vn',
         'regx_number' => '/^\d+$/',
-		'raw_folder'=>'raw_tests',
+        'raw_folder' => 'raw_tests',
         //'upload_dir' => '/home/yima/http/hosts/yima.vn/front/upload/',
-        'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/front/upload/',
-        //'upload_url' => "http://yima.vn/upload/",
-        'upload_url' => "/yima/front/upload/",
-        'domain'=>'/'
+//        'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/front/upload/',
+//        //'upload_url' => "http://yima.vn/upload/",
+//        'upload_url' => "/yima/front/upload/",
+        'upload_dir' => 'D:/xampp/htdocs/yima/upload/',
+        'upload_url' => "/yima/upload/",
+        'domain' => '/'
     ),
 );

@@ -29,6 +29,7 @@
                                         Ghi nhớ đăng nhập
                                     </label>
                                     <a class="btn-style btn-login button-medium btn-submit" href="#">Đăng nhập</a>
+                                <input type="submit" name="Submit" value="Submit" style="visibility:hidden"> 
                                     </div>
                                 </div>
                             </div>

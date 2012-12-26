@@ -21,7 +21,7 @@
                             <div class="control-group">
                                 <label class="control-label">Câu hỏi</label>
                                 <div class="controls">
-                                    <textarea  class="span12" name="question"><?php if (isset($_POST['question'])) echo htmlspecialchars ($_POST['question']);else echo htmlspecialchars($question['question']); ?></textarea>
+                                    <textarea  class="span12 tinymce" name="question"><?php if (isset($_POST['question'])) echo htmlspecialchars ($_POST['question']);else echo htmlspecialchars($question['question']); ?></textarea>
                                 </div>
                             </div>
 
