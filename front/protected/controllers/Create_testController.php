@@ -79,9 +79,9 @@ class Create_testController extends Controller {
             $this->message['error'][] = "Bạn chưa chọn phân loại.";
         if ($this->validator->is_empty_string($price))
             $this->message['error'][] = "Giá tiền không được để trống.";
-               if (!$this->validator->is_integer($price))
-            $this->message['error'][] = "Giá tiền phải là số";
-      
+        if (!$this->validator->is_positive_number($price) || $price % 500 != 0)
+            $this->message['error'][] = "Giá tiền phải là số và chia hết cho 500";
+
         if (!$this->validator->is_empty_string($attach_file['name']) && $attach_file['type'] != "application/pdf" || (int) $attach_file['size'] > 3145728)
             $this->message['error'][] = "Tài liệu scan định dạng PDF, dung lượng tối đa 3MB";
 
@@ -97,9 +97,9 @@ class Create_testController extends Controller {
             $this->message['success'] = false;
             return false;
         }
-        
-        if($price == ""){
-            $price =0;
+
+        if ($price == "") {
+            $price = 0;
         }
 
         $pdf_file = "";
@@ -243,27 +243,27 @@ class Create_testController extends Controller {
             $this->Create_testModel->update(array('group_id' => $gourp['id'], 'id' => $t['id']));
         }
     }
-    
+
     /*
-    public function actionGet_faculty_by_organizaiton() {
-        HelperGlobal::require_login();
-        $this->layout = "empty";
-        $organization = $_POST['organization_id'];
-        $faculty = $this->Create_testModel->get_faculty($organization);
-        $this->viewData['faculty'] = $faculty;
-        $this->render('list_faculty', $this->viewData);
-    }
+      public function actionGet_faculty_by_organizaiton() {
+      HelperGlobal::require_login();
+      $this->layout = "empty";
+      $organization = $_POST['organization_id'];
+      $faculty = $this->Create_testModel->get_faculty($organization);
+      $this->viewData['faculty'] = $faculty;
+      $this->render('list_faculty', $this->viewData);
+      }
 
-    public function actionGet_sub() {
-        HelperGlobal::require_login();
-        $this->layout = "empty";
-        $organization = $_POST['organization_id'];
-        $faculty = $_POST['faculty_id'];
+      public function actionGet_sub() {
+      HelperGlobal::require_login();
+      $this->layout = "empty";
+      $organization = $_POST['organization_id'];
+      $faculty = $_POST['faculty_id'];
 
-        $subject = $this->Create_testModel->get_sub($organization, $faculty);
-        $this->viewData['subject'] = $subject;
-        $this->render('list_subject', $this->viewData);
-    }*/
+      $subject = $this->Create_testModel->get_sub($organization, $faculty);
+      $this->viewData['subject'] = $subject;
+      $this->render('list_subject', $this->viewData);
+      } */
 
     public function actionDelete($id) {
         HelperGlobal::require_login();
@@ -321,8 +321,8 @@ class Create_testController extends Controller {
             $this->message['error'][] = "Bạn chưa chọn phân loại.";
         if ($this->validator->is_empty_string($price))
             $this->message['error'][] = "Giá tiền không được để trống.";
-        if (!$this->validator->is_integer($price))
-            $this->message['error'][] = "Giá tiền phải là số";
+        if (!$this->validator->is_positive_number($price) || $price % 500 != 0)
+            $this->message['error'][] = "Giá tiền phải là số và chia hết cho 500";
         if (!$this->validator->is_empty_string($attach_file['name']) && $attach_file['type'] != "application/pdf" || (int) $attach_file['size'] > 3145728)
             $this->message['error'][] = "Tài liệu scan định dạng PDF, dung lượng tối đa 3MB";
 
@@ -330,7 +330,7 @@ class Create_testController extends Controller {
             $this->message['success'] = false;
             return false;
         }
-        
+
 
 
 

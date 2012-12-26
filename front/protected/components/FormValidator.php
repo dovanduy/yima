@@ -15,15 +15,16 @@ class FormValidator {
     private $element_array = array();
     private $method = "post";
     private $invalid_elements = array();
-    private $allowed_image_type = array('image/png', 'image/jpeg','image/gif');
+    private $allowed_image_type = array('image/png', 'image/jpeg', 'image/gif');
     private $allowed_media_type = array('audio/mpeg');
+
     /**
      * Constructor
      * method must be "get" or "post". Default value is "post"
      * @var string $_method
      * 
      */
-    public function __construct($_method="post") {
+    public function __construct($_method = "post") {
         if ($_method != "post")
             $this->method = "get";
     }
@@ -141,44 +142,43 @@ class FormValidator {
         //can not be here!! :-)
         return false;
     }
+
     private function validateType($type) {
         if (array_search($type, $this->allowed_image_type) === false)
             return false;
         else
             return true;
     }
-    
-    private function validateImage($image)
-    {
-        if($image == "")
+
+    private function validateImage($image) {
+        if ($image == "")
             return false;
-        if(is_array(getimagesize($image)))
+        if (is_array(getimagesize($image)))
             return true;
         return false;
     }
-    
-    private function validateSize($filesize,$allow_size) {
-        if ((float) $filesize > (float)$allow_size)
+
+    private function validateSize($filesize, $allow_size) {
+        if ((float) $filesize > (float) $allow_size)
             return false;
         return true;
     }
-    
+
     private function validateMediaType($type) {
         if (array_search($type, $this->allowed_media_type) === false)
             return false;
         else
             return true;
     }
-    public function is_valid_image($file,$allow_size = 3145728)
-    {
-        if (!$this->validateImage($file['tmp_name']) || !$this->validateType($file['type']) || !$this->validateSize($file['size'],$allow_size)) 
+
+    public function is_valid_image($file, $allow_size = 3145728) {
+        if (!$this->validateImage($file['tmp_name']) || !$this->validateType($file['type']) || !$this->validateSize($file['size'], $allow_size))
             return false;
         return true;
     }
-    
-    public function is_valid_mp3($file,$allow_size = 3145728)
-    {
-        if (!$this->validateMediaType($file['type']) || !$this->validateSize($file['size'],$allow_size)) 
+
+    public function is_valid_mp3($file, $allow_size = 3145728) {
+        if (!$this->validateMediaType($file['type']) || !$this->validateSize($file['size'], $allow_size))
             return false;
         return true;
     }
@@ -188,24 +188,21 @@ class FormValidator {
         $this->invalid_elements = array();
         $this->method = "post";
     }
-    
-    public static function check_max_image_size($w,$h,$img)
-    {
+
+    public static function check_max_image_size($w, $h, $img) {
         $info = getimagesize($img);
-        return (int)$info[0] <= $w && (int)$info[1] <= $h;
+        return (int) $info[0] <= $w && (int) $info[1] <= $h;
     }
-    
-    public static function check_min_image_size($w,$h,$img)
-    {
+
+    public static function check_min_image_size($w, $h, $img) {
         $info = getimagesize($img);
-        return (int)$info[0] >= $w && (int)$info[1] >= $h;
+        return (int) $info[0] >= $w && (int) $info[1] >= $h;
     }
-    
-    public static function check_fixed_image_size($w,$h,$img)
-    {
+
+    public static function check_fixed_image_size($w, $h, $img) {
         $info = getimagesize($img);
-        
-        return (int)$info[0] == $w && (int)$info[1] == $h;
+
+        return (int) $info[0] == $w && (int) $info[1] == $h;
     }
 
     public static function is_email($email) {
@@ -234,6 +231,11 @@ class FormValidator {
 
     public static function is_valid($pattern, $subject) {
         return preg_match($pattern, $subject);
+    }
+
+    public function is_positive_number($str) {
+        $pattern = '/^\d+$/';
+        return FormValidator::is_valid($pattern, $str);
     }
 
     public static function is_match($str, $array) {
