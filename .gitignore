@@ -1,1 +1,8 @@
 /front/upload/
+.DS_Store
+*.log
+toefl/.DS_Store
+toeic/.DS_Store
+back/protected/runtime/application.log
+
+front/protected/runtime/application.log
