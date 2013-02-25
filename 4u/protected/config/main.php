@@ -49,12 +49,12 @@ return array(
         // uncomment the following to use a MySQL database
 
         'db' => array(
-            'connectionString' => 'mysql:host=127.0.0.1;dbname=yimadb',
+            'connectionString' => 'mysql:host=127.0.0.1;dbname=yima',
             'emulatePrepare' => true,
             //'enableProfiling' => true,
             //'enableParamLogging' => true,
-            'username' => 'yima',
-            'password' => '8$mdKKq5ngZQ',
+            'username' => 'root',
+            'password' => '',
             'charset' => 'utf8',
         ),
         'errorHandler' => array(
