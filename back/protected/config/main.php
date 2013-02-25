@@ -1,5 +1,5 @@
 <?php
-
+require_once( dirname(__FILE__) . '/../components/simple_html_dom.php');
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable

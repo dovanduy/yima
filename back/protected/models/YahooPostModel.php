@@ -31,6 +31,11 @@ class YahooPostModel extends CFormModel {
             $params[] = array('name' => ':author_id', 'value' => $args['author_id'], 'type' => PDO::PARAM_INT);
         }
         
+        if (isset($args['category_id'])) {
+            $custom .= " AND yp.category_id = :category_id";
+            $params[] = array('name' => ':category_id', 'value' => $args['category_id'], 'type' => PDO::PARAM_INT);
+        }
+        
         $sql = "SELECT yp.*,yu.lastname,yu.firstname,yu.email
                 FROM yahoo_posts yp
                 LEFT JOIN yahoo_users yu
@@ -68,6 +73,11 @@ class YahooPostModel extends CFormModel {
             $params[] = array('name' => ':author_id', 'value' => $args['author_id'], 'type' => PDO::PARAM_INT);
         }
         
+        if (isset($args['category_id'])) {
+            $custom .= " AND yp.category_id = :category_id";
+            $params[] = array('name' => ':category_id', 'value' => $args['category_id'], 'type' => PDO::PARAM_INT);
+        }
+        
         $sql = "SELECT count(*) as total
                 FROM yahoo_posts yp                
                 WHERE 1
@@ -88,6 +98,17 @@ class YahooPostModel extends CFormModel {
                 WHERE id = :id";
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(":id", $id,PDO::PARAM_INT);
+        return $command->queryRow();
+    }
+    
+    public function is_exist_with_user_and_slug($author_id,$slug){
+        $sql = "SELECT *
+                FROM yahoo_posts
+                WHERE author_id = :author_id
+                AND slug = :slug";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":author_id", $author_id);
+        $command->bindParam(":slug", $slug);
         return $command->queryRow();
     }
     

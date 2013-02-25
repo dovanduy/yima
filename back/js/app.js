@@ -5,8 +5,29 @@ $(document).ready(function(){
     init_ddq_manager();
     bind_subject_mod();
     bind_nt_test();
-    
+    bind_crawl_yahoo();
 });
+
+function bind_crawl_yahoo(){
+    $("#crawl-post .more-detail").click(function(){
+        var ele = $(this);
+        if(ele.hasClass('disabled'))
+            return false;
+        ele.addClass('disabled').html('Calculating...');
+        var category_id = $("#crawl-post .category-id").val();
+        $("#crawl-post .more").addClass('hide');
+        $.post(ele.attr('href'),{'category_id':category_id},function(response){
+            console.log(response);
+            ele.removeClass('disabled').html('More Detail');
+             $("#crawl-post .category-name strong").text(response.category_title);
+             $("#crawl-post .total-records span").text(response.total_records);
+             $("#crawl-post .total-pages span").text(response.total_pages);
+             $("#crawl-post .total-posts span").text(response.total_posts);
+             $("#crawl-post .more").removeClass('hide');
+        },'json');
+        return false;
+    });
+}
 
 function filter_search(oid,fid,sid,reload){
     $(".add-test .faculty").fadeOut('fast');

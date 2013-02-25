@@ -121,6 +121,36 @@ class YahooUserModel extends CFormModel {
         $command->bindParam(":id", $id, PDO::PARAM_INT);
         return $command->queryRow();
     }
+    
+    public function get_by_title($title) {
+        $sql = "SELECT ysu.*,yt.amount,ynt.total_test,yp.total_post,yc.total_card,ycu.total_coupon
+                FROM yahoo_users ysu
+                LEFT JOIN (SELECT SUM(amount) as amount,user_id
+                            FROM yima_transactions
+                            GROUP BY user_id) yt
+                ON yt.user_id = ysu.id
+                LEFT JOIN (SELECT count(*) as total_test,author_id
+                            FROM yima_nt_test
+                            GROUP BY author_id) ynt
+                ON ynt.author_id = ysu.id
+                LEFT JOIN (SELECT count(*) as total_post,author_id
+                            FROM yima_posts
+                            GROUP BY author_id) yp
+                ON yp.author_id = ysu.id
+                LEFT JOIN (SELECT count(*) as total_card,user_id
+                            FROM yima_cards
+                            GROUP BY user_id) yc
+                ON yc.user_id = ysu.id
+                LEFT JOIN (SELECT count(*) as total_coupon,user_id
+                            FROM yima_coupon_user
+                            GROUP BY user_id) ycu
+                ON ycu.user_id = ysu.id
+                WHERE ysu.title = :title
+                ";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":title", $title);
+        return $command->queryRow();
+    }
 
     public function update($args) {
         $keys = array_keys($args);
