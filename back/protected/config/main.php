@@ -94,10 +94,10 @@ return array(
         'regx_number' => '/^\d+$/',
         'raw_folder' => 'raw_tests',
         //'upload_dir' => '/home/yima/http/hosts/yima.vn/front/upload/',
-//        'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/front/upload/',
+        'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/upload/',
 //        //'upload_url' => "http://yima.vn/upload/",
 //        'upload_url' => "/yima/front/upload/",
-        'upload_dir' => 'D:/xampp/htdocs/yima/upload/',
+//        'upload_dir' => 'D:/xampp/htdocs/yima/upload/',
         'upload_url' => "/yima/upload/",
         'domain' => '/'
     ),
