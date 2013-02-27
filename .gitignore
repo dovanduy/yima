@@ -1,4 +1,5 @@
 /front/upload/
+upload/*
 .DS_Store
 *.log
 toefl/.DS_Store
