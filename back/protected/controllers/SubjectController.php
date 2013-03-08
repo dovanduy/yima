@@ -109,7 +109,7 @@ class SubjectController extends Controller {
     private function do_add() {
         $title = trim($_POST['title']);
 
-        $priority = $_POST['priority'];
+        $priority = ($_POST['priority']!="")?$_POST['priority']:0;
         $featured = (isset($_POST['featured']))?$_POST['featured']:0;
         if ($featured != 1) {
             $featured = 0;
@@ -133,6 +133,8 @@ class SubjectController extends Controller {
             return false;
         }
 
+        $img='';
+        $thumbnail='';
         if (!$this->validator->is_empty_string($image['name'])) {
             $resize = HelperApp::resize_images($image, HelperApp::get_subject_sizes());            
             $img = $resize['img'];

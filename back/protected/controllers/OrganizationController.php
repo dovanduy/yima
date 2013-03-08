@@ -194,8 +194,8 @@ class OrganizationController extends Controller {
         $total = $this->OrganizationModel->count_groups($args);
         
         $this->viewData['organization'] = $organization;
-        $this->viewData['subjects'] = $this->SubjectModel->get_all();
-        $this->viewData['faculties'] = $this->FacultyModel->get_all(array());
+        $this->viewData['subjects'] = $this->SubjectModel->gets(array('disabled'=>0),1,100);
+        $this->viewData['faculties'] = $this->FacultyModel->get_all_by_organization(array('organization_id'=>$id));
         $this->viewData['groups'] = $groups;
         $this->viewData['total'] = $total;
         $this->viewData['paging'] = $total > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl."/organization/group/id/$id/p/", $total, $p) : "";
