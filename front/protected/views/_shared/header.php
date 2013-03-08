@@ -78,7 +78,7 @@
                         <div class="span6"><a href="<?php echo Helper::host_info(); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt=""/></a></div>
                         <div class="span6">
                             <div class="menu-top-contact pull-right">
-                                <i class="icon-circle-arrow-right"></i> Gọi <span class="label label-info">08.668.22033</span> để được tư vấn trực tiếp<br/>
+                                <?php /*<i class="icon-circle-arrow-right"></i> Gọi <span class="label label-info">08.668.22033</span> để được tư vấn trực tiếp<br/>*/?>
                                 <i class="icon-circle-arrow-right"></i> <a href="<?php echo Yii::app()->request->baseUrl; ?>/contact">Liên hệ</a>
                             </div>
                         </div>
@@ -104,9 +104,9 @@
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/create_test" class="bold">Soạn kiểm tra</a></li>
                     <?php /*
                       <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/info/view/page/help" class="bold">Hướng dẫn sử dụng</a></li>
+                      <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/faq/">Câu hỏi thường găp</a></li>
+                      <li><a href="<?php echo Yii::app()->params['domain']; ?>4u/" class="bold">Yima4u</a></li>
                      */ ?>
-                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/faq/">Câu hỏi thường găp</a></li>
-                    <li><a href="<?php echo Yii::app()->params['domain']; ?>4u/" class="bold">Yima4u</a></li>
                 </ul>
                 <ul class="nav nav-pills pull-right">
                     <?php if (!UserControl::LoggedIn()): ?>
@@ -144,14 +144,15 @@
                         <li class="dropdown nav-account">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo UserControl::getFullname(); ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
+                                <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/test/type/created/"><i class="icon-plus-sign"></i> Bài kiểm tra của tôi</a></li>
+                                <li class="divider"></li>
     <!--                                <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile">Trang cá nhân</a></li>-->
-                                <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/setting"><i class="icon-cog"></i> Thiết lập tài khoản</a></li>
+                                <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/setting"><i class="icon-cog"></i> Cài đặt tài khoản</a></li>
                                 <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/password"><i class="icon-lock"></i> Đổi mật khẩu</a></li>
                                 <li class="divider"></li>
                                 <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/transaction"><i class="icon-tasks"></i> Lịch sử giao dịch</a></li>
-                                <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/test/type/created/"><i class="icon-plus-sign"></i> Bài kiểm tra đã tạo</a></li>
                                 <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/test/type/done/"><i class="icon-ok"></i> Bài kiểm tra đã làm</a></li>
-                                <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/test/type/toefl/"><i class="icon-ok"></i> Bài Toefl đã làm</a></li>
+                                <?php /* <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/test/type/toefl/"><i class="icon-ok"></i> Bài Toefl đã làm</a></li> */ ?>
                                 <li class="divider"></li>
                                 <li class=""><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/signout"><i class="icon-off"></i> Thoát</a></li>
                             </ul>

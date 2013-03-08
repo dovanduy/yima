@@ -2,7 +2,7 @@
 <section class="search span9">
     <div id="user-info">
         <div class="head">
-            <legend>Bài kiểm tra đã tạo</legend>
+            <legend>Bài kiểm tra của tôi</legend>
         </div>
         <div class="">
             <table class="table table-striped table-bordered table-center mytest">
@@ -16,7 +16,7 @@
                 <tbody>
                     <?php if (count($tests) < 1): ?>
                         <tr>
-                            <td colspan="4" style="text-align: center">Chưa có dữ liệu</td>
+                            <td colspan="5" style="text-align: center">Chưa có dữ liệu</td>
                         </tr>
                     <?php endif; ?>
                     <?php foreach ($tests as $k => $v): ?>

@@ -2,7 +2,7 @@
     <thead>
     <th>#ID</th>
     <th style="text-align: left">Thông tin</th>
-    <th>Ngày nạp</th>
+    <th>Ngày giao dịch</th>
     <th style="text-align: left">Số tiền</th>
 </thead>
 <tbody>

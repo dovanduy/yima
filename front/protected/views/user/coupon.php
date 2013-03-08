@@ -2,7 +2,7 @@
     <thead>
     <th>#ID</th>
     <th>Mã thẻ</th>
-    <th>Ngày nạp</th>
+    <th>Ngày giao dịch</th>
     <th>Số tiền</th>
 </thead>
 <tbody>
