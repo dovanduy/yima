@@ -9709,3 +9709,327 @@ Stack trace:
 REQUEST_URI=/yima/front/test/search_by_category/c/2309
 HTTP_REFERER=http://localhost/yima/front/user/test/type/created/
 ---
+2013/03/09 03:36:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php (145)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/09 03:36:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php(145): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php(30): OrganizationModel->get_question('851', '28')
+#3 [internal function]: OrganizationController->actionIndex('truong-dai-hoc-...', '851')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/in...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh/subject_id/851
+HTTP_REFERER=http://localhost/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh
+---
+2013/03/09 03:58:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php (145)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/09 03:58:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php(145): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php(30): OrganizationModel->get_question('851', '28')
+#3 [internal function]: OrganizationController->actionIndex('truong-dai-hoc-...', '851')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/in...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh/subject_id/851
+HTTP_REFERER=http://localhost/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh
+---
+2013/03/09 04:00:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php (145)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/09 04:00:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php(145): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php(30): OrganizationModel->get_question('851', '28')
+#3 [internal function]: OrganizationController->actionIndex('truong-dai-hoc-...', '851')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/in...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh/subject_id/851
+HTTP_REFERER=http://localhost/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh
+---
+2013/03/09 04:01:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php (145)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/09 04:01:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php(145): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php(30): OrganizationModel->get_question('851', '28')
+#3 [internal function]: OrganizationController->actionIndex('truong-dai-hoc-...', '851')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/in...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh/subject_id/851
+HTTP_REFERER=http://localhost/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh
+---
+2013/03/09 04:01:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php (145)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/09 04:01:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php(145): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php(30): OrganizationModel->get_question('2309', '242')
+#3 [internal function]: OrganizationController->actionIndex('dai-hoc-ngoai-n...', '2309')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/in...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/front/organization/index/slug/dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh/subject_id/2309
+HTTP_REFERER=http://localhost/yima/front/organization/index/slug/dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/09 04:03:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_organization".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_organ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_organ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_organization/org/242
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/09 04:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_category".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_categ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_categ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_category/c/2309
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/09 04:05:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_organization".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_organ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_organ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_organization/org/242
+HTTP_REFERER=http://localhost/yima/front/user/test/type/done/
+---
+2013/03/09 04:07:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_organization".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_organ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_organ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_organization/org/242
+HTTP_REFERER=http://localhost/yima/front/user/test/type/done/
+---
+2013/03/09 04:07:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_category".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_categ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_categ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_category/c/2309
+HTTP_REFERER=http://localhost/yima/front/user/test/type/done/
+---
+2013/03/09 04:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_organization".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_organ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_organ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_organization/org/242
+HTTP_REFERER=http://localhost/yima/front/user/test/type/done/
+---
+2013/03/09 04:09:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php (145)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/09 04:09:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'knt.organization_id' in 'where clause'. The SQL statement executed was: SELECT knq.*,knt.title as knt_title
+                FROM yima_nt_question knq
+
+                LEFT JOIN  yima_nt_test knt
+                           
+                on knt.id = knq.test_id
+		WHERE knt.organization_id = :organization_id 
+		AND knt.subject_id = :subject_id
+                GROUP BY knt.subject_id
+                ORDER BY knq.date_added ASC
+               LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/OrganizationModel.php(145): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php(30): OrganizationModel->get_question('851', '28')
+#3 [internal function]: OrganizationController->actionIndex('truong-dai-hoc-...', '851')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(OrganizationController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrganizationController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('organization/in...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh/subject_id/851
+HTTP_REFERER=http://localhost/yima/front/organization/index/slug/truong-dai-hoc-bach-khoa---dai-hoc-quoc-gia-thanh-pho-ho-chi-minh
+---

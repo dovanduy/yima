@@ -1049,9 +1049,9 @@ div.sidebar-wrap{padding: 20px 15px;min-height: 100px;}
     padding: 10px;
     text-decoration: none;
     color: #cdb3a3;
-    text-align: center;
+    text-align: left;
     margin: 0 26px 5px;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 1;
     font-family: Courier, Verdana, Tahoma;
     background: url('../img/book.jpg') no-repeat;
@@ -1074,7 +1074,7 @@ div.sidebar-wrap{padding: 20px 15px;min-height: 100px;}
 
 .list-result ul li .book-cover .inner{display: table-cell; vertical-align: middle;}
 
-.list-result ul li .summary{text-align: center;}
+.list-result ul li .summary{text-align: left;}
 
 .list-result ul li .title{margin-bottom: 5px;}
 

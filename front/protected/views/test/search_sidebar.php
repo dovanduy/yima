@@ -1,32 +1,6 @@
 
 <aside class="sidebar span3">
     <div class="sidebar-wrap">
-        <?php if (count($query_string) > 0): ?>
-            <form method="get" action="">
-                <div id="filter_date" class="filter">
-
-                    <h3>Nội dung đang tìm</h3>
-                    <ul>
-
-                        <?php
-                        $key = array('cate' => 'Nội dung', 'oid' => 'Trường/ Trung tâm', 'own' => 'Tác giả', 'cid' => 'Chủ đề','price'=>'Giá');
-                        ?>
-
-                        <?php foreach ($query_string as $k => $v): ?>
-                            <li class="">
-                                <a class="query-search" href="#"><i class="icon-remove"></i></a>
-                                <a ><?php echo $key[$k]; ?></a>: <?php echo $v; ?>
-                                <input type="hidden" name="<?php echo $k; ?>" value="<?php echo urldecode($v); ?>" />
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-
-                </div>
-            </form>
-        <?php endif; ?>
-
-
-
         <div id="filter_price" class="filter">
             <h3>Tìm theo giá</h3>
             <ul>
@@ -76,5 +50,30 @@
 
             </ul>
         </div>
+
+        <?php if (count($query_string) > 0): ?>
+            <form method="get" action="">
+                <div id="filter_date" class="filter">
+
+                    <h3>Nội dung đang tìm</h3>
+                    <ul>
+
+                        <?php
+                        $key = array('cate' => 'Nội dung', 'oid' => 'Trường/ Trung tâm', 'own' => 'Tác giả', 'cid' => 'Chủ đề', 'price' => 'Giá');
+                        ?>
+
+                        <?php foreach ($query_string as $k => $v): ?>
+                            <li class="">
+                                <a class="query-search" href="#"><i class="icon-remove"></i></a>
+                                <a ><?php echo $key[$k]; ?></a>: <?php echo $v; ?>
+                                <input type="hidden" name="<?php echo $k; ?>" value="<?php echo urldecode($v); ?>" />
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+
+                </div>
+            </form>
+        <?php endif; ?>
+
     </div>
 </aside>

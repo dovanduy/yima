@@ -32,11 +32,11 @@
                     <li>
                         <a class="book-cover" href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>">
                             <span class="inner">
-                                <?php echo $n['subject_title'] ?>
+                                <?php echo $n['title']; ?>
                             </span>
                         </a>
                         <div class="summary">
-                            <div class="title"><a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['title']; ?></a></div>
+                            <div class="title"><a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['subject_title'] ?></a></div>
                             <div class="price">Giá: <?php if ($n['price'] == 0) echo '<span class="label label-success">miễn phí</span>'; else echo '<span class="label label-info">' . number_format($n['price'], 0, '.', '.') . ' đ</span>'; ?></div>
                         </div>
                     </li>
