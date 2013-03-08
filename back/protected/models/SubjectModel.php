@@ -104,8 +104,7 @@ class SubjectModel extends CFormModel {
                 FROM yima_sys_subject 
                 WHERE 1
                 $custom
-                ORDER BY title ASC
-                LIMIT :page,:ppp";
+                ORDER BY title ASC";
         $command = Yii::app()->db->createCommand($sql);
         
         foreach ($params as $a)

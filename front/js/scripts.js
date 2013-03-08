@@ -293,8 +293,6 @@ function bind_nt_test(){
     });
     
     $(".query-search").click(function(){
-        if(!confirm('Bạn có chắc bỏ loại tìm kiếm này không?')) 
-            return false;
         var ele = $(this);
         var li = ele.parents('li');
         var form = ele.parents('form');

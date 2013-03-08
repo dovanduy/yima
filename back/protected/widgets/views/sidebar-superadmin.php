@@ -1,10 +1,10 @@
 <div class="nav-collapse sidebar-nav">
     <ul class="nav nav-tabs nav-stacked main-menu">
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/organization/"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Organization</span></a></li>
-        <?php /*<li><a href="<?php echo Yii::app()->request->baseUrl ?>/faculty/"><i class="icon-bookmark icon-white"></i><span class="hidden-tablet"> Faculty</span></a></li>*/?>
+        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/faculty/"><i class="icon-bookmark icon-white"></i><span class="hidden-tablet"> Faculty</span></a></li>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/class/"><i class="icon-th-large icon-white"></i><span class="hidden-tablet"> Class</span></a></li>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/grade/"><i class="icon-align-center icon-white"></i><span class="hidden-tablet"> Grade</span></a></li>
-        <?php /*<li><a href="<?php echo Yii::app()->request->baseUrl ?>/subject/"><i class="icon-folder-open icon-white"></i><span class="hidden-tablet"> Subject</span></a></li>*/?>
+        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/subject/"><i class="icon-folder-open icon-white"></i><span class="hidden-tablet"> Subject</span></a></li>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/subject/mod/"><i class="icon-fire icon-white"></i><span class="hidden-tablet"> Subject Mods</span></a></li>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/keyword_searching_test/"><i class="icon-hdd icon-white"></i><span class="hidden-tablet"> Keyword</span></a></li>
 
