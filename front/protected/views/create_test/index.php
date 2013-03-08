@@ -15,14 +15,14 @@
                     <div class="add-test"> 
                         <form class="form-horizontal" method="post" enctype="multipart/form-data">
                             <div class="control-group">
-                                <label class="control-label">Tên bài kiểm tra</label>
+                                <label class="control-label">Tên bài kiểm tra *</label>
                                 <div class="controls">
                                     <input type="text" class="span12" name="title" value="<?php if (isset($_POST['title'])) echo htmlspecialchars($_POST['title']); ?>">
                                 </div>
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label">Tóm tắt</label>
+                                <label class="control-label">Tóm tắt nội dung</label>
                                 <div class="controls">
                                     <textarea name="descrip" rows="7" class="span12"><?php if (isset($_POST['descrip'])) echo $_POST['descrip']; ?></textarea>
                                 </div>
@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label">Trường</label>
+                                <label class="control-label">Trường *</label>
                                 <div class="controls">
                                     <select link="<?php echo Yii::app()->baseUrl ?>/create_test/get_faculty_by_organizaiton/"  class="span12 organization" name="organization">
                                         <option value="0">--- Trường/Trung tâm ---</option>
@@ -61,7 +61,7 @@
                             </div>
 
                             <div class="control-group subject hide">
-                                <label class="control-label">Chủ đề</label>
+                                <label class="control-label">Chủ đề *</label>
                                 <div class="controls">
                                     <select class="span12 list-subject" name="subject">       
 
@@ -70,10 +70,10 @@
                             </div>
 
                             <div class="control-group">
-                                <label class="control-label">Phân Loại</label>
+                                <label class="control-label">Phân loại *</label>
                                 <div class="controls">
                                     <select  class="span12" name="section">
-                                        <option value="0">--- Loại ---</option>
+                                        <option value="0">--- Loại bài kiểm tra ---</option>
                                         <?php foreach ($section as $s): ?>
                                             <option <?php if (isset($_POST['section']) && $_POST['section'] == $s['id']) echo 'selected'; ?> value="<?php echo $s['id']; ?>"><?php echo $s['title']; ?></option>
                                         <?php endforeach; ?>
@@ -84,14 +84,14 @@
 
 
                             <div class="control-group">
-                                <label class="control-label">Giá tiền</label>
+                                <label class="control-label">Giá tiền *</label>
                                 <div class="controls">
                                     <div class="input-append">
-                                        <input type="text" class="input-medium" name="price" value="<?php if (isset($_POST['price'])) echo htmlspecialchars($_POST['price']); ?>">
+                                        <input type="text" class="input-medium" name="price" value="<?php echo (isset($_POST['price']))? htmlspecialchars($_POST['price']) : 0; ?>" >
                                         <span class="add-on" style="margin-left: -4px">VNĐ</span>
                                     </div>
 
-                                    <p class="help-block">Lưu ý: Giá tiền phải chia hết cho 500</p>
+                                    <p class="help-block">Lưu ý: Giá tiền phải chia hết cho 500. Nếu miễn phí thì vui lòng nhập số 0.</p>
                                 </div>
                             </div>
 

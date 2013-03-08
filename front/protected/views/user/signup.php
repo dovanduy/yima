@@ -43,7 +43,7 @@
                 </div>
                 <div class="span4 signup-contact">
                     Bạn đã đăng ký tài khoản rồi? <a href="<?php echo Yii::app()->request->baseUrl; ?>/user/signin">Đăng nhập!</a><br/><br/>
-                    Nếu bạn vẫn còn thắc mắc về cách sử dụng <b>Yima.vn </b>, đừng ngần ngại gọi đến số <span class="label label-info">08.668.22033</span> để được tư vấn trực tiếp.
+                    <?php /*Nếu bạn vẫn còn thắc mắc về cách sử dụng <b>Yima.vn </b>, đừng ngần ngại gọi đến số <span class="label label-info">08.668.22033</span> để được tư vấn trực tiếp.*/?>
                 </div>
             </div>
         </div>                    

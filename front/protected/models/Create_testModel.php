@@ -121,7 +121,7 @@ class Create_testModel extends CFormModel {
                 FROM yima_sys_section 
                 WHERE disabled = 0 AND deleted = 0
                
-                ORDER BY title ASC
+                ORDER BY priority ASC
                 ";
         $command = Yii::app()->db->createCommand($sql);
 

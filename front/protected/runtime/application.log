@@ -9482,3 +9482,111 @@ Stack trace:
 REQUEST_URI=/yima/front/images/menu/toeic.jpg
 HTTP_REFERER=http://localhost/yima/front/
 ---
+2013/03/09 02:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:08:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/
+---
+2013/03/09 02:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2013/03/09 02:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2013/03/09 02:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toeic.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toeic.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---
+2013/03/09 02:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/menu/toefl.jpg".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('images/menu/toe...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/images/menu/toefl.jpg
+HTTP_REFERER=http://localhost/yima/front/home/
+---

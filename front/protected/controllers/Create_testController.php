@@ -47,7 +47,9 @@ class Create_testController extends Controller {
     public function actionIndex() {
         HelperGlobal::require_login();
 
-        $organization = $this->OrganizationModel->get_all();
+        $args = array('featured' => 1);
+        
+        $organization = $this->OrganizationModel->gets($args);        
         $section = $this->Create_testModel->get_section();
 
         if ($_POST)
@@ -72,11 +74,11 @@ class Create_testController extends Controller {
         if ($this->validator->is_empty_string($title))
             $this->message['error'][] = "Tên bài kiểm tra không được để trống.";
         if ($organization == 0)
-            $this->message['error'][] = "Bạn chưa chọn trường.";
+            $this->message['error'][] = "Bạn chưa chọn Trường.";
         if ($subject == 0)
-            $this->message['error'][] = "Bạn chưa chọn môn học.";
+            $this->message['error'][] = "Bạn chưa chọn Chủ đề.";
         if ($section == 0)
-            $this->message['error'][] = "Bạn chưa chọn phân loại.";
+            $this->message['error'][] = "Bạn chưa chọn Phân loại.";
         if ($this->validator->is_empty_string($price))
             $this->message['error'][] = "Giá tiền không được để trống.";
         if (!$this->validator->is_positive_number($price) || $price % 500 != 0)
