@@ -110,11 +110,11 @@ class SubjectController extends Controller {
         $title = trim($_POST['title']);
 
         $priority = $_POST['priority'];
-        $featured = $_POST['featured'];
+        $featured = (isset($_POST['featured']))?$_POST['featured']:0;
         if ($featured != 1) {
             $featured = 0;
         }
-        $search = $_POST['search'];
+        $search = (isset($_POST['search']))?$_POST['search']:0;
         if ($search != 1) {
             $search = 0;
         }
