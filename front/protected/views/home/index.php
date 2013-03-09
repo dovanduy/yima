@@ -46,7 +46,7 @@
                             <tr>
                                 <td>YIMA-<?php echo Helper::_parse_id($n['id']) ?></td>
                                 <td class="align-left">
-                                    <a href=""><?php echo $n['title']; ?></a><br/>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['title']; ?></a><br/>
                                     Loại: <?php echo $n['section_title'] ?><br/>
                                     Chủ đề: <a rel="tooltip" title="<?php echo $n['subject_title']; ?>" href="<?php echo Yii::app()->request->baseUrl ?>/test/?cid=<?php echo $n['subject_id']; ?>"><?php echo Helper::string_truncate($n['subject_title']); ?></a>
                                 </td>
