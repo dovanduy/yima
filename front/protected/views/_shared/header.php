@@ -72,11 +72,10 @@
           </div>
           </div> */ ?>
         <div class="top-header">
-            <div class="row-fluid">
                 <div class="container">
                     <div class="row-fluid">
                         <div class="span6"><a href="<?php echo Helper::host_info(); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt=""/></a></div>
-                        <div class="span6">
+                        <div class="span6 clearfix">
                             <div class="menu-top-contact pull-right">
                                 <?php /*<i class="icon-circle-arrow-right"></i> Gọi <span class="label label-info">08.668.22033</span> để được tư vấn trực tiếp<br/>*/?>
                                 <i class="icon-circle-arrow-right"></i> <a href="<?php echo Yii::app()->request->baseUrl; ?>/contact">Liên hệ</a>
@@ -84,10 +83,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="subnav">
-            <div class="container">
+            <div class="container clearfix">
                 <ul class="nav nav-pills pull-left">
 
                     <li class="dropdown">
