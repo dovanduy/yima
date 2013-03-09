@@ -1,6 +1,6 @@
 <?php $this->renderFile(Yii::app()->basePath . "/views/_shared/header.php"); ?>
 
-<div class="row-fluid home">
+<div class="home">
     <div class="container">
         <?php /*
           <div class="row-fluid">

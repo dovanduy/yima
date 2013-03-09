@@ -52,7 +52,6 @@
 
     <body>
         <div class="top-header">
-            <div class="row-fluid">
                 <div class="container">
                     <div class="row-fluid">
                         <div class="span6"><a href="<?php echo Helper::host_info(); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt=""/></a></div>
@@ -64,13 +63,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
         <div class="subnav">
-            <div class="container">
+            <div class="container clearfix">
 
-                <ul class="nav nav-pills pull-left">
+                <ul class="nav nav-pills pull-left clearfix">
 
                     <li><a class="bold" href="/yima/front/">Yima.vn</a></li>        
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/post/search/">Tìm kiếm câu hỏi</a></li>
@@ -78,7 +76,7 @@
                     <li><a class="bold" href="<?php echo Yii::app()->request->baseUrl; ?>/post/add/">Gửi câu hỏi</a></li>
                 </ul>
 
-                <ul class="nav nav-pills pull-right">
+                <ul class="nav nav-pills pull-right clearfix">
                     <?php if (!UserControl::LoggedIn()): ?>
                         <li class=""><a href="<?php echo Yii::app()->request->hostInfo; ?>/yima/front/user/signup">Đăng ký</a></li>
                         <li class=""><a href="<?php echo Yii::app()->request->hostInfo; ?>/yima/front/user/signin">Đăng nhập</a></li>
