@@ -4,7 +4,7 @@
             <aside class="sidebar span3">
                 <div class="sidebar-wrap">
                     <div id="filter_date" class="filter">
-                        <h3>Môn học</h3>
+                        <h3>Chủ đề</h3>
                         <ul>
                             <?php foreach($subject as $s):?>
                             <li>
