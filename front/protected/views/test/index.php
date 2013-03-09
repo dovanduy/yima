@@ -24,24 +24,44 @@
               </div> */ ?>
         </div>
         <div class="list-result search-page">
-            <ul>
+            <table class="table table-bordered table-striped table-center">
+                <tr>
+                    <th>Mã số</th>
+                    <th>Tên</th>
+                    <th>Trường / Khoa</th>
+                    <th>Giá</th>
+                    <th></th>
+                </tr>
                 <?php if (count($tests) < 1): ?>
-                    <li>Không có bài kiểm tra nào</li>
+                    <tr>
+                        <td>Không tìm thấy đề phù hợp.</td>
+                    </tr>
                 <?php endif; ?>
                 <?php foreach ($tests as $n): ?>
-                    <li>
-                        <a class="book-cover" href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>">
-                            <span class="inner">
-                                <?php echo $n['title']; ?>
-                            </span>
-                        </a>
-                        <div class="summary">
-                            <div class="title"><a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['subject_title'] ?></a></div>
-                            <div class="price">Giá: <?php if ($n['price'] == 0) echo '<span class="label label-success">miễn phí</span>'; else echo '<span class="label label-info">' . number_format($n['price'], 0, '.', '.') . ' đ</span>'; ?></div>
-                        </div>
-                    </li>
+                    <tr>
+                        <td>YIMA-<?php echo Helper::_parse_id($n['id']) ?></td>
+                        <td class="align-left">
+                            <a href=""><?php echo $n['title']; ?></a><br/>
+                            Loại: <?php echo $n['section_title'] ?><br/>
+                            Chủ đề: <a rel="tooltip" title="<?php echo $n['subject_title']; ?>" href="<?php echo Yii::app()->request->baseUrl ?>/test/?cid=<?php echo $n['subject_id']; ?>"><?php echo Helper::string_truncate($n['subject_title']); ?></a>
+                        </td>
+                        <td class="align-left">
+                            <a rel="tooltip" title="<?php echo $n['org_title']; ?>" href="<?php echo Yii::app()->request->baseUrl; ?>/test/?oid=<?php echo $n['organization_id'] ?>"><?php echo $n['org_title']; ?></a><br/>
+                            Khoa: <a rel="tooltip" title="<?php echo $n['faculty_name']; ?>" href=""><?php echo $n['faculty_name']; ?></a>
+                        </td>
+                        <td>
+                            <?php if ($n['price'] == 0): ?>
+                                <span class="label label-success">Miễn phí</span>
+                            <?php else: ?>
+                                <span class="label label-info"><?php echo number_format($n['price'], 0, '.', '.'); ?></span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-small">Chi tiết</a>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
-            </ul>
+            </table>
         </div> 
         <div class="clearfix"></div>
         <?php $this->renderFile(Yii::app()->basePath . "/views/_shared/paging.php", array('total' => $total, 'paging' => $paging)); ?>

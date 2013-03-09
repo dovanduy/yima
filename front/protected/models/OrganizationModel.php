@@ -122,16 +122,13 @@ class OrganizationModel extends CFormModel {
         $custom = "";
         $params = array();
 
-        $sql = "SELECT knq.*,knt.title as knt_title
-                FROM yima_nt_question knq
-
-                LEFT JOIN  yima_nt_test knt
-                           
-                on knt.id = knq.test_id
-		WHERE knt.organization_id = :organization_id 
-		AND knt.subject_id = :subject_id
-                GROUP BY knt.subject_id
-                ORDER BY knq.date_added ASC
+        $sql = "SELECT ynq.*,ynt.title as knt_title,yofs.subject_id as knt_subject
+                FROM yima_nt_question ynq,yima_nt_test ynt,yima_organization_faculty_subject yofs
+                WHERE ynq.test_id = ynt.id
+                AND yofs.id = ynt.group_id
+                AND yofs.organization_id = :organization_id
+                AND yofs.subject_id = :subject_id
+                ORDER BY ynq.date_added ASC
                LIMIT :page,:ppp";
         
         $command = Yii::app()->db->createCommand($sql);

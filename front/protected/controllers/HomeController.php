@@ -44,6 +44,7 @@ class HomeController extends Controller {
     public function actionIndex() {
 
         $nt_test = $this->TestModel->gets(array());
+        //print_r($nt_test);die;
         $this->viewData['nt_test'] = $nt_test;
 
 

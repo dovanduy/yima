@@ -226,5 +226,11 @@ class Helper {
             $str.= $k."=".$v ."&";
         return $str == "" ? $str : substr($str, 0, -1);
     }
+    
+    public static function _parse_id($id){
+        $lenght = strlen($id);
+        $final_id = str_repeat('0', 6 - $lenght) . $id;
+        return $final_id;
+    }
 
 }
