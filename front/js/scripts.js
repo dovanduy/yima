@@ -306,6 +306,15 @@ function bind_nt_test(){
         form.trigger('submit');
         return false;
     });
+    
+    $(".free-test").click(function(){
+       var ele = $(this);
+       if(ele.hasClass('require-login'))
+           return false;
+       
+       $("#modal-buy-test .modal-submit").trigger('click');
+       return false;
+    });
 }
 
 function add_test(){

@@ -28,11 +28,11 @@
                         </td>
                         
                         <td class="align-left">
-                            Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/search_by_organization/org/<?php echo $v['organization_id']; ?>" rel="tooltip" title="<?php echo $v['org_title'] ?>"><?php echo Helper::string_truncate($v['org_title'],50); ?></a><br/>
+                            Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $v['organization_slug']; ?>" rel="tooltip" title="<?php echo $v['org_title'] ?>"><?php echo Helper::string_truncate($v['org_title'],50); ?></a><br/>
                             <?php if($v['faculty_id']): ?>
                             Khoa: <a href="#" rel="tooltip" title="<?php echo $v['faculty_name'] ?>"><?php echo Helper::string_truncate($v['faculty_name'],50); ?></a><br/>
                             <?php endif;?>
-                            Chủ đề: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/search_by_category/c/<?php echo $v['subject_id']; ?>" rel="tooltip" title="<?php echo $v['subject_title'] ?>"><?php echo Helper::string_truncate($v['subject_title'],50); ?></a><br/>
+                            Chủ đề: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/?cid=<?php echo $v['subject_id']; ?>" rel="tooltip" title="<?php echo $v['subject_title'] ?>"><?php echo Helper::string_truncate($v['subject_title'],50); ?></a><br/>
                         </td>
                         <td>
                             <?php echo !$v['price'] ? '<span class="label label-success">miễn phí</span>' : '<span class="label label-info">' . number_format($v['price'], 0, '.', '.') . ' đ</span>' ?>

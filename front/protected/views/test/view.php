@@ -52,10 +52,12 @@
 
                 <br/>
                 <p class="clearfix">
-                    <?php if (!$has_buy): ?>
+                    <?php if (!$has_buy && $post['price'] > 0): ?>
                         <a data-toggle="modal" href="#<?php if (UserControl::LoggedIn()) echo 'modal-buy-test'; ?>" class="btn btn-warning pull-left <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>">Làm bài thi</a>
+                    <?php elseif (!$has_buy && $post['price'] == 0): ?>
+                        <a href="#" class="btn btn-warning pull-left free-test <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>">Làm bài thi</a>
                     <?php else: ?>
-                        <a onclick="return confirm('Bạn có chắc muốn làm bài kiểm tra này không?');" href="<?php echo Yii::app()->request->baseUrl; ?>/test/do/id/<?php echo $post['id']; ?>" class="btn btn-warning pull-left">Làm bài thi</a>
+                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/do/id/<?php echo $post['id']; ?>" class="btn btn-warning pull-left">Làm bài thi</a>
                     <?php endif; ?>
                     <a class="btn btn-primary pull-right btn-reply <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>">Bình luận</a>
                 </p>
