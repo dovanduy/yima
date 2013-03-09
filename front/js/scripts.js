@@ -230,47 +230,53 @@ function bind_nt_test(){
     
     $('#test-nt .next').click(function(){
         var ele = $(this);
-        $('#test-nt .submit-test').hide();
+        $("#test-nt .test").removeClass('current');
+        $('#test-nt .submit-test').addClass('hide').removeClass('done');
         var id = ele.attr('value');
          var total = $('.review').attr('value');
         
         $('#test-nt .question_'+id).hide();
         var id = ++id;
-        $('#test-nt .question_'+id).show();
-         if(id == total)
-            $('#test-nt .submit-test').show();
+        $('#test-nt .question_'+id).addClass('current').show();
+         if(id == total){
+            $('#test-nt .btn-test .submit-test').removeClass('hide');
+            $('#test-nt .submit .submit-test').addClass('done');
+         }
         return false;
     });
     
     $('#test-nt .back').click(function(){
-        $('#test-nt .submit-test').hide();
+        $('#test-nt .submit-test').addClass('hide').removeClass('done');
         var ele = $(this);
+        $("#test-nt .test").removeClass('current');
         var id = ele.attr('value');
         var total = $('.review').attr('value');
        
         $('#test-nt .question_'+id).hide();
         var id = --id;
-        $('#test-nt .question_'+id).show();
+        $('#test-nt .question_'+id).addClass('current').show();
         if(id == total)
-            $('#test-nt .submit-test').show();
+            $('#test-nt .btn-test .submit-test').removeClass('hide');
         return false;
     });
     
     $("#test-nt .review").click(function(){
         var ele = $(this);
         ele.hide();
-        $('#test-nt .review-back').show();
+        $('#test-nt .review-back').removeClass('hide');
         $('#test-nt .list-result').show();
         $('#test-nt .test').hide();
+        if($("#test-nt .submit .submit-test").hasClass('done'))
+            $("#test-nt .submit .submit-test").removeClass('hide');
     });
     
     $("#test-nt .review-back").click(function(){
         var ele = $(this);
-        ele.hide();
+        $('#test-nt .review-back').addClass('hide');
         $('#test-nt .review').show();
-        $('#test-nt .test:eq(0)').show();
+        $('#test-nt .test.current').show();
         $('#test-nt .list-result').hide();
-        
+        $("#test-nt .submit .submit-test").addClass('hide');
     });
     
     $('#test-nt .choice_status').click(function(){

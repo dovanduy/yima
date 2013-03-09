@@ -26,7 +26,9 @@
 #test-nt{padding: 24px 20px;background-color: #FFFFFF;}
 #test-nt .list-result{display: none;padding:10px;} 
 #test-nt .test{display: none}    
+#test-nt .test-heading{font-size: 14px;line-height: 21px;margin-bottom: 10px;padding-bottom: 10px;border-bottom: 1px solid #ccc}
 #test-nt .btn-test {float:right;margin-top: 10px;margin-right: 20px}
+#test-nt .btn-test a{margin-right: 15px;}
 #test-nt .row-fluid{padding-bottom: 15px;margin: 10px}
 #test-nt .row-fluid li{padding:10px}
 #test-nt .back-test{text-align: right;padding:15px}
@@ -94,3 +96,4 @@
 .signin-up{padding: 25px 0}
 
 .toefl-course ul li ul li{border-bottom: #888 1px solid}
+
