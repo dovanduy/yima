@@ -36,7 +36,7 @@ $(document).ready(function(){
      $content.find("body div.subnav").remove();
      $content.find("body #footer").remove();*/
     
-    
+    $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
 });
 
 
