@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <title>Yima.vn | Yes, It's my answer</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="robots" content="noindex, nofollow"/>
