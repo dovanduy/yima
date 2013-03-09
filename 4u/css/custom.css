@@ -63,7 +63,7 @@
 .subject-location:hover{color:#666}
 
 .aside{margin-bottom: 25px}
-    .aside .head{background-color: #0095DA;color: #FFFFFF;font-size: 14px;font-weight: bold;padding: 6px 12px;}
+    .aside .head{background-color: #333333/*#0095DA*/;color: #FFFFFF;font-size: 14px;font-weight: bold;padding: 6px 12px;}
     .aside .list-items{}
     .aside .list-items li{padding: 7px 12px;color:#4D4D4D;font-weight: bold}
     .aside .list-items li:nth-child(2n){background-color: #DADBDB}
@@ -74,6 +74,102 @@
 .link{color: #0088CC!important;}
 
 .list-result .summary .sub-info{font-size: 11px}
-.search{background-color: #fff}
+.search{background-color: #fff;border-radius: 6px}
 
+ /************/
+ 
+/*.alert{margin: 0 18px 18px;} */
+#add_location{display: inline}
+
+.table-ticket .head-ticket-name{width:1%}
+.table-ticket .head-ticket-quantity{width:10%}
+.table-ticket .head-ticket-action{width:25%;}
+.table-ticket .head-ticket-status{width:12%}
+.table-ticket .head-ticket-price{width:10%}
+.table-ticket .head-ticket-price.free{width:38%}
+
+.table-ticket .loading td{text-align: center;}
+.table-ticket .loading img{vertical-align: middle}
+
+.ticket-name{width:110px}
+
+.find-magu .toefl-link:link{color: #888}
+
+
+
+ .toefl-test ul, .toefl-test li{padding:5px;margin-left: 10px}
+.toefl-test li{width: 100px;border-top:0px}
+.toefl-test ul{float:left}
+
+
+#test-nt{padding: 24px 20px;background-color: #FFFFFF;}
+#test-nt .list-result{display: none;padding:10px;} 
+#test-nt .test{display: none}    
+#test-nt .btn-test {float:right;margin-top: 10px;margin-right: 20px}
+#test-nt .row-fluid{padding-bottom: 15px;margin: 10px}
+#test-nt .row-fluid li{padding:10px}
+#test-nt .back-test{text-align: right;padding:15px}
+#test-nt .submit{text-align: right;padding:0 15px 15px}
+#faculty .subject-list{display: none;padding-left: 10px}
+
+.list-question .btn{}
+.add-test{margin-top:20px}
+.add-quest .questions{border-top: 1px solid #DBDBDB;padding-top:10px}
+
+.modal .alert{text-shadow: none}
+.img-polaroid{background-color: #FFFFFF;border: 1px solid rgba(0, 0, 0, 0.2);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);padding: 4px;}
+
+#user-sidebar{}
+#user-sidebar h3{background-position: 0 center;background-repeat: no-repeat;font-size: 16px;font-weight: 600;margin-bottom: 7px;color:#0088CC}
+#user-sidebar ul{padding-bottom: 20px;}
+#user-sidebar ul li{}
+#user-sidebar ul li.active a{color: #fff}
+#user-sidebar ul li a{color:#4A515B;font-size: 14px;font-weight: bold; display: block; margin-bottom: 10px;width: 167px;text-align: left;padding: 10px}
+#user-sidebar ul li a:hover{text-decoration: none}
+#user-sidebar ul li:last-child{margin-top: 20px; padding-top: 20px; border-top: 1px solid #ccc;}
+
+#user-info{padding: 24px 20px;}
+#user-info .block{margin-bottom: 20px}
+#user-info .transaction{}
+#user-info .transaction table th,#user-info .transaction table td{text-align: center;vertical-align: middle}
+#user-info .alert{margin: 0 0 18px 0}
+
+.list-question .questions{margin-bottom: 15px;}
+.list-question .questions h3{color:#333333}
+
+.list-test .filter h3{padding-left: 0}
+.list-test .filter h3 i{margin-top: 2px}
+.list-test .filter ul > li{margin-left: 0}
+.list-test .filter ul > li .time{font-size: 11px;font-style: italic}
+.list-test .filter ul > li .time a{color: #666;text-decoration: none}
+
+
+.align-left{text-align: left!important}
+.align-right{text-align: right!important}
+.align-center{text-align: center!important}
+.row-action{width:17%}
+.row-id{width:5%}
+.row-edit{width: 5%;}
+
+.table-center{}
+.table-center th,.table-center td{vertical-align: middle;text-align: center}
+
+
+ #post{}
+    #post .post h1{font-size: 24px;line-height: 32px}
+    #post .post .content{padding-top: 15px;color: #333}
+    #post .post .content-footer{padding-top: 15px;font-size: 11px;color: #666;}
+    #post #list-comments{padding-top: 20px}
+    #post #list-comments h3{margin-bottom: 15px;color: #222}
+    #post #list-comments .comments{padding-top: 10px}
+    #post #list-comments .comments .comment{border-top: 1px solid #d5d5d5;padding: 20px 0}
+    #post #list-comments .comments .comment .content{padding-top: 0;color: #333}
+    #post #list-comments .comments .comment .vote-info{margin-top: 10px;margin-bottom: 0}
+
+    #post #list-comments .comments .best-comment{}
+    #post #list-comments .content-footer{padding-top: 0px;font-size: 11px;color: #666;}
     
+
+.signin-up{padding: 25px 0}
+
+.toefl-course ul li ul li{border-bottom: #888 1px solid}

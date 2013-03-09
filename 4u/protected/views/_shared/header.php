@@ -51,27 +51,25 @@
     </head>
 
     <body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container clearfix">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="<?php echo Yii::app()->request->baseUrl; ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt=""/></a>
-                    <div class="nav-collapse pull-right clearfix">
-                        <div class="menu-top-contact pull-left">
-                            <i class="icon-circle-arrow-right icon-white"></i> <a href="<?php echo Yii::app()->request->baseUrl; ?>/contact">Liên hệ</a>
-                            <i class="icon-circle-arrow-right icon-white"></i> Gọi 08.668.22033 để được tư vấn trực tiếp
+        <div class="top-header">
+            <div class="row-fluid">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="span6"><a href="<?php echo Helper::host_info(); ?>"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt=""/></a></div>
+                        <div class="span6">
+                            <div class="menu-top-contact pull-right">
+                                <?php /* <i class="icon-circle-arrow-right"></i> Gọi <span class="label label-info">08.668.22033</span> để được tư vấn trực tiếp<br/> */ ?>
+                                <i class="icon-circle-arrow-right"></i> <a href="<?php echo Yii::app()->request->baseUrl; ?>/contact">Liên hệ</a>
+                            </div>
                         </div>
-                    </div><!--/.nav-collapse -->
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="subnav subnav-fixed">
+        <div class="subnav">
             <div class="container">
+
                 <ul class="nav nav-pills pull-left">
 
                     <li><a class="bold" href="/yima/front/">Yima.vn</a></li>        
@@ -79,35 +77,36 @@
 
                     <li><a class="bold" href="<?php echo Yii::app()->request->baseUrl; ?>/post/add/">Gửi câu hỏi</a></li>
                 </ul>
+
                 <ul class="nav nav-pills pull-right">
                     <?php if (!UserControl::LoggedIn()): ?>
-                        <li class=""><a href="/yima/front/user/signup">Đăng ký</a></li>
-                        <li class=""><a href="/yima/front/user/signin">Đăng nhập</a></li>
+                        <li class=""><a href="<?php echo Yii::app()->request->hostInfo; ?>/yima/front/user/signup">Đăng ký</a></li>
+                        <li class=""><a href="<?php echo Yii::app()->request->hostInfo; ?>/yima/front/user/signin">Đăng nhập</a></li>
                     <?php else: ?>
-                        <?php /*
-                          <li class="dropdown nav-account">
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="#" class="bold">Nạp tiền <b class="caret"></b></a>
+
+                        <li class="dropdown nav-account">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" class="bold">Nạp tiền <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class=""><a href="/yima/front/user/profile">Mua thẻ cào</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="/yima/front/user/profile">Nhập mã số thẻ cào</a></li>
+                                <li class=""><a href="/yima/front/user/profile">Nhập coupon code</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="/yima/front/user/settings">Lich sử giao dịch</a></li>
+                                <li class="divider"></li>
+                                <li class=""><a href="/yima/front/user/settings">Số dư <span class="label label-success">1.000.000đ</span></a></li>
+                                <li class=""><a href="/yima/front/user/settings">Đã mua <span class="label label-info">500.000đ</span></a></li>
+                            </ul>
+                        </li> 
+                        <?php /* <li class="dropdown nav-account">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo UserControl::getFullname(); ?> <b class="caret"></b></a>
                           <ul class="dropdown-menu">
-                          <li class=""><a href="/yima/front/user/profile">Mua thẻ cào</a></li>
+                          <li class=""><a href="/yima/front/user/profile">Trang cá nhân</a></li>
+                          <li class=""><a href="/yima/front/user/setting">Cài đặt tài khoản</a></li>
                           <li class="divider"></li>
-                          <li class=""><a href="/yima/front/user/profile">Nhập mã số thẻ cào</a></li>
-                          <li class=""><a href="/yima/front/user/profile">Nhập coupon code</a></li>
-                          <li class="divider"></li>
-                          <li class=""><a href="/yima/front/user/settings">Lich sử giao dịch</a></li>
-                          <li class="divider"></li>
-                          <li class=""><a href="/yima/front/user/settings">Số dư <span class="label label-success">1.000.000đ</span></a></li>
-                          <li class=""><a href="/yima/front/user/settings">Đã mua <span class="label label-info">500.000đ</span></a></li>
+                          <li class=""><a href="/yima/front/user/signout">Thoát</a></li>
                           </ul>
                           </li> */ ?>
-                        <li class="dropdown nav-account">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo UserControl::getFullname(); ?> <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li class=""><a href="/yima/front/user/profile">Trang cá nhân</a></li>
-                                <li class=""><a href="/yima/front/user/setting">Cài đặt tài khoản</a></li>
-                                <li class="divider"></li>
-                                <li class=""><a href="/yima/front/user/signout">Thoát</a></li>
-                            </ul>
-                        </li>
                     <?php endif; ?>
                 </ul>
             </div>

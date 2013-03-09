@@ -206,5 +206,9 @@ class Helper {
     public static function domain(){
         return Yii::app()->request->hostInfo."/yima/front/";
     }
+    
+    public static function host_info() {
+        return Yii::app()->request->hostInfo . Yii::app()->request->baseUrl;
+    }
 
 }
