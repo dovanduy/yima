@@ -84,7 +84,7 @@
                     </div>
                 </div>
         </div>
-        <div class="subnav">
+        <div class="subnav <?php if(Yii::app()->params['is_page'] == "do_test") echo 'hide'; ?>">
             <div class="container clearfix">
                 <ul class="nav nav-pills pull-left">
 

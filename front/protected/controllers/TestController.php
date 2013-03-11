@@ -233,6 +233,7 @@ class TestController extends Controller {
 
         $total_question = $this->QuestionModel->count_by_test($id);
         $this->layout = "main";
+        Yii::app()->params['is_page'] = "do_test";
         $this->viewData['questions'] = $questions;
         $this->viewData['total'] = $total_question;
         $this->viewData['testnt'] = $testnt;

@@ -116,8 +116,8 @@
     </div>
 </div>
 
-<div id="footer">
-    <div class="container">
+<div id="footer" class="<?php if(Yii::app()->params['is_page'] == "do_test") echo 'hide'; ?>">
+    <div class="container ">
         <?php /*
         <div class="row-fluid">
             <div class="span3">

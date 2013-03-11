@@ -62,7 +62,7 @@
                                     <?php endif; ?>
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-small">Chi tiết</a>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/view/s/<?php echo $n['slug'] ?>" class="btn btn-small">Chi tiết</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
