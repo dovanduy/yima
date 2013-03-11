@@ -1,21 +1,19 @@
-<aside class="sidebar span3 list-test">
+<aside class="sidebar span3 list-test recent-tests">
     <div class="sidebar-wrap">
         <div class="filter">
             <h3><i class="icon-list-alt"></i> Bài đã tạo gần đây</h3>
             <div class="list-result latest">
                 <ul>
                     <?php foreach (HelperGlobal::get_recent_tests() as $k => $n): ?>
-                        <li>
-                            <a class="book-cover" href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>">
-                                <span class="inner">
-                                    <?php echo $n['subject_title'] ?>
-                                </span>
-                            </a>
+                        <li>                            
                             <div class="summary">
-                                <div class="title"><a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['subject_title'] ?></a></div>
-                                <div class="sub-title"><?php echo $n['title']; ?></div>
-                                <span class="time"><a href="#" rel="tooltip" title="<?php echo date('d-m-Y H:i:s', $n['date_added']); ?>"><?php echo DateTimeFormat::nicetime($n['date_added']); ?></a></span>
-                                <div class="price">Giá: <?php if ($n['price'] == 0) echo '<span class="label label-success">miễn phí</span>'; else echo '<span class="label label-info">' . number_format($n['price'], 0, '.', '.') . ' đ</span>'; ?></div>
+                                <div class="title">YIMA-<?php echo Helper::_parse_id($n['id']); ?></div>
+                                <div class="title"><a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['title'] ?></a></div>
+                                <div class="sub-title">Loại: <?php echo $n['section_title']; ?></div>
+                                <div class="sub-title"><?php echo $n['subject_title']; ?></div>
+                                
+                                
+                                <div class="price"><span class="time"><a href="#" rel="tooltip" title="<?php echo date('d-m-Y H:i:s', $n['date_added']); ?>"><?php echo DateTimeFormat::nicetime($n['date_added']); ?></a></span> Giá: <?php if ($n['price'] == 0) echo '<span class="label label-success">miễn phí</span>'; else echo '<span class="label label-info">' . number_format($n['price'], 0, '.', '.') . ' đ</span>'; ?></div>
                             </div>
                             <div class="clearfix"></div>
                         </li>

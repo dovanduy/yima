@@ -46,7 +46,7 @@
                                         <div class="control-group">
                                             <label class="control-label">Câu hỏi</label>
                                             <div class="controls">
-                                                <textarea  class="span12" name="question[<?php echo $k; ?>]"><?php if (isset($_POST['question'][$k])) echo htmlspecialchars ($_POST['question'][$k]); ?></textarea>
+                                                <textarea  class="span12 tinymce" name="question[<?php echo $k; ?>]"><?php if (isset($_POST['question'][$k])) echo htmlspecialchars ($_POST['question'][$k]); ?></textarea>
                                             </div>
                                         </div>
 

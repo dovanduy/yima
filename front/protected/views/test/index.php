@@ -34,7 +34,7 @@
                 </tr>
                 <?php if (count($tests) < 1): ?>
                     <tr>
-                        <td>Không tìm thấy đề phù hợp.</td>
+                        <td colspan="5">Không tìm thấy đề phù hợp.</td>
                     </tr>
                 <?php endif; ?>
                 <?php foreach ($tests as $n): ?>
@@ -57,7 +57,7 @@
                             <?php endif; ?>
                         </td>
                         <td>
-                            <a href="" class="btn btn-small">Chi tiết</a>
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/view/s/<?php echo $n['slug'] ?>" class="btn btn-small">Chi tiết</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

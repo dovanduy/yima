@@ -44,12 +44,11 @@ class HomeController extends Controller {
     public function actionIndex() {
 
         $nt_test = $this->TestModel->gets(array());
-        //print_r($nt_test);die;
-        $this->viewData['nt_test'] = $nt_test;
-
-
+        $total = $this->TestModel->counts(array());
         $subject = $this->SubjectModel->gets(array('disabled'=>0,'deleted'=>0,'featured'=>1));
-        $this->viewData['subject'] = $subject;        
+        $this->viewData['nt_test'] = $nt_test;
+        $this->viewData['subject'] = $subject;     
+        $this->viewData['total'] = $total;        
         $this->render('index', $this->viewData);
     }
 

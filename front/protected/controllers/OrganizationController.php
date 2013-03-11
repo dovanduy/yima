@@ -11,6 +11,8 @@ class OrganizationController extends Controller {
     private $message = array('success' => true, 'error' => array());
     private $validator;
     private $OrganizationModel;
+    private $TestModel;
+    private $SubjectModel;
 
     public function init() {
         /* @var $validator FormValidator */
@@ -18,28 +20,40 @@ class OrganizationController extends Controller {
 
         /* @var $OrganizationModel OrganizationModel */
         $this->OrganizationModel = new OrganizationModel();
+
+        /* @var $TestModel TestModel */
+        $this->TestModel = new TestModel();
+        
+        /* @var $SubjectModel SubjectModel */
+        $this->SubjectModel = new SubjectModel();
     }
 
-    public function actionIndex($slug, $subject_id = 0) {
-
+    public function actionIndex($slug, $subject_id = 0, $p = 1) {
+        $ppp = Yii::app()->params['ppp'];
         $organization = $this->OrganizationModel->get_by_slug($slug);
-        $subject = $this->OrganizationModel->get_test_nt_by_organization($organization['id']);
-
-        
+        if (!$organization)
+            $this->load_404();
+        $args = array('organization_id' => $organization['id']);
+        $subject = null;
         if ($subject_id > 0) {
-            $question = $this->OrganizationModel->get_question($subject_id, $organization['id']);
-        } else 
-            {
-            $question = $this->OrganizationModel->get_question_all($organization['id']);
+            $subject = $this->SubjectModel->get($subject_id);
+            
+            if(!$subject)
+                $this->load_404 ();
+            
+            $args['subject_id'] = $subject_id;
         }
 
-        $this->viewData['question'] = $question;
+        $tests = $this->TestModel->gets($args, $p, $ppp);
+        $total = $this->TestModel->counts($args);
+        $this->viewData['tests'] = $tests;
         $this->viewData['slug'] = $slug;
         $this->viewData['subject'] = $subject;
+        $this->viewData['subjects'] = $this->SubjectModel->gets(array('deleted'=>0,'disabled'=>0,'organization_id'=>$organization['id']));
         $this->viewData['organization'] = $organization;
+        $this->viewData['total'] = $total;
+        $this->viewData['paging'] = $total > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl."/organization/index/slug/$slug/subject_id/$subject_id/p/", $total, $p) : "";
         $this->render('index', $this->viewData);
     }
 
 }
-
-?>

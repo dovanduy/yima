@@ -177,6 +177,10 @@ class Create_testController extends Controller {
 
         $title = "";
         $type = "scq";
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+        die;
         foreach ($question as $k => $v) {
             $index = $k + 1;
             //$title = $_POST['title_' . $i];

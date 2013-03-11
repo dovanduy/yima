@@ -40,12 +40,12 @@ class TestModel extends CFormModel {
         }
 
         if (isset($args['subject_id']) && $args['subject_id'] > 0) {
-            $custom.= " AND kss.id = :subject_id";
+            $custom.= " AND yofs.subject_id = :subject_id";
             $params[] = array('name' => ':subject_id', 'value' => $args['subject_id'], 'type' => PDO::PARAM_STR);
         }
 
         if (isset($args['organization_id']) && $args['organization_id'] > 0) {
-            $custom.= " AND kso.id = :organization_id";
+            $custom.= " AND yofs.organization_id = :organization_id";
             $params[] = array('name' => ':organization_id', 'value' => $args['organization_id'], 'type' => PDO::PARAM_STR);
         }
 
@@ -113,13 +113,13 @@ class TestModel extends CFormModel {
             $params[] = array('name' => ':author_id', 'value' => $args['author_id'], 'type' => PDO::PARAM_INT);
         }
 
-        if (isset($args['subject_id']) && $args['subject_id']) {
-            $custom.= " AND kss.id = :subject_id";
+        if (isset($args['subject_id']) && $args['subject_id'] > 0) {
+            $custom.= " AND yofs.subject_id = :subject_id";
             $params[] = array('name' => ':subject_id', 'value' => $args['subject_id'], 'type' => PDO::PARAM_STR);
         }
 
         if (isset($args['organization_id']) && $args['organization_id'] > 0) {
-            $custom.= " AND kso.id = :organization_id";
+            $custom.= " AND yofs.organization_id = :organization_id";
             $params[] = array('name' => ':organization_id', 'value' => $args['organization_id'], 'type' => PDO::PARAM_STR);
         }
 

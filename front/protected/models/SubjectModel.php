@@ -67,5 +67,19 @@ class SubjectModel extends CFormModel {
 
         return $command->queryAll();
     }
+    
+    public function get($id) {
+        
+        
+        $sql = "SELECT *
+                FROM yima_sys_subject 
+                WHERE id = :id
+                AND deleted = 0";
+        
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $id,PDO::PARAM_INT);        
+
+        return $command->queryRow();
+    }
 
 }

@@ -96,4 +96,5 @@
 .signin-up{padding: 25px 0}
 
 .toefl-course ul li ul li{border-bottom: #888 1px solid}
-
+.recent-tests .summary{width: 190px !important}
+.recent-tests .summary .time{margin-right: 3px;}
