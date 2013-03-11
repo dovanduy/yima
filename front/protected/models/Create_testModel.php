@@ -237,15 +237,16 @@ class Create_testModel extends CFormModel {
         return Yii::app()->db->lastInsertID;
     }
 
-    public function add_answer($qid, $choice1, $choice2, $choice3, $choice4, $choice) {
-        $sql = 'INSERT into yima_nt_answer_scq(question_id,choice_1,choice_2,choice_3,choice_4,right_choice)
-            VALUES(:question_id,:choice_1,:choice_2,:choice_3,:choice_4,:right_choice)';
+    public function add_answer($qid, $choice1, $choice2, $choice3, $choice4, $choice,$note) {
+        $sql = 'INSERT into yima_nt_answer_scq(question_id,choice_1,choice_2,choice_3,choice_4,right_choice,note)
+            VALUES(:question_id,:choice_1,:choice_2,:choice_3,:choice_4,:right_choice,:note)';
         $command = Yii::app()->db->createCommand($sql);
 
         $command->bindParam(':choice_1', $choice1, PDO::PARAM_STR);
         $command->bindParam(':choice_2', $choice2, PDO::PARAM_STR);
         $command->bindParam(':choice_3', $choice3, PDO::PARAM_STR);
         $command->bindParam(':choice_4', $choice4, PDO::PARAM_STR);
+        $command->bindParam(':note', $note, PDO::PARAM_STR);
 
         $command->bindParam(':question_id', $qid, PDO::PARAM_INT);
         $command->bindParam(':right_choice', $choice, PDO::PARAM_INT);

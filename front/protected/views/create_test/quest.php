@@ -107,6 +107,14 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="control-group">
+
+                                            <label class="control-label">Phân tích đáp án</label>
+                                            <div class="controls">
+                                                <textarea class="span12" name="note[<?php echo $k; ?>]" ><?php if (isset($_POST['note'][$k])) echo htmlspecialchars($_POST['note'][$k]); ?></textarea>
+                                            </div>
+                                        </div>
+                                        
                                         <p class="pull-right"><a href ="#" class="btn btn-danger delete-question">Xóa câu hỏi</a></p>
                                     </div>
                                 <?php endforeach; ?>

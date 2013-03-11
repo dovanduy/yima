@@ -173,14 +173,15 @@ class Create_testController extends Controller {
         $choice3 = $_POST['choice3'];
         $choice4 = $_POST['choice4'];
         $right = $_POST['right'];
+        $note = $_POST['note'];
         $total = count($question);
 
         $title = "";
         $type = "scq";
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
-        die;
+        //echo "<pre>";
+        //print_r($_POST);
+        //echo "</pre>";
+        //die;
         foreach ($question as $k => $v) {
             $index = $k + 1;
             //$title = $_POST['title_' . $i];
@@ -226,7 +227,7 @@ class Create_testController extends Controller {
 
         foreach ($question as $k => $v) {
             $question_id = $this->Create_testModel->add_question($title, $test['id'], $question[$k], $type, UserControl::getId(), time());
-            $answer_id = $this->Create_testModel->add_answer($question_id, $choice1[$k], $choice2[$k], $choice3[$k], $choice4[$k], $right[$k]);
+            $answer_id = $this->Create_testModel->add_answer($question_id, $choice1[$k], $choice2[$k], $choice3[$k], $choice4[$k], $right[$k],$note[$k]);
         }
 
         $this->redirect(Yii::app()->request->baseUrl . "/create_test/edit/id/$test[id]/type/question/?s=1");
@@ -391,6 +392,7 @@ class Create_testController extends Controller {
         $choice3 = $_POST['choice3'];
         $choice4 = $_POST['choice4'];
         $right = $_POST['right'];
+        $note = $_POST['note'];
 
         if ($this->validator->is_empty_string($title))
             $this->message['error'][] = "Câu hỏi không được để trống.";
@@ -416,7 +418,7 @@ class Create_testController extends Controller {
         }
 
         $this->QuestionModel->update(array('question' => $title, 'last_modified' => time(), 'id' => $question['id']));
-        $this->AnswerModel->update(array('choice_1' => $choice1, 'choice_2' => $choice2, 'choice_3' => $choice3, 'choice_4' => $choice4, 'right_choice' => $right, 'id' => $anwser['id']));
+        $this->AnswerModel->update(array('choice_1' => $choice1, 'choice_2' => $choice2, 'choice_3' => $choice3, 'choice_4' => $choice4, 'right_choice' => $right,'note'=>$note, 'id' => $anwser['id']));
         $this->redirect(Yii::app()->request->baseUrl . "/create_test/question/id/$question[id]?s=1");
     }
 
