@@ -57,7 +57,7 @@ class TestController extends Controller {
         $cid = isset($_GET['cid']) ? $_GET['cid'] : "";
         $oid = isset($_GET['oid']) ? $_GET['oid'] : "";
         $ppp = Yii::app()->getParams()->itemAt('ppp');
-        $args = array('search_cate' => $s, 'search_own' => $own, 'search_price' => $price,'subject_id'=>$cid,'organization_id'=>$oid);
+        $args = array('search_cate' => $s, 'search_own' => $own, 'search_price' => $price, 'subject_id' => $cid, 'organization_id' => $oid);
 
         $tests = $this->TestModel->gets($args, $p, $ppp);
         $total_tests = $this->TestModel->counts($args);
@@ -99,7 +99,7 @@ class TestController extends Controller {
         $args = array('deleted' => 0, 'ref_id' => $test['id'], 'ref_type' => 'test_nt');
         $comments = $this->CommentModel->gets($args, $p, $ppp);
         $total = $this->CommentModel->counts($args);
-        
+
         $this->viewData['has_buy'] = $this->TestModel->get_user_test(UserControl::getId(), $test['id']);
         $this->viewData['post'] = $test;
         $this->viewData['comments'] = $comments;

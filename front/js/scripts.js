@@ -201,17 +201,14 @@ function bind_nt_test(){
         };
         $.post(ele.attr('link'),data,function(response)
         {
+            var textarea = $(".tinymce");
+            textarea.removeClass('tinymce');
             $(response).insertBefore($(".list-question form .form-actions"));
             $(".list-question").show();
             $(".list-question .questions.hide").fadeIn(300);
             
             bind_mce();
-            //$(".mceEditor").css('display','inline');
-            /*
-            mceEditors.filter(function(){
-                var display = $(this).css('display');
-                return display == "none";
-            }).remove(); */
+            textarea.addClass('tinymce');            
         });
         
         
