@@ -20,13 +20,13 @@
                 <?php endif; ?>
             </h1>
             <div class="content-footer clearfix">
-
-
-                Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/search_by_organization/org/<?php echo $post['organization_id'] ?>"><?php echo $post['organization_title'] ?></a><br/>
+                Mã đề: <strong>YIMA-<?php echo Helper::_parse_id($post['id']); ?></strong><br/>
+                
+                Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>"><?php echo $post['organization_title'] ?></a><br/>
 
 
                 Khoa: <a href="#"><?php echo $post['faculty_title'] ?></a>
-                - Môn: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/search_by_category/c/<?php echo $post['subject_id'] ?>"><?php echo $post['subject_title'] ?></a><br/>
+                - Môn: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>/subject_id/<?php echo $post['subject_id']; ?>"><?php echo $post['subject_title'] ?></a><br/>
 
 
                 Người tạo: <a href="#"><?php echo $post['lastname'] . " " . $post['firstname']; ?></a> 

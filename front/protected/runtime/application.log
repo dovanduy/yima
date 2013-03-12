@@ -10373,3 +10373,131 @@ REQUEST_URI=/yima/front/organization/index/slug/dai-hoc-ngoai-ngu-tin-hoc-thanh-
 in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/organization/index.php (9)
 in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/OrganizationController.php (56)
 in /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php (17)
+2013/03/12 09:15:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search_by_organization".' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(271): CController->missingAction('search_by_organ...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('search_by_organ...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/search_by_...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/yima/front/test/search_by_organization/org/242
+HTTP_REFERER=http://localhost/yima/front/test/view/s/bai-kiem-tra-demo-dich-kinh-thuong--business-translation--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/12 09:16:35 [error] [php] include(HelperUrl.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yima/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/views/sidebar-view-test.php(19): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(131): require()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(96): SidebarViewTest->renderInternal()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/widgets/CWidget.php(244): SidebarViewTest->renderFile()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php(27): SidebarViewTest->render()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(174): SidebarViewTest->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php(21): TestController->widget()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(127): require()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(96): TestController->renderInternal()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(785): TestController->renderFile()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/TestController.php(110): TestController->render()
+#11 unknown(0): TestController->actionView()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): TestController->runAction()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): TestController->runActionWithFilters()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): TestController->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/front/test/view/s/bai-kiem-tra-demo-dich-kinh-thuong--business-translation--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/views/sidebar-view-test.php (19)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php (27)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php (21)
+2013/03/12 10:17:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT yt.*,ysu.firstname,ysu.lastname,ysu.email
+                FROM yima_transactions yt
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yt.user_id
+                WHERE 1
+                AND yt.ref_id = :ref_idAND yt.ref_type = :ref_type
+                ORDER BY yt.date_added DESC
+                LIMIT :page,:ppp.
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/TransactionModel.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php (27)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php (21)
+2013/03/12 10:17:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT yt.*,ysu.firstname,ysu.lastname,ysu.email
+                FROM yima_transactions yt
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yt.user_id
+                WHERE 1
+                AND yt.ref_id = :ref_idAND yt.ref_type = :ref_type
+                ORDER BY yt.date_added DESC
+                LIMIT :page,:ppp' in /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/models/TransactionModel.php(39): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php(27): TransactionModel->gets(Array, 1, 10)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(174): SidebarViewTest->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php(21): CBaseController->widget('SidebarViewTest')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(127): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(785): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/TestController.php(110): CController->render('view', Array)
+#9 [internal function]: TestController->actionView('bai-kiem-tra-de...', 1)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): CController->run('view')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController('test/view/s/bai...')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/yima/front/test/view/s/bai-kiem-tra-demo-dich-kinh-thuong--business-translation--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/12 10:19:04 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/views/sidebar-view-test.php:27)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/widgets/CWidget.php(244): SidebarViewTest->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php(33): SidebarViewTest->render()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(174): SidebarViewTest->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php(21): TestController->widget()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(127): require()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(96): TestController->renderInternal()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(785): TestController->renderFile()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/TestController.php(110): TestController->render()
+#8 unknown(0): TestController->actionView()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): TestController->runAction()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): TestController->runActionWithFilters()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): TestController->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/front/test/view/s/bai-kiem-tra-demo-dich-kinh-thuong--business-translation--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/views/sidebar-view-test.php (27)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php (33)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php (21)
+2013/03/12 10:31:51 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/views/sidebar-view-test.php:39)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/widgets/CWidget.php(244): SidebarViewTest->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php(36): SidebarViewTest->render()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(174): SidebarViewTest->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php(21): TestController->widget()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(127): require()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CBaseController.php(96): TestController->renderInternal()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(785): TestController->renderFile()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/controllers/TestController.php(110): TestController->render()
+#8 unknown(0): TestController->actionView()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(309): CInlineAction->runWithParams()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(287): TestController->runAction()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CController.php(266): TestController->runActionWithFilters()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(283): TestController->run()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yima/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yima/front/index.php(17): CWebApplication->run()
+REQUEST_URI=/yima/front/test/view/s/bai-kiem-tra-demo-dich-kinh-thuong--business-translation--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/views/sidebar-view-test.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/widgets/SidebarViewTest.php (36)
+in /Applications/XAMPP/xamppfiles/htdocs/yima/front/protected/views/layouts/view-test.php (21)

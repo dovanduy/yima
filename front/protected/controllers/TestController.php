@@ -99,13 +99,14 @@ class TestController extends Controller {
         $args = array('deleted' => 0, 'ref_id' => $test['id'], 'ref_type' => 'test_nt');
         $comments = $this->CommentModel->gets($args, $p, $ppp);
         $total = $this->CommentModel->counts($args);
-
+        
         $this->viewData['has_buy'] = $this->TestModel->get_user_test(UserControl::getId(), $test['id']);
         $this->viewData['post'] = $test;
         $this->viewData['comments'] = $comments;
         $this->viewData['total'] = $total;
         $this->viewData['paging'] = $total > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/test/view/s/$s/p/", $total, $p) : "";
         $this->viewData['best_comment'] = $this->CommentModel->get_best_comment($test['id'], 'test_nt');
+        Yii::app()->params['test'] = $test;
         $this->render('view', $this->viewData);
     }
 

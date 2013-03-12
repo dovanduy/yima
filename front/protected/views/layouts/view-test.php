@@ -1,6 +1,6 @@
 <?php $this->renderFile(Yii::app()->basePath . "/views/_shared/header.php"); ?>
 
-<div class="row-fluid home">
+<div class="row-fluid home view-test">
     <div class="container">
         <?php /*
           <div class="row-fluid">
@@ -18,9 +18,7 @@
         
         <div class="row-fluid magu-home">
             <?php echo $content; ?>
-            <div class="span4" style="margin-top: 33px">
-                
-            </div>                    
+            <?php $this->widget('SidebarViewTest'); ?>     
         </div>
 
 

@@ -167,7 +167,7 @@ class TestModel extends CFormModel {
     public function get($id) {
         $user_id = UserControl::getId();
         $sql = "SELECT ynt.id,ynt.title,ynt.slug,ynt.description,ynt.section_id,ynt.price,ynt.author_id,ynt.date_added,ynt.last_modified,ynt.disabled,ynt.deleted,ynt.attach_file,ynt.total_comment,ynt.total_like,ynt.total_dislike,
-                yofs.organization_id,yofs.faculty_id,yofs.subject_id,yofs.sub_number,yso.title as organization_title,ysf.title as faculty_title,yss.title as subject_title,ysu.email,ysu.firstname,ysu.lastname,ysu.thumbnail,(yv.ref_id = ynt.id) as voted
+                yofs.organization_id,yofs.faculty_id,yofs.subject_id,yofs.sub_number,yso.title as organization_title,yso.slug as organization_slug,ysf.title as faculty_title,yss.title as subject_title,ysu.email,ysu.firstname,ysu.lastname,ysu.thumbnail,(yv.ref_id = ynt.id) as voted
                 FROM yima_nt_test ynt
                 LEFT JOIN yima_organization_faculty_subject yofs
                 ON ynt.group_id = yofs.id
@@ -197,7 +197,7 @@ class TestModel extends CFormModel {
     public function get_by_slug($slug) {
         $user_id = UserControl::getId();
         $sql = "SELECT ynt.id,ynt.title,ynt.slug,ynt.description,ynt.section_id,ynt.price,ynt.author_id,ynt.date_added,ynt.last_modified,ynt.disabled,ynt.deleted,ynt.attach_file,ynt.total_comment,ynt.total_like,ynt.total_dislike,
-                yofs.organization_id,yofs.faculty_id,yofs.subject_id,yofs.sub_number,yso.title as organization_title,ysf.title as faculty_title,yss.title as subject_title,ysu.email,ysu.firstname,ysu.lastname,ysu.thumbnail,(yv.ref_id = ynt.id) as voted,ynq.total_question
+                yofs.organization_id,yofs.faculty_id,yofs.subject_id,yofs.sub_number,yso.title as organization_title,yso.slug as organization_slug,ysf.title as faculty_title,yss.title as subject_title,ysu.email,ysu.firstname,ysu.lastname,ysu.thumbnail,(yv.ref_id = ynt.id) as voted,ynq.total_question
                 FROM yima_nt_test ynt
                 LEFT JOIN yima_organization_faculty_subject yofs
                 ON ynt.group_id = yofs.id
@@ -263,6 +263,20 @@ class TestModel extends CFormModel {
         $command->bindParam(":user_id", $user_id);
         $command->bindParam(":test_id", $test_id);
         return $command->queryRow();
+    }
+    
+    public function get_latest_user_tests($test_id) {
+        $sql = "SELECT yut.*,ysu.lastname,ysu.firstname,ysu.email
+                FROM yima_user_test yut
+                LEFT JOIN yima_sys_user ysu
+                ON yut.user_id = ysu.id
+                WHERE yut.ref_type = 'test_nt'
+                AND yut.ref_id = :test_id
+                ORDER BY yut.date_added DESC
+                LIMIT 10";
+        $command = Yii::app()->db->createCommand($sql);        
+        $command->bindParam(":test_id", $test_id);
+        return $command->queryAll();
     }
 
     public function get_user_toefl($user_id, $test_id, $type) {

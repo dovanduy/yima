@@ -98,3 +98,15 @@
 .toefl-course ul li ul li{border-bottom: #888 1px solid}
 .recent-tests .summary{width: 190px !important}
 .recent-tests .summary .time{margin-right: 3px;}
+
+
+.view-test{}
+    .view-test .sidebar{}
+    .view-test .sidebar .box{margin: 0 15px 15px 15px;}
+    .view-test .sidebar .box h4{background-image: -moz-linear-gradient(center bottom , #FFFFFF 50%, #EEEEEE 100%);background: none repeat scroll 0 0 #333333;color: #fff;line-height: 28px;padding-left: 15px;}
+    .view-test .sidebar .box ul{margin: 7px 0}
+    .view-test .sidebar .box ul li{padding: 3px 0;}
+    .view-test .sidebar .box ul li:nth-child(2n){background-color: #BBB}
+    .view-test .sidebar .box ul li a{margin-left: 15px;color:#444}
+    .view-test .sidebar .box ul li .time{margin-left: 32px;font-size: 11px;font-style: italic;color:#999}
+    .view-test .sidebar .box ul li:nth-child(2n) a{color:#444}

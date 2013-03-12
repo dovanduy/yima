@@ -8,15 +8,28 @@ class TransactionModel extends CFormModel {
         $params = array();
         
         if(isset($args['user_id'])){
-            $custom.= "AND user_id = :user_id";
+            $custom.= " AND yt.user_id = :user_id";
             $params[] = array('name' => ':user_id', 'value' => $args['user_id'], 'type' => PDO::PARAM_INT);
         }
         
-        $sql = "SELECT *
-                FROM yima_transactions
+        if(isset($args['ref_id'])){
+            $custom.= " AND yt.ref_id = :ref_id";
+            $params[] = array('name' => ':ref_id', 'value' => $args['ref_id'], 'type' => PDO::PARAM_INT);
+        }
+        
+        if(isset($args['ref_type'])){
+            $custom.= " AND yt.ref_type = :ref_type";
+            $params[] = array('name' => ':ref_type', 'value' => $args['ref_type'], 'type' => PDO::PARAM_STR);
+        }        
+        
+        
+        $sql = "SELECT yt.*,ysu.firstname,ysu.lastname,ysu.email
+                FROM yima_transactions yt
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = yt.user_id
                 WHERE 1
                 $custom
-                ORDER BY date_added DESC
+                ORDER BY yt.date_added DESC
                 LIMIT :page,:ppp";
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(":page", $page,PDO::PARAM_INT);
@@ -32,12 +45,22 @@ class TransactionModel extends CFormModel {
         $params = array();
         
         if(isset($args['user_id'])){
-            $custom.= "AND user_id = :user_id";
+            $custom.= " AND yt.user_id = :user_id";
             $params[] = array('name' => ':user_id', 'value' => $args['user_id'], 'type' => PDO::PARAM_INT);
         }
         
+        if(isset($args['ref_id'])){
+            $custom.= " AND yt.ref_id = :ref_id";
+            $params[] = array('name' => ':ref_id', 'value' => $args['ref_id'], 'type' => PDO::PARAM_INT);
+        }
+        
+        if(isset($args['ref_type'])){
+            $custom.= " AND yt.ref_type = :ref_type";
+            $params[] = array('name' => ':ref_type', 'value' => $args['ref_type'], 'type' => PDO::PARAM_STR);
+        }
+        
         $sql = "SELECT count(*) as total
-                FROM yima_transactions
+                FROM yima_transactions yt
                 WHERE 1
                 $custom
                 ";
