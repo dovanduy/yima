@@ -100,6 +100,7 @@
                     </li>
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/test" class="bold">Tìm bài kiểm tra</a></li>
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/create_test" class="bold">Soạn kiểm tra</a></li>
+                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/toefl" class="bold">TOEFL</a></li>
                     <?php /*
                       <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/info/view/page/help" class="bold">Hướng dẫn sử dụng</a></li>
                       <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/faq/">Câu hỏi thường găp</a></li>

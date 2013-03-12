@@ -7,6 +7,7 @@ class HomeController extends Controller {
     private $OrganizationModel;
     private $SubjectModel;
     private $TestModel;
+    private $Course_testModel;
 
     public function init() {
         /* @var $EventModel EventModel */
@@ -20,6 +21,9 @@ class HomeController extends Controller {
         
         /* @var $TestModel TestModel */
         $this->TestModel = new TestModel();
+        
+        /* @var $Course_testModel Course_testModel */
+        $this->Course_testModel = new Course_testModel();
     }
 
     public function actions() {
@@ -46,6 +50,10 @@ class HomeController extends Controller {
         $nt_test = $this->TestModel->gets(array());
         $total = $this->TestModel->counts(array());
         $subject = $this->SubjectModel->gets(array('disabled'=>0,'deleted'=>0,'featured'=>1));
+        
+        $toefl = $this->Course_testModel->get_toefl_course(array(),1,10);
+        
+        $this->viewData['toefl'] = $toefl;
         $this->viewData['nt_test'] = $nt_test;
         $this->viewData['subject'] = $subject;     
         $this->viewData['total'] = $total;        

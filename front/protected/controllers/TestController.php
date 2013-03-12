@@ -106,7 +106,8 @@ class TestController extends Controller {
         $this->viewData['total'] = $total;
         $this->viewData['paging'] = $total > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/test/view/s/$s/p/", $total, $p) : "";
         $this->viewData['best_comment'] = $this->CommentModel->get_best_comment($test['id'], 'test_nt');
-        Yii::app()->params['test'] = $test;
+        Yii::app()->params['test'] = $test;        
+        Yii::app()->params['is_page'] = "test-detail";
         $this->render('view', $this->viewData);
     }
 

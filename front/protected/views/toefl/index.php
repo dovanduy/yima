@@ -11,38 +11,31 @@
 
 
                 <div id="search_results">
-                    <div class="alert-message clearfix">
-                        <strong>
-                            Danh sách bài thi TOEFL
-                        </strong>
-                        <div id="sort_results">
-                            <form action="?">
-                                Sắp xếp: 
-                                <select>
-                                    <option value="#">
-                                        Ngày tháng
-                                    </option>
-                                    <option selected="" value="#">
-                                        Hợp lý
-                                    </option>
-                                </select>
-                            </form>
-                        </div> 
-                    </div>
-                    <div class="toefl-course list-result">
-                        <ul>
-                            <?php foreach ($course as $c): ?>
-                                <li class="clearfix">
-                                    <div class="summary">
-                                        <h4><a href="<?php echo Yii::app()->baseUrl?>/toefl/view/id/<?php echo $c['id']?>" value ="<?php echo $c['id'] ?>" class ="toefl-link"><?php echo $c['title'] ?></a></h4>
-                                        
+                    <table class="table table-bordered table-striped table-center">
+                        <tr>
+                            <th>Mã số</th>
+                            <th>Tên</th>
 
-                                    </div>
-                                </li>
-                            <?php endforeach; ?>
+                            <th></th>
+                        </tr>
+                        <?php if (count($toefl) < 1): ?>
+                            <tr>
+                                <td colspan="3">Không tìm thấy đề phù hợp.</td>
+                            </tr>
+                        <?php endif; ?>
+                        <?php foreach ($toefl as $n): ?>
+                            <tr>
+                                <td>TOEFL-<?php echo Helper::_parse_id($n['id']) ?></td>
+                                <td class="align-left">
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/toefl/view/id/<?php echo $n['id'] ?>"><?php echo $n['title']; ?></a><br/>
 
-                        </ul>
-                    </div>
+                                </td>
+                                <td>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/toefl/view/id/<?php echo $n['id'] ?>" class="btn btn-small">Chi tiết</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
                     <?php $this->renderFile(Yii::app()->basePath . "/views/_shared/paging.php", array('total' => $total, 'paging' => $paging)); ?>
                 </div>
 

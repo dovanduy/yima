@@ -27,12 +27,12 @@ class ToeflController extends Controller {
         $args = '';
 
         $ppp = Yii::app()->getParams()->itemAt('ppp');
-        $course = $this->Course_testModel->get_toefl_course($args, $p, $ppp);
+        $toefl = $this->Course_testModel->get_toefl_course($args, $p, $ppp);
         $total = $this->Course_testModel->get_toefl_counts();
 
 
         $this->viewData['paging'] = $total > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/toefl/index/p/", $total, $p) : "";
-        $this->viewData['course'] = $course;
+        $this->viewData['toefl'] = $toefl;
         $this->viewData['total'] = $total;
 
         $this->render('index', $this->viewData);

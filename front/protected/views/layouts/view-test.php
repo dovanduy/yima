@@ -15,10 +15,12 @@
           </div>
           </div>
           </div> */ ?>
-        
+
         <div class="row-fluid magu-home">
             <?php echo $content; ?>
-            <?php $this->widget('SidebarViewTest'); ?>     
+            <?php if (Yii::app()->params['is_page'] == "test-detail"): ?>
+                <?php $this->widget('SidebarViewTest'); ?>     
+            <?php endif; ?>
         </div>
 
 
