@@ -110,7 +110,7 @@
                                     <tr>
                                         <td class="align-left"><?php echo $q1_iq['title']; ?></td>
                                         <td><i class="<?php echo $q1_iq['answer'] == $user_choices_iq[$q1_iq['id']] ? "icon-ok" : "icon-remove"; ?>"></i></td>
-                                        <?php if ($q2): ?>
+                                        <?php if ($q2_iq): ?>
                                             <td class="align-left"><?php echo $q2_iq['title']; ?></td>
                                             <td><i class="<?php echo $q2_iq['answer'] == $user_choices_iq[$q2_iq['id']] ? "icon-ok" : "icon-remove"; ?>"></i></td>
                                         <?php else: ?>

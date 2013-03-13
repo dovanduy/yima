@@ -49,8 +49,8 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'AmavietNAM';
-$db['default']['database'] = 'toefl';
+$db['default']['password'] = '';
+$db['default']['database'] = 'yima';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

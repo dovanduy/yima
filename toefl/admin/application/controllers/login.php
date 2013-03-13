@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 class Login extends CI_Controller {
 
-    public function index() {
+    public function index() {        
         //--- default theme
         $this->theme = $this->config->item('theme');
 

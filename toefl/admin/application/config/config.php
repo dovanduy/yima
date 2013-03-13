@@ -18,7 +18,7 @@ if (!defined('BASEPATH'))
   |
  */
 //$config['base_url']	= 'http://192.168.0.10/admin/';
-$config['base_url']	= 'http://toefl.ama.edu.vn/admin/';
+$config['base_url']	= '/yima/toefl/admin/';
 
 /*
   |--------------------------------------------------------------------------

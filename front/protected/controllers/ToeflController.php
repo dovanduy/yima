@@ -61,6 +61,7 @@ class ToeflController extends Controller {
         HelperGlobal::require_login();
         $right_choice = 0;
         $wrong_choice = 0;
+        $total_question = 0;
 
         $test_id = $_POST['rid'];
         $c_id = $_POST['cid'];
@@ -80,6 +81,9 @@ class ToeflController extends Controller {
         for ($i = 1; $i <= $total_scq; $i++) {
             $right_choices_scq[$data['scq'][$i - 1]] = $this->Course_testModel->get_sc_reading($data['scq'][$i - 1]);
             $user_choices_scq[$data['scq'][$i - 1]] = $data['scq_user_choice'][$i - 1] != "" ? $data['scq_user_choice'][$i - 1] : 0;
+            
+            if($right_choices_scq[$data['scq'][$i - 1]]['answer'] == $user_choices_scq[$data['scq'][$i - 1]])
+                $right_choice++;
         }
 
 
@@ -99,6 +103,9 @@ class ToeflController extends Controller {
         for ($i = 1; $i <= $total_mcq; $i++) {
             $right_choices_mcq[$data['mcq_id'][$i - 1]] = $this->Course_testModel->get_mc_reading($data['mcq_id'][$i - 1]);
             $user_choices_mcq[$data['mcq_id'][$i - 1]] = $data['mcq_choice'][$i - 1] != "" ? $data['mcq_choice'][$i - 1] : 0;
+            
+            if($right_choices_mcq[$data['mcq_id'][$i - 1]]['answer'] == $user_choices_mcq[$data['mcq_id'][$i - 1]])
+                $right_choice++;
         }
 
         // print_r($user_choices_mcq);print_r($right_choices_mcq);die;
@@ -118,6 +125,9 @@ class ToeflController extends Controller {
         for ($i = 1; $i <= $total_iq; $i++) {
             $right_choices_iq[$data['iq_id'][$i - 1]] = $this->Course_testModel->get_iq_reading($data['iq_id'][$i - 1]);
             $user_choices_iq[$data['iq_id'][$i - 1]] = $data['iq_choice'][$i - 1] != "" ? $data['iq_choice'][$i - 1] : 0;
+            
+            if($right_choices_iq[$data['iq_id'][$i - 1]]['answer'] == $user_choices_iq[$data['iq_id'][$i - 1]])
+                $right_choice++;
         }
 
 
@@ -131,6 +141,9 @@ class ToeflController extends Controller {
         for ($i = 1; $i <= $total_ddq; $i++) {
             $right_choices_ddq[$data['ddq_id'][$i - 1]] = $this->Course_testModel->get_ddq_reading($data['ddq_id'][$i - 1]);
             $user_choices_ddq[$data['ddq_id'][$i - 1]] = $data['ddq_choice'][$i - 1] != "" ? $data['ddq_choice'][$i - 1] : 0;
+            
+            //if($right_choices_ddq[$data['ddq_id'][$i - 1]]['answer'] == $user_choices_ddq[$data['ddq_id'][$i - 1]])
+                //$right_choice++;
         }
 
 
@@ -169,14 +182,17 @@ class ToeflController extends Controller {
         for ($i = 1; $i <= $total_oq; $i++) {
             $right_choices_oq[$data['oq_id'][$i - 1]] = $this->Course_testModel->get_oq_reading($data['oq_id'][$i - 1]);
             $user_choices_oq[$data['oq_id'][$i - 1]] = $data['oq_choice'][$i - 1] != "" ? $data['oq_choice'][$i - 1] : 0;
+            
+            if($right_choices_oq[$data['oq_id'][$i - 1]]['answer'] == $user_choices_oq[$data['oq_id'][$i - 1]])
+                $right_choice++;
         }
 
 
         $user_choices = array('scq' => $user_choices_scq, 'mcq' => $user_choices_mcq, 'iq' => $user_choices_iq, 'ddq' => $user_choices_ddq, 'oq' => $user_choices_oq);
         $right_choices = array('scq' => $right_choices_scq, 'mcq' => $right_choices_mcq, 'iq' => $right_choices_iq, 'ddq' => $right_choices_ddq, 'oq' => $right_choices_oq);
         $all_data = serialize(array('user_choices' => $user_choices, 'right_choices' => $right_choices));
-
-        $rela = $this->TestModel->add_test_relationship($relationship_id, $all_data, 0, $right_choice);
+        $total_question = $total_ddq + $total_iq + $total_mcq + $total_oq + $total_scq;
+        $rela = $this->TestModel->add_test_relationship($relationship_id, $all_data, $total_question, $right_choice);
         echo json_encode($rela);
     }
 

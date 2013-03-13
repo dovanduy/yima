@@ -46,6 +46,23 @@ if ( ! function_exists('site_url'))
 	}
 }
 
+if ( ! function_exists('upload_url'))
+{
+	function upload_url()
+	{
+		return "/yima/front/upload/";
+	}
+}
+
+if ( ! function_exists('upload_dir'))
+{
+	function upload_dir()
+	{
+		return '/Applications/XAMPP/xamppfiles/htdocs/yima/front/upload/';
+	}
+}
+
+
 // ------------------------------------------------------------------------
 
 /**

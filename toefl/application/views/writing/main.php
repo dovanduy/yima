@@ -280,8 +280,9 @@
                     writing1=$('#writing1_content').val();
                     writing2=$('#writing2_content').val();
                     $.post(url,{writing1:writing1,writing2:writing2,wid1:wid1,wid2:wid2,cid:cid}, function(data) {
+                        window.location = "<?php echo HelperURL::main_url() ?>toefl/finished/id/"+data+"/part/writing";
                     }, 'json');
-                      window.location = "<?php echo HelperURL::main_url() ?>toefl/finished/id/"+data+"/part/writing";
+                      
                     break;
                 default:
                 }

@@ -11,7 +11,8 @@ class Writing extends CI_Controller {
         $this->load->database();
         $params = array('filename' => '');
         $this->load->library('mp3file', $params);
-
+        
+        
         /*$step = $_SESSION['steps'];
         $current_step = $_SESSION['current_step'];
 
@@ -58,6 +59,7 @@ class Writing extends CI_Controller {
             if ($row->lsound == '') {
                 $response['lsound_duration'] = 5;
             } else {
+                                
                 $f = 'admin/data/sounds/writing/' . $row->lsound;
                 if (file_exists($f)) {
                     $response['lsound_duration'] = sound_length($f) + 5;
