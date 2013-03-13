@@ -43,9 +43,23 @@ class OrganizationModel extends CFormModel {
         $sql = "SELECT *
                 FROM yima_sys_organization
                 WHERE slug = :slug
+                AND disabled = 0
+                AND deleted = 0
                 ";
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(":slug", $slug, PDO::PARAM_STR);
+        return $command->queryRow();
+    }
+    
+    public function get($id) {
+        $sql = "SELECT *
+                FROM yima_sys_organization
+                WHERE id = :id
+                AND disabled = 0
+                AND deleted = 0
+                ";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(":id", $id);
         return $command->queryRow();
     }
 

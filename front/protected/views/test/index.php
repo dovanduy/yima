@@ -43,11 +43,11 @@
                         <td class="align-left">
                             <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/view/s/<?php echo $n['slug'] ?>"><?php echo $n['title']; ?></a><br/>
                             Loại: <?php echo $n['section_title'] ?><br/>
-                            Chủ đề: <a rel="tooltip" title="<?php echo $n['subject_title']; ?>" href="<?php echo Yii::app()->request->baseUrl ?>/test/?cid=<?php echo $n['subject_id']; ?>"><?php echo Helper::string_truncate($n['subject_title']); ?></a>
+                            Chủ đề: <a rel="tooltip" title="<?php echo $n['subject_title']; ?>" href="<?php echo Yii::app()->request->baseUrl ?>/organization/index/slug/<?php echo $n['organization_slug'] ?>/subject_id/<?php echo $n['subject_id']; ?>"><?php echo Helper::string_truncate($n['subject_title']); ?></a>
                         </td>
                         <td class="align-left">
-                            <a rel="tooltip" title="<?php echo $n['org_title']; ?>" href="<?php echo Yii::app()->request->baseUrl; ?>/test/?oid=<?php echo $n['organization_id'] ?>"><?php echo $n['org_title']; ?></a><br/>
-                            Khoa: <a rel="tooltip" title="<?php echo $n['faculty_name']; ?>" href=""><?php echo $n['faculty_name']; ?></a>
+                            <a rel="tooltip" title="<?php echo $n['org_title']; ?>" href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $n['organization_slug'] ?>"><?php echo $n['org_title']; ?></a><br/>
+                            Khoa: <a rel="tooltip" title="<?php echo $n['faculty_name']; ?>" href="<?php echo Yii::app()->request->baseUrl; ?>/faculty/index/id/<?php echo $n['faculty_id']; ?>/oid/<?php echo $n['organization_id']; ?>"><?php echo $n['faculty_name']; ?></a>
                         </td>
                         <td>
                             <?php if ($n['price'] == 0): ?>

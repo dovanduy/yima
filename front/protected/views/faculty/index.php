@@ -3,27 +3,12 @@
         <article class="row-fluid find-magu">
             <aside class="sidebar span3">
                 <div class="sidebar-wrap">
-                    <?php if ($faculties): ?>
-                        <div id="filter_date" class="filter">
-                            <h3>Khoa</h3>
-                            <ul>
-                                <?php foreach ($faculties as $s): ?>
-                                    <li>
-                                        <a href="<?php echo Yii::app()->baseUrl ?>/faculty/index/id/<?php echo $s['id'] ?>/oid/<?php echo $organization['id'] ?>"><?php echo $s['title'] ?></a>
-
-                                    </li>
-
-                                <?php endforeach; ?>
-
-                            </ul>
-                        </div>
-                    <?php endif; ?>
                     <div id="filter_date" class="filter">
                         <h3>Chủ đề</h3>
                         <ul>
                             <?php foreach ($subjects as $s): ?>
                                 <li>
-                                    <a href="<?php echo Yii::app()->baseUrl ?>/organization/index/slug/<?php echo $slug ?>/subject_id/<?php echo $s['id'] ?>"><?php echo $s['title'] ?></a>
+                                    <a href="<?php echo Yii::app()->baseUrl ?>/organization/index/slug/<?php echo $organization['slug'] ?>/subject_id/<?php echo $s['id'] ?>"><?php echo $s['title'] ?></a>
 
                                 </li>
 
@@ -40,11 +25,8 @@
                     <div class="alert-message clearfix">
                         <strong>
                             <?php echo $organization['title'] ?>
-                        </strong>
-                        <?php if ($subject): ?>
-                            <br/><br/>
-                            <span style="font-size: 14px;font-weight: bold">Chủ đề: <?php echo $subject['title']; ?></span>
-                        <?php endif; ?>
+                        </strong><br/><br/>
+                        <span style="font-size: 14px;font-weight: bold"><?php echo $faculty['title']; ?></span>
                     </div>
 
                     <div class="list-result search-page">

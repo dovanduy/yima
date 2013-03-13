@@ -48,6 +48,11 @@ class TestModel extends CFormModel {
             $custom.= " AND yofs.organization_id = :organization_id";
             $params[] = array('name' => ':organization_id', 'value' => $args['organization_id'], 'type' => PDO::PARAM_STR);
         }
+        
+        if (isset($args['faculty_id']) && $args['faculty_id'] > 0) {
+            $custom.= " AND yofs.faculty_id = :faculty_id";
+            $params[] = array('name' => ':faculty_id', 'value' => $args['faculty_id'], 'type' => PDO::PARAM_STR);
+        }
 
         $sql = "SELECT knt.*,kso.id as organization_id,kso.title as org_title,kso.slug as organization_slug,ksu.id as user_id,ksu.email as author_title,kss.id as subject_id,kss.title as subject_title,ysf.title as faculty_name,yofs.faculty_id,ysse.title as section_title
                 FROM yima_nt_test knt
@@ -121,6 +126,11 @@ class TestModel extends CFormModel {
         if (isset($args['organization_id']) && $args['organization_id'] > 0) {
             $custom.= " AND yofs.organization_id = :organization_id";
             $params[] = array('name' => ':organization_id', 'value' => $args['organization_id'], 'type' => PDO::PARAM_STR);
+        }
+        
+        if (isset($args['faculty_id']) && $args['faculty_id'] > 0) {
+            $custom.= " AND yofs.faculty_id = :faculty_id";
+            $params[] = array('name' => ':faculty_id', 'value' => $args['faculty_id'], 'type' => PDO::PARAM_STR);
         }
 
 

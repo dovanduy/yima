@@ -36,5 +36,21 @@ class FacultyModel extends CFormModel {
         }
         return $command->queryAll();
     }
+    
+    public function get($id){
+       
+
+        $sql = "SELECT *
+                FROM yima_sys_faculty
+                WHERE disabled = 0
+                AND deleted = 0
+                AND id = :id
+                ORDER BY title ASC
+                ";
+
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindParam(':id', $id);
+        return $command->queryRow();
+    }
 
 }
