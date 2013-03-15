@@ -81,8 +81,8 @@
  #post{}
     #post .post h1{font-size: 24px;line-height: 32px}
     #post .post .content{padding-top: 15px;color: #333}
-    #post .post .content-footer{padding-top: 15px;font-size: 11px;color: #666;}
-    #post #list-comments{padding-top: 20px}
+    #post .post .content-footer{padding-top: 15px;font-size: 11px;color: #666; padding-bottom: 20px; border-bottom: 1px dotted #ccc; line-height: 24px;}
+    #post #list-comments{padding-top: 20px; margin-top: 20px; border-top: 1px dotted #ccc;}
     #post #list-comments h3{margin-bottom: 15px;color: #222}
     #post #list-comments .comments{padding-top: 10px}
     #post #list-comments .comments .comment{border-top: 1px solid #d5d5d5;padding: 20px 0}
@@ -105,7 +105,7 @@
     .view-test .sidebar .box{margin: 0 15px 15px 15px;}
     .view-test .sidebar .box h4{background-image: -moz-linear-gradient(center bottom , #FFFFFF 50%, #EEEEEE 100%);background: none repeat scroll 0 0 #333333;color: #fff;line-height: 28px;padding-left: 15px;border-radius: 5px 5px 0 0}
     .view-test .sidebar .box ul{margin: 7px 0}
-    .view-test .sidebar .box ul li{padding: 3px 0;}
+    .view-test .sidebar .box ul li{padding: 3px 10px;}
     .view-test .sidebar .box ul li:nth-child(2n){background-color: #dfdfdf}
     .view-test .sidebar .box ul li a{margin-left: 15px;color:#444}
     .view-test .sidebar .box ul li .time{margin-left: 32px;font-size: 11px;font-style: italic;color:#999}
@@ -115,10 +115,11 @@
 .books{
     padding: 0px;
     text-decoration: none;
-    color: #cdb3a3;
+    color: #ccc;
     text-align: center;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 5px;
     opacity: 1;
     font-family: Courier, Verdana, Tahoma;
     -moz-transition-property: opacity;  /* FF4+ */

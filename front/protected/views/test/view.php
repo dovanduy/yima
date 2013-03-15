@@ -56,11 +56,11 @@
                     <?php if (!$has_buy && $post['price'] > 0): ?>
                     <a data-toggle="modal" href="#<?php if (UserControl::LoggedIn()) echo 'modal-buy-test'; ?>" class="btn btn-warning pull-left <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i>Làm bài thi</a>
                     <?php elseif (!$has_buy && $post['price'] == 0): ?>
-                        <a href="#" class="btn btn-warning pull-left free-test <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
+                        <a href="#" class="btn btn-primary pull-left free-test btn-large <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
                     <?php else: ?>
-                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/do/id/<?php echo $post['id']; ?>" class="btn btn-warning pull-left"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
+                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/do/id/<?php echo $post['id']; ?>" class="btn btn-primary pull-left btn-large"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
                     <?php endif; ?>
-                        <a class="btn btn-primary pull-right btn-reply <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-comment"></i> Bình luận</a>
+                        <a class="btn pull-right btn-reply btn-large <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-comment"></i> Bình luận</a>
                 </p>
             </div>
 

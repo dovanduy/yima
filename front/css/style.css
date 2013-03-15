@@ -1031,7 +1031,7 @@ div.sidebar-wrap{padding: 20px 15px;min-height: 100px;}
     transition-property: opacity;  /* Standard */
     transition-duration: 0.5s;
 }
-.book-cover:hover{opacity: 0.9; color: #cdb3a3; text-decoration: none;}
+.book-cover:hover{opacity: 0.9; color: #fff; text-decoration: none;}
 .book-cover .inner{display: table-cell; vertical-align: middle;}
 
 
