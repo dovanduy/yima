@@ -139,251 +139,252 @@
             if (current_question>1) $('.button.back').show();
         });
         
-        $('.part5_question, .part6_question, .part7_question').click(function(){
+    $('.part5_question, .part6_question, .part7_question').click(function(){
            
-            question=$(this).attr('alt');
-            $('#status'+question).html('Answered');
-        });
+        question=$(this).attr('alt');
+        $('#status'+question).html('Answered');
+    });
         
-        $('#oq .arrow').click(function(){
-            question=$(this).attr('num');
-            $('#status'+question).html('Answered');
-        });
+    $('#oq .arrow').click(function(){
+        question=$(this).attr('num');
+        $('#status'+question).html('Answered');
+    });
         
-        $('.button.back').click(function(){
-            var number_question=<?php echo $number_question; ?>;
-            var current_question=parseInt($('#current_question').val());
-            current_question-=1;
-            $('#current_question').val(current_question);
-            $('#current_position').html(current_question+' of '+number_question);
-            $('.question').hide();
-            $('#question'+current_question).show();       
+    $('.button.back').click(function(){
+        var number_question=<?php echo $number_question; ?>;
+        var current_question=parseInt($('#current_question').val());
+        current_question-=1;
+        $('#current_question').val(current_question);
+        $('#current_position').html(current_question+' of '+number_question);
+        $('.question').hide();
+        $('#question'+current_question).show();       
             
-            if (current_question==1) $('.button.back').hide();
-        });
+        if (current_question==1) $('.button.back').hide();
+    });
         
-        $('.button.review').click(function(){
-            $('.button.end_section').hide();
-            $('.button.return').hide();
-            $('.button.next').hide();
-            $('.button.review').hide();
-            $('.button.back').hide();
-            $('.button.return_from_review').show();
-            $('.question').hide();
+    $('.button.review').click(function(){
+        $('.button.end_section').hide();
+        $('.button.return').hide();
+        $('.button.next').hide();
+        $('.button.review').hide();
+        $('.button.back').hide();
+        $('.button.return_from_review').show();
+        $('.question').hide();
             
-            $('#review').show();
-        });
+        $('#review').show();
+    });
         
-        $('.button.end_section').click(function(){
-            //OQ
-            var oq_arr=[<?php echo $reading_oq_arr; ?>];
-            var oq_id='<?php echo $reading_oq_arr; ?>';
+    $('.button.end_section').click(function(){
+        //OQ
+        var oq_arr=[<?php echo $reading_oq_arr; ?>];
+        var oq_id='<?php echo $reading_oq_arr; ?>';
             
-            var oq_choice_arr=new Array();
-            for (var i = 0; i < oq_arr.length; i++){
-                var oq_order_arr=new Array();
+        var oq_choice_arr=new Array();
+        for (var i = 0; i < oq_arr.length; i++){
+            var oq_order_arr=new Array();
                 
-                oq_order_arr.push($('.oq'+oq_arr[i]+' .choice1').attr('alt'));
-                oq_order_arr.push($('.oq'+oq_arr[i]+' .choice2').attr('alt'));
-                oq_order_arr.push($('.oq'+oq_arr[i]+' .choice3').attr('alt'));
-                oq_order_arr.push($('.oq'+oq_arr[i]+' .choice4').attr('alt'));
+            oq_order_arr.push($('.oq'+oq_arr[i]+' .choice1').attr('alt'));
+            oq_order_arr.push($('.oq'+oq_arr[i]+' .choice2').attr('alt'));
+            oq_order_arr.push($('.oq'+oq_arr[i]+' .choice3').attr('alt'));
+            oq_order_arr.push($('.oq'+oq_arr[i]+' .choice4').attr('alt'));
                 
-                console.log(oq_order_arr);
+            console.log(oq_order_arr);
                 
-                oq_order=oq_order_arr.join(';');
-                oq_choice_arr[i]=oq_order;
-            }
-            oq_choice=oq_choice_arr.join(',');
+            oq_order=oq_order_arr.join(';');
+            oq_choice_arr[i]=oq_order;
+        }
+        oq_choice=oq_choice_arr.join(',');
             
-            //DDQ
-            var ddq_arr=[<?php echo $reading_ddq_arr; ?>];
-            var ddq_id='<?php echo $reading_ddq_arr; ?>';
+        //DDQ
+        var ddq_arr=[<?php echo $reading_ddq_arr; ?>];
+        var ddq_id='<?php echo $reading_ddq_arr; ?>';
             
-            var ddq_final_subject_arr=new Array();
-            var ddq_final_choice_arr=new Array();
+        var ddq_final_subject_arr=new Array();
+        var ddq_final_choice_arr=new Array();
             
-            for (var i = 0; i < ddq_arr.length; i++){
-                var ddq_subject_arr=new Array();
-                var ddq_choice_arr=new Array();
+        for (var i = 0; i < ddq_arr.length; i++){
+            var ddq_subject_arr=new Array();
+            var ddq_choice_arr=new Array();
             
-                $.each($('.ddq'+ddq_arr[i]), function() {
-                    subject_id=$(this).attr('alt');
-                    ddq_subject_arr.push(subject_id);
+            $.each($('.ddq'+ddq_arr[i]), function() {
+                subject_id=$(this).attr('alt');
+                ddq_subject_arr.push(subject_id);
                     
-                    var ddq_subject_choice_arr=new Array();
-                    $.each($('#subject'+subject_id+' li a.remove_choice'), function() {
-                        ddq_subject_choice_arr.push($(this).attr('alt'));
-                    });
-                    ddq_subject_choice=ddq_subject_choice_arr.join('/');
-                    
-                    ddq_choice_arr.push(ddq_subject_choice);
+                var ddq_subject_choice_arr=new Array();
+                $.each($('#subject'+subject_id+' li a.remove_choice'), function() {
+                    ddq_subject_choice_arr.push($(this).attr('alt'));
                 });
+                ddq_subject_choice=ddq_subject_choice_arr.join('/');
+                    
+                ddq_choice_arr.push(ddq_subject_choice);
+            });
                 
-                ddq_subject=ddq_subject_arr.join(';');
-                ddq_choice=ddq_choice_arr.join(';');
+            ddq_subject=ddq_subject_arr.join(';');
+            ddq_choice=ddq_choice_arr.join(';');
                 
-                ddq_final_subject_arr.push(ddq_subject);
-                ddq_final_choice_arr.push(ddq_choice);
+            ddq_final_subject_arr.push(ddq_subject);
+            ddq_final_choice_arr.push(ddq_choice);
                 
-            }
+        }
             
-            ddq_subject=ddq_final_subject_arr.join(',');
-            ddq_choice=ddq_final_choice_arr.join(',');
+        ddq_subject=ddq_final_subject_arr.join(',');
+        ddq_choice=ddq_final_choice_arr.join(',');
             
             
-            //IQ
-            var part7_arr=[<?php echo $reading_part7_arr; ?>];
-            var part7_id='<?php echo $reading_part7_arr; ?>';
-            var part7_choice_arr=new Array();
-            for (var i = 0; i < part7_arr.length; i++){
-                part7_choice_arr[i]=$('#part7'+part7_arr[i]).val();
-            }
-            part7_choice=part7_choice_arr.join(',');
+        //IQ
+        var part7_arr=[<?php echo $reading_part7_arr; ?>];
+        var part7_id='<?php echo $reading_part7_arr; ?>';
+        var part7_choice_arr=new Array();
+        for (var i = 0; i < part7_arr.length; i++){
+            part7_choice_arr[i]=$('input[name=part7'+part7_arr[i]+']:checked').val();
+        }
+        part7_choice=part7_choice_arr.join(',');
             
-            //MCQ
-            var part6_arr=[<?php echo $reading_part6_arr; ?>];
-            var part6_id='<?php echo $reading_part6_arr; ?>';
-            var part6_choice_arr=new Array();
-            for (var i = 0; i < part6_arr.length; i++){
-                part6_checked='';
+        //MCQ
+        var part6_arr=[<?php echo $reading_part6_arr; ?>];
+        var part6_id='<?php echo $reading_part6_arr; ?>';
+        var part6_choice_arr=new Array();
+        for (var i = 0; i < part6_arr.length; i++){
+            /*part6_checked='';
                 var part6_checked_arr=new Array();
                 $.each($('.part6'+part6_arr[i]), function() {
                     if ($(this).attr('checked')=='checked') part6_checked_arr.push($(this).val());
                 });
                 part6_checked=part6_checked_arr.join(';');
-                part6_choice_arr[i]=part6_checked;
-            }
-            part6_choice=part6_choice_arr.join(',');
-            
-            //SCQ
-            var part5_arr=[<?php echo $reading_part5_arr; ?>];
-            var part5_id='<?php echo $reading_part5_arr; ?>';
-            var choice_arr=new Array();
-            for (var i = 0; i < part5_arr.length; i++){
-                choice_arr[i]=$('input[name=part5'+part5_arr[i]+']:checked').val();
-            }
-            part5_choice=choice_arr.join(',');
-            
-            //post to reading_command
-            var cid = '<?php echo $cid?>';
-            var rid = '<?php echo $rid?>';
-            var url = '<?php echo HelperURL::main_url(); ?>toeic/test/marks_reading';
-            $.post(url,{part5_id:part5_id,part5_choice:part5_choice,part6_id:part6_id,part6_choice:part6_choice,part7_id:part7_id,part7_choice:part7_choice,rid:rid,cid:cid}, function() {
-               // window.location = "<?php echo base_url(); ?>start";
-            }, 'json');
-            
-        });
-
-        $('.button.view_question').click(function(){
-            $('.button.next').show();
-            $('.button.review').show();
-            $('.button.back').hide();
-            $('.button.return_from_review').hide();
-            var current_question=parseInt($(this).attr('alt'));
-            $('#question'+current_question).show();
-            if (current_question>1) $('.button.back').show();
-            
-            var number_question=<?php echo $number_question; ?>;
-            $('#current_question').val(current_question);
-            $('#current_position').html(current_question+' of '+number_question);
-            
-            $('#confirmation').hide();
-            $('#review').hide();
-        });
-
-        $('.button.return_from_review').click(function(){
-            $('.button.next').show();
-            $('.button.review').show();
-            $('.button.back').hide();
-            $('.button.return_from_review').hide();
-            var current_question=parseInt($('#current_question').val());
-            $('#question'+current_question).show();
-            if (current_question>1) $('.button.back').show();
-            
-            $('#confirmation').hide();
-            $('#review').hide();
-        });
-        
-        $('.button.continue').click(function(){
-            $('#timer').show();   
-            $('.switch_timer').show();   
-            $('#direction').hide();
-            $('#reading_text').show();
-            
-            $('.button.continue').hide();            
-            $('.button.next_reading').show();
-            setInterval(run_timer, 1000); 
-        });
-        
-        $('.button.next_reading').click(function(){
-            $('#current_position').show();   
-            $('#reading_text').hide();
-            $('#question1').show();
-            
-            $('.button.review').show();
-            $('.button.next_reading').hide();
-            $('.button.next').show();            
-        });
-        
-        $('.switch_timer').click(function(){
-            lbl_current_time=$('#timer').html();
-            current_time=$('#current_timer').val();
-            if (lbl_current_time=='&nbsp;') {
-                minute=Math.floor(current_time/60);
-                second=Math.floor(current_time - minute*60);
-                $('#timer').html(pad(minute, 2) + ' : ' + pad(second, 2));
-            }else{
-                $('#timer').html('&nbsp;');
-            }
-        });
-        
-        $('.square').click(function(){
-            var current_question=parseInt($('#current_question').val());
-            text=$(this).html();
-            part7_title=$('#question'+current_question+' .part7_title').html();
-            
-            if (text=='&nbsp;') {
-                $('#question'+current_question+' .square').html('&nbsp;');
-                $(this).html(part7_title);
-            }else{
-                $(this).html('&nbsp;');
-            }
-        });
-        
-        function run_timer(){
-            lbl_current_time=$('#timer').html();
-            current_time=parseInt($('#current_timer').val());
-            current_time-=1;
-            $('#current_timer').val(current_time);
-            if (lbl_current_time!='&nbsp;') {
-                minute=Math.floor(current_time/60);
-                second=Math.floor(current_time - minute*60);
-                $('#timer').html(pad(minute, 2) + ' : ' + pad(second, 2));
-            }
-            if (current_time==0) $('.button.end_section').trigger('click');
+                part6_choice_arr[i]=part6_checked; */
+            part6_choice_arr[i]=$('input[name=part6'+part6_arr[i]+']:checked').val();
         }
-        
-        function pad(number, length) {
-            var str = '' + number;
-            while (str.length < length) {
-                str = '0' + str;
-            }
-            return str;
+        part6_choice=part6_choice_arr.join(',');
+            
+        //SCQ
+        var part5_arr=[<?php echo $reading_part5_arr; ?>];
+        var part5_id='<?php echo $reading_part5_arr; ?>';
+        var choice_arr=new Array();
+        for (var i = 0; i < part5_arr.length; i++){
+            choice_arr[i]=$('input[name=part5'+part5_arr[i]+']:checked').val();
         }
-        
-        $('.arrow').click(function(){
-            question=$(this).attr('num');
+        part5_choice=choice_arr.join(',');
             
-            exchange = $(this).attr('alt');
-            current = $(this).attr('value');
+        //post to reading_command
+        var cid = '<?php echo $cid ?>';
+        var rid = '<?php echo $rid ?>';
+        var url = '<?php echo HelperURL::main_url(); ?>toeic/test/marks_reading';
+        $.post(url,{part5_id:part5_id,part5_choice:part5_choice,part6_id:part6_id,part6_choice:part6_choice,part7_id:part7_id,part7_choice:part7_choice,rid:rid,cid:cid}, function(data) {
+             window.location = "<?php echo HelperURL::main_url(); ?>toeic/test/finished/id/"+data+"/part/reading/";
+        }, 'json');
             
-            text=$('#question'+question+' .choice'+current+' span').html();
-            $('#question'+question+' .choice'+current+' span').html($('#question'+question+' .choice'+exchange+' span').html());
-            $('#question'+question+' .choice'+exchange+' span').html(text);
-            
-            id = $('#question'+question+' .choice'+current).attr('alt');
-            $('#question'+question+' .choice'+current).attr('alt',$('#question'+question+' .choice'+exchange).attr('alt'));
-            $('#question'+question+' .choice'+exchange).attr('alt',id);
-        });
     });
+
+    $('.button.view_question').click(function(){
+        $('.button.next').show();
+        $('.button.review').show();
+        $('.button.back').hide();
+        $('.button.return_from_review').hide();
+        var current_question=parseInt($(this).attr('alt'));
+        $('#question'+current_question).show();
+        if (current_question>1) $('.button.back').show();
+            
+        var number_question=<?php echo $number_question; ?>;
+        $('#current_question').val(current_question);
+        $('#current_position').html(current_question+' of '+number_question);
+            
+        $('#confirmation').hide();
+        $('#review').hide();
+    });
+
+    $('.button.return_from_review').click(function(){
+        $('.button.next').show();
+        $('.button.review').show();
+        $('.button.back').hide();
+        $('.button.return_from_review').hide();
+        var current_question=parseInt($('#current_question').val());
+        $('#question'+current_question).show();
+        if (current_question>1) $('.button.back').show();
+            
+        $('#confirmation').hide();
+        $('#review').hide();
+    });
+        
+    $('.button.continue').click(function(){
+        $('#timer').show();   
+        $('.switch_timer').show();   
+        $('#direction').hide();
+        $('#reading_text').show();
+            
+        $('.button.continue').hide();            
+        $('.button.next_reading').show();
+        setInterval(run_timer, 1000); 
+    });
+        
+    $('.button.next_reading').click(function(){
+        $('#current_position').show();   
+        $('#reading_text').hide();
+        $('#question1').show();
+            
+        $('.button.review').show();
+        $('.button.next_reading').hide();
+        $('.button.next').show();            
+    });
+        
+    $('.switch_timer').click(function(){
+        lbl_current_time=$('#timer').html();
+        current_time=$('#current_timer').val();
+        if (lbl_current_time=='&nbsp;') {
+            minute=Math.floor(current_time/60);
+            second=Math.floor(current_time - minute*60);
+            $('#timer').html(pad(minute, 2) + ' : ' + pad(second, 2));
+        }else{
+            $('#timer').html('&nbsp;');
+        }
+    });
+        
+    $('.square').click(function(){
+        var current_question=parseInt($('#current_question').val());
+        text=$(this).html();
+        part7_title=$('#question'+current_question+' .part7_title').html();
+            
+        if (text=='&nbsp;') {
+            $('#question'+current_question+' .square').html('&nbsp;');
+            $(this).html(part7_title);
+        }else{
+            $(this).html('&nbsp;');
+        }
+    });
+        
+    function run_timer(){
+        lbl_current_time=$('#timer').html();
+        current_time=parseInt($('#current_timer').val());
+        current_time-=1;
+        $('#current_timer').val(current_time);
+        if (lbl_current_time!='&nbsp;') {
+            minute=Math.floor(current_time/60);
+            second=Math.floor(current_time - minute*60);
+            $('#timer').html(pad(minute, 2) + ' : ' + pad(second, 2));
+        }
+        if (current_time==0) $('.button.end_section').trigger('click');
+    }
+        
+    function pad(number, length) {
+        var str = '' + number;
+        while (str.length < length) {
+            str = '0' + str;
+        }
+        return str;
+    }
+        
+    $('.arrow').click(function(){
+        question=$(this).attr('num');
+            
+        exchange = $(this).attr('alt');
+        current = $(this).attr('value');
+            
+        text=$('#question'+question+' .choice'+current+' span').html();
+        $('#question'+question+' .choice'+current+' span').html($('#question'+question+' .choice'+exchange+' span').html());
+        $('#question'+question+' .choice'+exchange+' span').html(text);
+            
+        id = $('#question'+question+' .choice'+current).attr('alt');
+        $('#question'+question+' .choice'+current).attr('alt',$('#question'+question+' .choice'+exchange).attr('alt'));
+        $('#question'+question+' .choice'+exchange).attr('alt',id);
+    });
+});
 </script>

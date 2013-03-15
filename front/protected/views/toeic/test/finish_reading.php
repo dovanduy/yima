@@ -65,12 +65,11 @@
                                     <?php endif; ?>
                                 </tr>
                             <?php endfor; ?>
-                                
-                                 <?php
-                          
+
+                            <?php
                             $questions_6 = array_values($information['right_choices']['scq_part6']);
-                            
-                           
+
+
                             $user_choices_6 = $information['user_choices']['scq_part6'];
                             $ceil_6 = ceil(count($questions_6) / 2);
                             //print_r($ceil_6);die;
@@ -94,12 +93,11 @@
                                     <?php endif; ?>
                                 </tr>
                             <?php endfor; ?>
-                                
-                                 <?php
-                          
+
+                            <?php
                             $questions_7 = array_values($information['right_choices']['scq_part7']);
-                            
-                           
+
+
                             $user_choices_7 = $information['user_choices']['scq_part7'];
                             $ceil_7 = ceil(count($questions_7) / 2);
                             //print_r($ceil_7);die;
@@ -115,25 +113,14 @@
                                 <tr>
                                     <td class="align-left"><?php echo $q1_7['question']; ?></td>
                                     <td><i class="<?php echo $q1_7['answer'] == $user_choices_7[$q1_7['id']] ? "icon-ok" : "icon-remove"; ?>"></i></td>
-                                    <?php if ($q2_7): ?>
+    <?php if ($q2_7): ?>
                                         <td class="align-left"><?php echo $q2_7['question']; ?></td>
                                         <td><i class="<?php echo $q2_7['answer'] == $user_choices_7[$q2_7['id']] ? "icon-ok" : "icon-remove"; ?>"></i></td>
-                                    <?php else: ?>
+    <?php else: ?>
                                         <td colspan="2"></td>
                                     <?php endif; ?>
                                 </tr>
-                            <?php endfor; ?>
-                                
-                                
-                                
-
-                            
-
-                         
-
-                            
-
-
+                                <?php endfor; ?>
                         </tbody>
                     </table>
                 </div>

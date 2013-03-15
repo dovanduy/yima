@@ -8,6 +8,7 @@ class Reading extends CI_Controller {
     private $number_question = 0;
 
     public function index($rid,$cid) {
+        
         if (!$rid)
             return;
         session_start();

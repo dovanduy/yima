@@ -33,7 +33,7 @@ class TestController extends Controller {
         $this->viewData['paging'] = $total > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/toeic/test/index/p/", $total, $p) : "";
         $this->viewData['tests'] = $tests;
         $this->viewData['total'] = $total;
-
+        
         $this->render('index', $this->viewData);
     }
 
@@ -57,6 +57,7 @@ class TestController extends Controller {
     }
 
     public function actionMarks_reading() {
+        
         HelperGlobal::require_login();
         $test_id = $_POST['rid'];
         $c_id = $_POST['cid'];
@@ -112,10 +113,13 @@ class TestController extends Controller {
           //print_r();die;
         HelperGlobal::require_login();
         $finish = $this->TestModel->get_test_relationship_toeic($id,$part);
+        
         //print_r($finish);die;
         if (!$finish || $finish['user_id'] != UserControl::getId())
             $this->load_404();
-
+        
+       
+        
         $this->layout = "main";
         $this->viewData['finish'] = $finish;
         //print_r($finish);die;

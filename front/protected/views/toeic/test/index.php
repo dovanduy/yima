@@ -6,50 +6,36 @@
             </aside>
             <section class="search span9">
                 <div id="search_bar">
+
                 </div>
 
+
                 <div id="search_results">
-                    <div class="alert-message clearfix">
-                        <strong>
-                            Danh sách bài thi TOEIC
-                        </strong>
-                        <div id="sort_results">
-                            <form action="?">
-                                Sắp xếp: 
-                                <select>
-                                    <option value="#">
-                                        Ngày tháng
-                                    </option>
-                                    <option selected="" value="#">
-                                        Hợp lý
-                                    </option>
-                                </select>
-                            </form>
-                        </div> 
-                    </div>
-                    <div class="list-result">
-                        <ul>
-                            <?php foreach ($tests as $t): ?>
-                                <li class="clearfix">
+                    <table class="table table-bordered table-striped table-center">
+                        <tr>
+                            <th>Mã số</th>
+                            <th>Tên</th>
 
-                                    <div class="summary">
-                                        <h4><a href="<?php echo Yii::app()->baseUrl?>/toeic/test/view/id/<?php echo $t['id']?>" value ="<?php echo $t['id'] ?>" class ="toeic-link"><?php echo $t['title'] ?></a></h4>
-                                        <div class ="toeic-test" id="toeic_<?php echo $t['id'] ?>">
-                                            <ul>
-                                                <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toeic/reading/<?php echo $t['reading'] ?>"> Reading </a></li>
-                                            </ul>
-                                            <ul>
-                                                <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toeic/listening/<?php echo $t['listening'] ?>"> Listening </a></li>
-                                            </ul>
+                            <th></th>
+                        </tr>
+                        <?php if (count($tests) < 1): ?>
+                            <tr>
+                                <td colspan="3">Không tìm thấy đề phù hợp.</td>
+                            </tr>
+                        <?php endif; ?>
+                        <?php foreach ($tests as $n): ?>
+                            <tr>
+                                <td>TOEIC-<?php echo Helper::_parse_id($n['id']) ?></td>
+                                <td class="align-left">
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/toeic/test/view/id/<?php echo $n['id'] ?>"><?php echo $n['title']; ?></a><br/>
 
-                                        </div>
-
-                                    </div>
-                                </li>
-                            <?php endforeach; ?>
-
-                        </ul>
-                    </div>
+                                </td>
+                                <td>
+                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/toeic/test/view/id/<?php echo $n['id'] ?>" class="btn btn-small">Chi tiết</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
                     <?php $this->renderFile(Yii::app()->basePath . "/views/_shared/paging.php", array('total' => $total, 'paging' => $paging)); ?>
                 </div>
 

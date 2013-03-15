@@ -25,7 +25,7 @@
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/custom.css?v=19112012" rel="stylesheet">
 
         <!-- Le fav and touch icons -->
-        <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/ico/favicon.ico?v=1">
+        <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/ico/favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo Yii::app()->request->baseUrl; ?>/images/logo144.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo Yii::app()->request->baseUrl; ?>/images/logo114.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo Yii::app()->request->baseUrl; ?>/images/logo72.png">
@@ -101,6 +101,7 @@
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/test" class="bold">Tìm bài kiểm tra</a></li>
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/create_test" class="bold">Soạn kiểm tra</a></li>
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/toefl" class="bold">TOEFL</a></li>
+                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/toeic/test/" class="bold">TOEIC</a></li>
                     <?php /*
                       <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/info/view/page/help" class="bold">Hướng dẫn sử dụng</a></li>
                       <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/faq/">Câu hỏi thường găp</a></li>

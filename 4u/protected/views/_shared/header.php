@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
-        <title>4u.yima.vn | Yes, It's my answer for you</title>
+        <title>Yima.vn | Yes, It's my answer</title>
 
         <meta name="description" content="">
         <meta name="author" content="">
@@ -70,7 +70,7 @@
 
                 <ul class="nav nav-pills pull-left clearfix">
 
-                    <li><a class="bold" href="/yima/front/">Yima.vn</a></li>        
+                    <li><a class="bold" href="<?php echo Yii::app()->request->baseUrl; ?>">Trang chủ</a></li>        
                     <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/post/search/">Tìm kiếm câu hỏi</a></li>
 
                     <li><a class="bold" href="<?php echo Yii::app()->request->baseUrl; ?>/post/add/">Gửi câu hỏi</a></li>

@@ -66,7 +66,7 @@ class Reading extends CI_Controller {
         }
 
    
-
+        
         //------------------
 
 

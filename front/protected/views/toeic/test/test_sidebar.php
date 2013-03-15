@@ -3,7 +3,7 @@
                         <h3>Bài Thi</h3>
                         <ul>
                             <li class="active">
-                                <a href="http://localhost/kto/front/toeic/test">TOEIC</a>                            
+                                <a href="<?php echo Yii::app()->request->baseUrl; ?>/toeic/test/">TOEIC</a>                            
                             </li>
                             
                         </ul>
