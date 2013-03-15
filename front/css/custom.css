@@ -103,10 +103,55 @@
 .view-test{}
     .view-test .sidebar{}
     .view-test .sidebar .box{margin: 0 15px 15px 15px;}
-    .view-test .sidebar .box h4{background-image: -moz-linear-gradient(center bottom , #FFFFFF 50%, #EEEEEE 100%);background: none repeat scroll 0 0 #333333;color: #fff;line-height: 28px;padding-left: 15px;}
+    .view-test .sidebar .box h4{background-image: -moz-linear-gradient(center bottom , #FFFFFF 50%, #EEEEEE 100%);background: none repeat scroll 0 0 #333333;color: #fff;line-height: 28px;padding-left: 15px;border-radius: 5px 5px 0 0}
     .view-test .sidebar .box ul{margin: 7px 0}
     .view-test .sidebar .box ul li{padding: 3px 0;}
-    .view-test .sidebar .box ul li:nth-child(2n){background-color: #BBB}
+    .view-test .sidebar .box ul li:nth-child(2n){background-color: #dfdfdf}
     .view-test .sidebar .box ul li a{margin-left: 15px;color:#444}
     .view-test .sidebar .box ul li .time{margin-left: 32px;font-size: 11px;font-style: italic;color:#999}
     .view-test .sidebar .box ul li:nth-child(2n) a{color:#444}
+    
+/*****Custom*****/    
+.books{
+    padding: 0px;
+    text-decoration: none;
+    color: #cdb3a3;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    opacity: 1;
+    font-family: Courier, Verdana, Tahoma;
+    -moz-transition-property: opacity;  /* FF4+ */
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-property: opacity;  /* Saf3.2+, Chrome */
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: opacity;  /* Opera 10.5+ */
+    -o-transition-duration: 0.5s;
+    -ms-transition-property: opacity;  /* IE10? */
+    -ms-transition-duration: 0.5s;
+    transition-property: opacity;  /* Standard */
+    transition-duration: 0.5s;
+    background-image: linear-gradient(bottom, rgb(59,57,46) 0%, rgb(89,86,74) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(59,57,46) 0%, rgb(89,86,74) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(59,57,46) 0%, rgb(89,86,74) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(59,57,46) 0%, rgb(89,86,74) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(59,57,46) 0%, rgb(89,86,74) 100%);
+
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(59,57,46)),
+	color-stop(1, rgb(89,86,74))
+    );
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #ccc inset;
+    min-height: 140px;
+    width: auto;
+}
+.book-cover .inner{}
+.home .magu-listing{padding:30px 20px 30px 20px;border-right: 1px solid #dedede;margin-right: -1px}
+.view-test .magu-listing .post .content-footer .label{padding:3px 4px}
+.view-test .magu-listing .post .content-footer a:hover{text-decoration: none}
+.view-test .sidebar{margin-left:0;padding-left:2.12766%;border-left: 1px solid #dedede;}
+.view-test .sidebar .box{margin: 0 0 15px;padding-bottom: 10px;border:1px solid #DEDEDE;border-radius: 5px;box-shadow: 1px 1px 4px 1px #dedede}

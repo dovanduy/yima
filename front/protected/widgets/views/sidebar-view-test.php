@@ -1,4 +1,4 @@
-<div class="span4 sidebar" style="margin-top: 33px">
+<div class="span4 sidebar" style="padding-top: 30px">
     <div class="row-fluid">
         <div class="box">
             <h4>Khoa</h4>

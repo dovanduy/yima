@@ -11260,3 +11260,282 @@ Stack trace:
 REQUEST_URI=/yima/front/upload/audio/toefl/writing/QBW-51-SubjectSound.mp3
 HTTP_REFERER=http://localhost/yima/toefl/js/player.swf
 ---
+2013/03/15 10:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:05:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:06:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:06:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:07:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:08:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:08:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:08:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:09:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:10:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
+2013/03/15 10:11:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/media/2013/03//150x150-kghJl9sNv.png".' in D:\xampp\htdocs\yima\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\htdocs\yima\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/media/20...')
+#1 D:\xampp\htdocs\yima\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yima\front\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/yima/front/upload/media/2013/03//150x150-kghJl9sNv.png
+HTTP_REFERER=http://localhost/yima/front/test/view/s/chuong-1---ban-chat-cua-marketing-tiep-thi-can-ban-va-tiep-thi-quoc-te--basic-and-international-marketing--dai-hoc-ngoai-ngu-tin-hoc-thanh-pho-ho-chi-minh
+---
