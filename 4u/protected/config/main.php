@@ -89,9 +89,9 @@ return array(
         'ticket_tax' => 0.1,
         'regx_number' => '/^\d+$/',
         //'upload_dir' => 'C:\xampp\htdocs\yima\upload\\',
-        'upload_dir' => '/home/yima/http/hosts/yima.vn/upload/',
-        //'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/upload/',
-        'upload_url' => "/upload/",
-        'domain'=>'/yima/'
+        //'upload_dir' => '/home/yima/http/hosts/yima.vn/upload/',
+        'upload_dir' => '/Applications/XAMPP/xamppfiles/htdocs/yima/front/upload/',
+        'upload_url' => "/yima/front/upload/",
+        'domain'=>'/yima/front/'
     ),
 );
