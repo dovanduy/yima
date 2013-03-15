@@ -51,23 +51,23 @@
         </div>
         <div class ="toefl-test" id="toefl_<?php echo $post['id'] ?>">
                 <ul>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/reading/index/<?php echo $post['reading1'] ?>/1/<?php echo $c_id?>"> Reading 1</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/reading/index/<?php echo $post['reading2'] ?>/2/<?php echo $c_id?>"> Reading 2</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/reading/index/<?php echo $post['reading3'] ?>/3/<?php echo $c_id?>"> Reading 3</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/reading/index/<?php echo $post['reading1'] ?>/1/<?php echo $c_id?>"> Reading 1</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/reading/index/<?php echo $post['reading2'] ?>/2/<?php echo $c_id?>"> Reading 2</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/reading/index/<?php echo $post['reading3'] ?>/3/<?php echo $c_id?>"> Reading 3</a></li>
                 </ul>
                 <ul>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/listening/index/<?php echo $post['listening1'] ?>/1/<?php echo $c_id?>"> Listening 1</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/listening/index/<?php echo $post['listening2'] ?>/2/<?php echo $c_id?>"> Listening 2</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/listening/index/<?php echo $post['listening3'] ?>/3/<?php echo $c_id?>"> Listening 3</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/listening/index/<?php echo $post['listening4'] ?>/4/<?php echo $c_id?>"> Listening 4</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/listening/index/<?php echo $post['listening5'] ?>/5/<?php echo $c_id?>"> Listening 5</a></li>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/listening/index/<?php echo $post['listening6'] ?>/6/<?php echo $c_id?>"> Listening 6</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/listening/index/<?php echo $post['listening1'] ?>/1/<?php echo $c_id?>"> Listening 1</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/listening/index/<?php echo $post['listening2'] ?>/2/<?php echo $c_id?>"> Listening 2</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/listening/index/<?php echo $post['listening3'] ?>/3/<?php echo $c_id?>"> Listening 3</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/listening/index/<?php echo $post['listening4'] ?>/4/<?php echo $c_id?>"> Listening 4</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/listening/index/<?php echo $post['listening5'] ?>/5/<?php echo $c_id?>"> Listening 5</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/listening/index/<?php echo $post['listening6'] ?>/6/<?php echo $c_id?>"> Listening 6</a></li>
                 </ul>
                 <ul>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/speaking/index/<?php echo $post['speaking1'] ?>/<?php echo $post['speaking2'] ?>/<?php echo $post['speaking3'] ?>/<?php echo $post['speaking4'] ?>/<?php echo $post['speaking5'] ?>/<?php echo $post['speaking6'] ?>/<?php echo $c_id?>"> Speaking</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/speaking/index/<?php echo $post['speaking1'] ?>/<?php echo $post['speaking2'] ?>/<?php echo $post['speaking3'] ?>/<?php echo $post['speaking4'] ?>/<?php echo $post['speaking5'] ?>/<?php echo $post['speaking6'] ?>/<?php echo $c_id?>"> Speaking</a></li>
                 </ul>
                 <ul>
-                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>toefl/writing/index/<?php echo $post['writing1'] ?>/<?php echo $post['writing2'] ?>/<?php echo $c_id?>"> Writing</a></li>
+                    <li><a target="_blank" href="<?php echo Yii::app()->request->hostInfo . Yii::app()->params['domain'] ?>/toefl/writing/index/<?php echo $post['writing1'] ?>/<?php echo $post['writing2'] ?>/<?php echo $c_id?>"> Writing</a></li>
                 </ul>
             </div>
     </div>
