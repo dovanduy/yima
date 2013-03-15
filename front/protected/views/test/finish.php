@@ -28,15 +28,14 @@
                     </ul>
 
                     <table style="margin-top: 20px" class="table table-striped table-bordered table-center clearfix">
-                        <thead>
+                        
+                        <tbody>
                             <tr>
                                 <th style="width:40%">Câu hỏi</th>
                                 <th style="width:10%">KQ</th>
                                 <th style="width:40%">Câu hỏi</th>
                                 <th style="width:10%">KQ</th>
                             </tr>
-                        </thead>
-                        <tbody>
                             <?php
                             $information = unserialize($finish['information']);
                             $questions = array_values($information['right_choices']);
