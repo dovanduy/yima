@@ -1,11 +1,10 @@
 <div class="span8 magu-listing" id="post">
     <div class="row-fluid">
         <div class="span3 avatar">
-            <a class="book-cover books" href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $post['slug'] ?>">
-                <span class="inner">
-                    <?php echo $post['subject_title'] ?>
-                </span>
+            <a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $post['slug'] ?>">
+                <img src="http://placehold.it/126x126" class="img-organization"/>
             </a>
+            
         </div>
         <div class="span9 post rate">
             <h1>
