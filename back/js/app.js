@@ -16,14 +16,16 @@ function bind_crawl_yahoo(){
         ele.addClass('disabled').html('Calculating...');
         var category_id = $("#crawl-post .category-id").val();
         $("#crawl-post .more").addClass('hide');
-        $.post(ele.attr('href'),{'category_id':category_id},function(response){
+        $.post(ele.attr('href'),{
+            'category_id':category_id
+        },function(response){
             console.log(response);
             ele.removeClass('disabled').html('More Detail');
-             $("#crawl-post .category-name strong").text(response.category_title);
-             $("#crawl-post .total-records span").text(response.total_records);
-             $("#crawl-post .total-pages span").text(response.total_pages);
-             $("#crawl-post .total-posts span").text(response.total_posts);
-             $("#crawl-post .more").removeClass('hide');
+            $("#crawl-post .category-name strong").text(response.category_title);
+            $("#crawl-post .total-records span").text(response.total_records);
+            $("#crawl-post .total-pages span").text(response.total_pages);
+            $("#crawl-post .total-posts span").text(response.total_posts);
+            $("#crawl-post .more").removeClass('hide');
         },'json');
         return false;
     });
@@ -120,6 +122,27 @@ function bind_nt_test(){
         
         
         return false;
+    });
+    
+    $(".disqualify-test").fancybox({
+        
+        });
+    
+    $(".form-disqualify").ajaxForm({
+        beforeSubmit:function(formData, jqForm, options){
+            var message = $.trim($('.content',jqForm).val());
+            if(message == "")
+            {
+                alert('Please enter email content.');     
+                return false;
+            }
+        },
+        success:function(responseText, statusText, xhr, $form){
+            
+            $("#test"+responseText).fadeOut('slow');
+            $.fancybox.close();
+            
+        }
     });
 }
 
@@ -259,6 +282,15 @@ function changeSubSearch(id){
 function init(){
     $("table .delete-row").click(function(){
         if(!confirm("Are you sure you want to Delete?")) return false;
+        var ele = $(this);
+        $.get(ele.attr('href'),"",function(){
+            ele.parents("tr").fadeOut('slow');
+        });
+        return false; // khong chuyen trang
+    });
+    
+    $("table .approve-test").click(function(){
+        if(!confirm("Are you sure you want to Approve this test?")) return false;
         var ele = $(this);
         $.get(ele.attr('href'),"",function(){
             ele.parents("tr").fadeOut('slow');

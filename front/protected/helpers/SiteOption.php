@@ -29,5 +29,10 @@ class SiteOption {
         self::FetchUserInstance();
         return self::$instance['usd_rate'];
     }
+    
+    public static function getTestFee() {
+        self::FetchUserInstance();
+        return self::$instance['test_fee'];
+    }
 
 }

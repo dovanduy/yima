@@ -25,7 +25,11 @@
                                 YIMA-<?php echo Helper::_parse_id($v['id']); ?>
                             </td>
                             <td class="align-left">
-                                <a title="<?php echo $v['title'] ?>" rel="tooltip" href="<?php echo Yii::app()->request->baseUrl . "/test/view/s/" . $v['slug']; ?>"><?php echo Helper::string_truncate($v['title'], 50); ?></a><br/>
+                                <a title="<?php echo $v['title'] ?>" rel="tooltip" href="<?php echo Yii::app()->request->baseUrl . "/test/view/s/" . $v['slug']; ?>"><?php echo Helper::string_truncate($v['title'], 50); ?></a>
+                                <?php if($v['disabled']): ?>
+                                <span class="label">Chờ duyệt</span>
+                                <?php endif; ?>
+                                <br/>
                                 <strong>Loại:</strong> <?php echo $v['section_title']; ?><br/>
                                 <strong>Chủ đề</strong>: <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/search_by_category/c/<?php echo $v['subject_id']; ?>" rel="tooltip" title="<?php echo $v['subject_title'] ?>"><?php echo Helper::string_truncate($v['subject_title'], 50); ?></a><br/>
                             </td>

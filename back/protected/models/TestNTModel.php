@@ -22,6 +22,11 @@ class TestNTModel extends CFormModel {
             $params[] = array('name' => ':deleted', 'value' => $args['deleted'], 'type' => PDO::PARAM_INT);
         }
         
+        if (isset($args['disabled'])) {
+            $custom.= " AND knt.disabled like :disabled";
+            $params[] = array('name' => ':disabled', 'value' => $args['disabled'], 'type' => PDO::PARAM_INT);
+        }
+        
         $sql = "SELECT knt.*,kso.id as org_id,kso.title as org_title,ksu.id as user_id,ksu.email as author_title,kss.title as subject_title,ysf.title as faculty_name,yofs.faculty_id,ysse.title as section_title,yit.total_image,ynq.total_question
                 FROM yima_nt_test knt
                 LEFT JOIN yima_organization_faculty_subject yofs
@@ -77,6 +82,11 @@ class TestNTModel extends CFormModel {
         if (isset($args['deleted'])) {
             $custom.= " AND knt.deleted like :deleted";
             $params[] = array('name' => ':deleted', 'value' => $args['deleted'], 'type' => PDO::PARAM_INT);
+        }
+        
+        if (isset($args['disabled'])) {
+            $custom.= " AND knt.disabled like :disabled";
+            $params[] = array('name' => ':disabled', 'value' => $args['disabled'], 'type' => PDO::PARAM_INT);
         }
 
         $sql = "SELECT count(*) as total
@@ -191,10 +201,12 @@ class TestNTModel extends CFormModel {
     }
 
     public function get($id) {
-        $sql = "SELECT ynt.*,yofs.faculty_id,yofs.organization_id,yofs.subject_id
+        $sql = "SELECT ynt.*,yofs.faculty_id,yofs.organization_id,yofs.subject_id,ysu.email
                 FROM yima_nt_test ynt
                 LEFT JOIN yima_organization_faculty_subject yofs
                 ON yofs.id = ynt.group_id
+                LEFT JOIN yima_sys_user ysu
+                ON ysu.id = ynt.author_id
                 WHERE ynt.id = :id
                 ";
         $command = Yii::app()->db->createCommand($sql);

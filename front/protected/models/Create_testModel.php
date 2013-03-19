@@ -160,13 +160,13 @@ class Create_testModel extends CFormModel {
         return $command->queryAll();
     }
 
-    public function add_test($title, $slug, $descrip, $group_id, $section, $price, $author, $time) {
+    public function add_test($title, $slug, $descrip, $group_id, $section, $price, $author, $time,$disabled) {
         $count_slug = $this->check_exist_slug($slug);
         if ($count_slug > 0)
             $slug = $slug . "-" . $count_slug;
         
-        $sql = 'INSERT into yima_nt_test(title, slug, description,group_id, section_id,author_id,price, date_added,last_modified) 
-            VALUES(:title, :slug, :description,:group_id, :section_id,:author_id,:price, :date_added,:last_modified)';
+        $sql = 'INSERT into yima_nt_test(title, slug, description,group_id, section_id,author_id,price, date_added,last_modified,disabled) 
+            VALUES(:title, :slug, :description,:group_id, :section_id,:author_id,:price, :date_added,:last_modified,:disabled)';
         $command = Yii::app()->db->createCommand($sql);
         $command->bindParam(':title', $title, PDO::PARAM_STR);
         $command->bindParam(':slug', $slug, PDO::PARAM_STR);
@@ -178,6 +178,7 @@ class Create_testModel extends CFormModel {
         $command->bindParam(':price', $price, PDO::PARAM_INT);
         $command->bindParam(':date_added', $time, PDO::PARAM_INT);
         $command->bindParam(':last_modified', $time, PDO::PARAM_INT);
+        $command->bindParam(':disabled', $disabled, PDO::PARAM_INT);
         $command->execute();
         return Yii::app()->db->lastInsertID;
     }

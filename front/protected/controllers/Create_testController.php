@@ -113,7 +113,7 @@ class Create_testController extends Controller {
         $slug = Helper::create_slug($title . '-' . $subj['title'] . '-' . $org['title']);
 
         $author = UserControl::getId();
-        $testnt = $this->Create_testModel->add_test($title, $slug, $descrip, $group['id'], $section, $price, $author, time());
+        $testnt = $this->Create_testModel->add_test($title, $slug, $descrip, $group['id'], $section, $price, $author, time(),1);
 
         if (!$this->validator->is_empty_string($attach_file['name'])) {
             $name = Helper::create_slug($title) . "-" . $testnt;

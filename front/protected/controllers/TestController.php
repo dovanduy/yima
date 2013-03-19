@@ -57,7 +57,7 @@ class TestController extends Controller {
         $cid = isset($_GET['cid']) ? $_GET['cid'] : "";
         $oid = isset($_GET['oid']) ? $_GET['oid'] : "";
         $ppp = Yii::app()->getParams()->itemAt('ppp');
-        $args = array('search_cate' => $s, 'search_own' => $own, 'search_price' => $price, 'subject_id' => $cid, 'organization_id' => $oid);
+        $args = array('search_cate' => $s, 'search_own' => $own, 'search_price' => $price, 'subject_id' => $cid, 'organization_id' => $oid,'disabled'=>0);
 
         $tests = $this->TestModel->gets($args, $p, $ppp);
         $total_tests = $this->TestModel->counts($args);
@@ -212,8 +212,10 @@ class TestController extends Controller {
         }
 
         $has_buy = $this->TestModel->get_user_test(UserControl::getId(), $id);
-        if (!$has_buy && $test['author_id'] != UserControl::getId())
+        if (!$has_buy && $test['author_id'] != UserControl::getId()){
             $this->TransactionModel->add('buy_nt_test', $id, UserControl::getId(), -$test['price'], "Mua bài kiểm tra");
+            $this->TransactionModel->add('sold_test', $id, $test['author_id'], ($test['price'] * SiteOption::getTestFee()), 'Bán bài kiểm tra');
+        }
         $this->TestModel->add_user_test(UserControl::getId(), $id);
         echo json_encode(array('message' => $this->message, 'data' => array('link' => Yii::app()->request->baseUrl . "/test/do/id/$id")));
     }

@@ -279,5 +279,17 @@ class HelperApp {
         }
         return $filename;
     }
+    
+    public static function email($to, $subject, $message, $footer = true, $from = 'ntnhanbk@gmail.com') {
+
+        $header =
+                "MIME-Version: 1.0\r\n" .
+                "Content-type: text/html; charset=UTF-8\r\n" .
+                "From: ntnhanbk@gmail.com <$from>\r\n" .
+                "Reply-to: $from" .
+                "Date: " . date("r") . "\r\n";
+
+        @mail($to, $subject, $message, $header);
+    }
 
 }

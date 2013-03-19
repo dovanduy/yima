@@ -25,7 +25,7 @@
                 <div>Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>"><?php echo $post['organization_title'] ?></a></div>
 
 
-                <div>Khoa: <a href="#"><?php echo $post['faculty_title'] ?></a></div>
+                <div>Khoa: <a href="<?php echo Yii::app()->request->baseUrl; ?>/faculty/index/id/<?php echo $post['faculty_id']; ?>/oid/<?php echo $post['organization_id']; ?>"><?php echo $post['faculty_title'] ?></a></div>
                 <div>Môn: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>/subject_id/<?php echo $post['subject_id']; ?>"><?php echo $post['subject_title'] ?></a></div>
 
 

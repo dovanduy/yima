@@ -4,7 +4,7 @@
             <h4>Khoa</h4>
             <ul>
                 <?php foreach ($faculties as $k => $v): ?>
-                    <li><a href="#"><?php echo $k + 1; ?>. &nbsp;<?php echo $v['title']; ?></a></li>
+                    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/faculty/index/id/<?php echo $test['faculty_id']; ?>/oid/<?php echo $test['organization_id']; ?>"><?php echo $k + 1; ?>. &nbsp;<?php echo $v['title']; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -14,7 +14,7 @@
             <h4>Đề tương tự</h4>
             <ul>
                 <?php foreach ($tests as $k => $v): ?>
-                    <li><a href="#"><?php echo $k + 1; ?>. &nbsp;<?php echo $v['title']; ?></a></li>
+                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/test/view/s/<?php echo $v['slug']; ?>"><?php echo $k + 1; ?>. &nbsp;<?php echo $v['title']; ?></a></li>
                 <?php endforeach; ?>
                 <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $test['organization_slug'] ?>/subject_id/<?php echo $test['subject_id'] ?>">Tất cả</a></li>
             </ul>

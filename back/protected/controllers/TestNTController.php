@@ -41,7 +41,7 @@ class TestNTController extends Controller {
         $ppp = Yii::app()->getParams()->itemAt('ppp');
         $s = isset($_GET['s']) ? $_GET['s'] : "";
         $s = strlen($s) > 2 ? $s : "";
-        $args = array('s' => $s, 'deleted' => 0);
+        $args = array('s' => $s, 'deleted' => 0,'disabled'=>0);
         if(isset($_GET['uid']) && $_GET['uid'])
             $args['author_id'] = $_GET['uid'];
         $testnt = $this->TestNTModel->gets($args, $p, $ppp);
@@ -52,6 +52,24 @@ class TestNTController extends Controller {
         $this->viewData['paging'] = $total_testnt > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/testNT/index/p/", $total_testnt, $p) : "";
 
         $this->render('index', $this->viewData);
+    }
+    
+    public function actionPending($p = 1){
+        $this->CheckPermission();
+        $ppp = Yii::app()->getParams()->itemAt('ppp');
+        $s = isset($_GET['s']) ? $_GET['s'] : "";
+        $s = strlen($s) > 2 ? $s : "";
+        $args = array('s' => $s, 'deleted' => 0,'disabled'=>1);
+        if(isset($_GET['uid']) && $_GET['uid'])
+            $args['author_id'] = $_GET['uid'];
+        $testnt = $this->TestNTModel->gets($args, $p, $ppp);
+        $total_testnt = $this->TestNTModel->counts($args);
+
+        $this->viewData['testnt'] = $testnt;
+        $this->viewData['total'] = $total_testnt;
+        $this->viewData['paging'] = $total_testnt > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/testNT/pending/p/", $total_testnt, $p) : "";
+
+        $this->render('pending', $this->viewData);
     }
     
     public function actionFinish($p = 1){
@@ -67,7 +85,7 @@ class TestNTController extends Controller {
 
         $this->viewData['testnt'] = $testnt;
         $this->viewData['total'] = $total_testnt;
-        $this->viewData['paging'] = $total_testnt > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/testNT/do/p/", $total_testnt, $p) : "";
+        $this->viewData['paging'] = $total_testnt > $ppp ? HelperApp::get_paging($ppp, Yii::app()->request->baseUrl . "/testNT/finish/p/", $total_testnt, $p) : "";
 
         $this->render('finish', $this->viewData);
     }
@@ -346,6 +364,29 @@ class TestNTController extends Controller {
             return;
         $this->TestNTModel->update(array('deleted' => 1, 'id' => $id));
         HelperGlobal::add_log(UserControl::getId(), $this->controllerID(), $this->methodID(), array('Hành động' => 'Xóa', 'Dữ liệu' => array('id' => $id)));
+    }
+    
+    public function actionApprove($id) {
+        $this->CheckPermission();
+
+        $testnt = $this->TestNTModel->get($id);
+        if (!$testnt)
+            return;
+        $this->TestNTModel->update(array('disabled' => 0, 'id' => $id));
+        HelperGlobal::add_log(UserControl::getId(), $this->controllerID(), $this->methodID(), array('Hành động' => 'Cập nhật', 'Dữ liệu' => array('id' => $id)));
+    }
+    
+    public function actionDisqualify($id){
+        $this->CheckPermission();
+
+        $testnt = $this->TestNTModel->get($id);
+        if (!$testnt)
+            return;
+        
+        $message = trim($_POST['message']);
+        HelperApp::email($testnt['email'], 'Bài kiểm tra '.$testnt['title'].' bị xóa', $message);
+        $this->TestNTModel->update(array('deleted'=>1,'id'=>$id));
+        echo $_POST['id'];
     }
 
     public function actionAdd() {

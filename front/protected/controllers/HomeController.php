@@ -47,8 +47,8 @@ class HomeController extends Controller {
 
     public function actionIndex() {
 
-        $nt_test = $this->TestModel->gets(array());
-        $total = $this->TestModel->counts(array());
+        $nt_test = $this->TestModel->gets(array('disabled'=>0));
+        $total = $this->TestModel->counts(array('disabled'=>0));
         $subject = $this->SubjectModel->gets(array('disabled'=>0,'deleted'=>0,'featured'=>1));
         
         $toefl = $this->Course_testModel->get_toefl_course(array(),1,10);

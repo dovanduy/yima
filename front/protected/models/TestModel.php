@@ -53,6 +53,11 @@ class TestModel extends CFormModel {
             $custom.= " AND yofs.faculty_id = :faculty_id";
             $params[] = array('name' => ':faculty_id', 'value' => $args['faculty_id'], 'type' => PDO::PARAM_STR);
         }
+        
+        if(isset($args['disabled'])){
+            $custom.= " AND knt.disabled = :disabled";
+            $params[] = array('name' => ':disabled', 'value' => $args['disabled'], 'type' => PDO::PARAM_STR);
+        }
 
         $sql = "SELECT knt.*,kso.id as organization_id,kso.title as org_title,kso.slug as organization_slug,ksu.id as user_id,ksu.email as author_title,kss.id as subject_id,kss.title as subject_title,ysf.title as faculty_name,yofs.faculty_id,ysse.title as section_title
                 FROM yima_nt_test knt
@@ -68,7 +73,7 @@ class TestModel extends CFormModel {
                 ON ysf.id = yofs.faculty_id
                 LEFT JOIN yima_sys_section ysse
                 ON ysse.id = knt.section_id
-                WHERE knt.deleted = 0 and knt.disabled = 0
+                WHERE knt.deleted = 0
                 $custom
                 ORDER BY knt.date_added DESC
                 LIMIT :page,:ppp";
@@ -132,6 +137,11 @@ class TestModel extends CFormModel {
             $custom.= " AND yofs.faculty_id = :faculty_id";
             $params[] = array('name' => ':faculty_id', 'value' => $args['faculty_id'], 'type' => PDO::PARAM_STR);
         }
+        
+        if(isset($args['disabled'])){
+            $custom.= " AND knt.disabled = :disabled";
+            $params[] = array('name' => ':disabled', 'value' => $args['disabled'], 'type' => PDO::PARAM_STR);
+        }
 
 
         $sql = "SELECT count(*) as total
@@ -148,7 +158,7 @@ class TestModel extends CFormModel {
                 ON ysf.id = yofs.faculty_id
                 LEFT JOIN yima_sys_section ysse
                 ON ysse.id = knt.section_id
-                WHERE knt.deleted = 0 and knt.disabled = 0
+                WHERE knt.deleted = 0
                 $custom";
         $command = Yii::app()->db->createCommand($sql);
         foreach ($params as $a)

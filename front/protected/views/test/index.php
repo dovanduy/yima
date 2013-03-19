@@ -53,7 +53,7 @@
                             <?php if ($n['price'] == 0): ?>
                                 <span class="label label-success">Miễn phí</span>
                             <?php else: ?>
-                                <span class="label label-info"><?php echo number_format($n['price'], 0, '.', '.'); ?></span>
+                                <span class="label label-info"><?php echo number_format($n['price'], 0, '.', '.'); ?>  đ</span>
                             <?php endif; ?>
                         </td>
                         <td>

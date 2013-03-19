@@ -18,6 +18,7 @@
 
         <li class="nav-header"><a href="#"><span class="hidden-tablet"> Normal Test</span></a></li>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/testNT"><i class="icon-list-alt icon-white"></i><span class="hidden-tablet"> Normal Test</span></a></li>
+        <li><a href="<?php echo Yii::app()->request->baseUrl ?>/testNT/pending"><i class="icon-list-alt icon-white"></i><span class="hidden-tablet"> Pending</span></a></li>
         <?php /* <li><a href="<?php echo Yii::app()->request->baseUrl ?>/question"><i class="icon-list-alt icon-white"></i><span class="hidden-tablet"> Question</span></a></li> */ ?>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/testNT/finish/"><i class="icon-ok icon-white"></i><span class="hidden-tablet"> Finished</span></a></li>
         <li><a href="<?php echo Yii::app()->request->baseUrl ?>/comment/index/type/test_nt/"><i class=" icon-envelope icon-white"></i><span class="hidden-tablet"> Comments</span></a></li>            
