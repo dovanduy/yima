@@ -1,38 +1,48 @@
 <div class="span8 magu-listing" id="post">
     <div class="row-fluid">
+        <h1 class="test-heading">
+            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/icon-test-heading.png"/>
+            <?php echo $post['title']; ?> 
+
+            <?php /* if ($post['voted']): ?>
+              <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote/id/<?php echo $post['id'] ?>" class="btn btn-info hide vote"><i class="icon-white icon-thumbs-up"></i> Hay</a>
+              <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote/id/<?php echo $post['id'] ?>" class="btn unvote"><i class="icon-thumbs-down"></i> Không Hay</a>
+              <?php else: ?>
+              <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote/id/<?php echo $post['id'] ?>" class="btn btn-info <?php if (!UserControl::LoggedIn()) echo 'require-login';else echo "vote"; ?>"><i class="icon-white icon-thumbs-up"></i> Hay</a>
+              <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote/id/<?php echo $post['id'] ?>" class="btn hide unvote"><i class="icon-thumbs-down"></i> Không Hay</a>
+              <?php endif; */ ?>
+        </h1>
+    </div>
+    <div class="row-fluid">
         <div class="span3 avatar">
             <a href="<?php echo Yii::app()->baseUrl ?>/test/view/s/<?php echo $post['slug'] ?>">
                 <img src="http://placehold.it/126x126" class="img-organization"/>
             </a>
-            
+            <?php if ($post['voted']): ?>
+                <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote/id/<?php echo $post['id'] ?>" class="btn btn-info hide vote"><i class="icon-white icon-thumbs-up"></i> Hay</a>
+                <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote/id/<?php echo $post['id'] ?>" class="btn unvote"><i class="icon-thumbs-down"></i> Không Hay</a>
+            <?php else: ?>
+                <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote/id/<?php echo $post['id'] ?>" class="btn btn-info <?php if (!UserControl::LoggedIn()) echo 'require-login';else echo "vote"; ?>"><i class="icon-white icon-thumbs-up"></i> Hay</a>
+                <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote/id/<?php echo $post['id'] ?>" class="btn hide unvote"><i class="icon-thumbs-down"></i> Không Hay</a>
+            <?php endif; ?>
         </div>
         <div class="span9 post rate">
-            <h1>
-                <?php echo $post['title']; ?> 
 
-                <?php if ($post['voted']): ?>
-                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote/id/<?php echo $post['id'] ?>" class="btn btn-info hide vote"><i class="icon-white icon-thumbs-up"></i> Hay</a>
-                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote/id/<?php echo $post['id'] ?>" class="btn unvote"><i class="icon-thumbs-down"></i> Không Hay</a>
-                <?php else: ?>
-                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote/id/<?php echo $post['id'] ?>" class="btn btn-info <?php if (!UserControl::LoggedIn()) echo 'require-login';else echo "vote"; ?>"><i class="icon-white icon-thumbs-up"></i> Hay</a>
-                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote/id/<?php echo $post['id'] ?>" class="btn hide unvote"><i class="icon-thumbs-down"></i> Không Hay</a>
-                <?php endif; ?>
-            </h1>
             <div class="content-footer clearfix">
-                <div>Mã đề: <strong>YIMA-<?php echo Helper::_parse_id($post['id']); ?></strong></div>
-                
-                <div>Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>"><?php echo $post['organization_title'] ?></a></div>
+                <div><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/double-arrow.png" class="arrow"/> Mã đề: <strong>YIMA-<?php echo Helper::_parse_id($post['id']); ?></strong></div>
+
+                <div><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/double-arrow.png" class="arrow"/> Trường: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>"><?php echo $post['organization_title'] ?></a></div>
 
 
-                <div>Khoa: <a href="<?php echo Yii::app()->request->baseUrl; ?>/faculty/index/id/<?php echo $post['faculty_id']; ?>/oid/<?php echo $post['organization_id']; ?>"><?php echo $post['faculty_title'] ?></a></div>
-                <div>Môn: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>/subject_id/<?php echo $post['subject_id']; ?>"><?php echo $post['subject_title'] ?></a></div>
+                <div><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/double-arrow.png" class="arrow"/> Khoa: <a href="<?php echo Yii::app()->request->baseUrl; ?>/faculty/index/id/<?php echo $post['faculty_id']; ?>/oid/<?php echo $post['organization_id']; ?>"><?php echo $post['faculty_title'] ?></a></div>
+                <div><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/double-arrow.png" class="arrow"/> Môn: <a href="<?php echo Yii::app()->request->baseUrl; ?>/organization/index/slug/<?php echo $post['organization_slug'] ?>/subject_id/<?php echo $post['subject_id']; ?>"><?php echo $post['subject_title'] ?></a></div>
 
 
-                <div>Người tạo: <a href="#"><?php echo $post['lastname'] . " " . $post['firstname']; ?></a> 
-                - <?php echo DateTimeFormat::nicetime($post['date_added']); ?>
-                - <i class="icon-thumbs-up"></i> <span class="total-vote"><?php echo $post['total_like']; ?></span>
+                <div><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/double-arrow.png" class="arrow"/> Người tạo: <a href="#"><?php echo $post['lastname'] . " " . $post['firstname']; ?></a> 
+                    - <?php echo DateTimeFormat::nicetime($post['date_added']); ?>
+                    - <i class="icon-thumbs-up"></i> <span class="total-vote"><?php echo $post['total_like']; ?></span>
                 </div>
-
+                <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/double-arrow.png" class="arrow"/>
                 Giá: <span class="label label-success"><?php echo $post['price'] ? number_format($post['price']) . "đ" : "Miễn phí"; ?></span>
                 - Câu hỏi: <span class="label"><?php echo (int) $post['total_question'] ?></span>
 
@@ -46,33 +56,38 @@
                     </span>
                 <?php endif; ?>
             </div>
-            <div class="content clearfix">
-                <p><h4>Nội dung tóm tắt</h4></p>
-                <?php echo Helper::wpautop($post['description']); ?>
 
-                <br/>
-                <p class="clearfix">
-                    <?php if (!$has_buy && $post['price'] > 0): ?>
-                    <a data-toggle="modal" href="#<?php if (UserControl::LoggedIn()) echo 'modal-buy-test'; ?>" class="btn btn-warning pull-left <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i>Làm bài thi</a>
-                    <?php elseif (!$has_buy && $post['price'] == 0): ?>
-                        <a href="#" class="btn btn-primary pull-left free-test btn-large <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
-                    <?php else: ?>
-                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/do/id/<?php echo $post['id']; ?>" class="btn btn-primary pull-left btn-large"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
-                    <?php endif; ?>
-                        <a class="btn pull-right btn-reply btn-large <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-comment"></i> Bình luận</a>
-                </p>
-            </div>
-
-            <div class=" reply clearfix hide">
-                <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/test/comment/tid/<?php echo $post['id']; ?>">
-
-                    <p><h4>Câu trả lời của bạn</h4></p>
-                    <p><textarea rows="5" class="span12" name="content"></textarea></p>
-                    <p><button class="btn cancel"><i class="icon-remove"></i> Hủy</button> <button class="submit btn btn-primary"><i class="icon-white icon-edit"></i> Trả lời</button></p>
-                </form>
-            </div>
         </div>
     </div>
+
+    <div class="row-fluid">
+        <div class="content clearfix">
+            <h4 class="content-description">Nội dung tóm tắt</h4>
+            <?php echo Helper::wpautop($post['description']); ?>
+
+            <br/>
+            <p class="clearfix">
+                <?php if (!$has_buy && $post['price'] > 0): ?>
+                    <a data-toggle="modal" href="#<?php if (UserControl::LoggedIn()) echo 'modal-buy-test'; ?>" class="btn btn-warning pull-left <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i>Làm bài thi</a>
+                <?php elseif (!$has_buy && $post['price'] == 0): ?>
+                    <a href="#" class="btn btn-primary pull-left free-test btn-large <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
+                <?php else: ?>
+                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/do/id/<?php echo $post['id']; ?>" class="btn btn-primary pull-left btn-large"><i class="icon-white icon-hand-right"></i> Làm bài thi</a>
+                <?php endif; ?>
+                <a class="btn pull-right btn-reply btn-large <?php if (!UserControl::LoggedIn()) echo 'require-login'; ?>"><i class="icon-comment"></i> Bình luận</a>
+            </p>
+        </div>
+
+        <div class=" reply clearfix hide">
+            <form method="post" action="<?php echo Yii::app()->request->baseUrl; ?>/test/comment/tid/<?php echo $post['id']; ?>">
+
+                <p><h4>Câu trả lời của bạn</h4></p>
+                <p><textarea rows="5" class="span12" name="content"></textarea></p>
+                <p><button class="btn cancel"><i class="icon-remove"></i> Hủy</button> <button class="submit btn btn-primary"><i class="icon-white icon-edit"></i> Trả lời</button></p>
+            </form>
+        </div>
+    </div>
+
     <div class="row-fluid" id="list-comments">
         <h3>Trả lời (<?php echo $total; ?>)</h3>
         <?php if (count($comments) < 1): ?>
@@ -104,7 +119,7 @@
                             <?php if (UserControl::LoggedIn()): ?>
                                 <p class="vote-info">
                                     <?php if ($best_comment['voted']): ?>
-                                    <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote_comment/id/<?php echo $best_comment['id']; ?>" class="btn btn-info btn-mini vote hide"><i class="icon-white icon-ok-circle"></i> Chuẩn</a>
+                                        <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote_comment/id/<?php echo $best_comment['id']; ?>" class="btn btn-info btn-mini vote hide"><i class="icon-white icon-ok-circle"></i> Chuẩn</a>
                                         <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/unvote_comment/id/<?php echo $best_comment['id']; ?>" class="btn btn-mini btn-inverse unvote"><i class="icon-white icon-ban-circle"></i> Không chuẩn</a>
                                     <?php else: ?>
                                         <a href="<?php echo Yii::app()->request->baseUrl; ?>/test/vote_comment/id/<?php echo $best_comment['id']; ?>" class="btn btn-info btn-mini vote"><i class="icon-white icon-ok-circle"></i> Chuẩn</a>

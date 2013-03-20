@@ -81,7 +81,9 @@
  #post{}
     #post .post h1{font-size: 24px;line-height: 32px}
     #post .post .content{padding-top: 15px;color: #333}
-    #post .post .content-footer{padding-top: 15px;font-size: 11px;color: #666; padding-bottom: 20px; border-bottom: 1px dotted #ccc; line-height: 24px;}
+    #post .content .content-description{color:#484747;font-size: 14px;padding-bottom: 13px;}
+    #post .post .content-footer{font-size: 11px;color: #222; padding-bottom: 20px; border-bottom: 1px #ccc dashed; line-height: 24px;}
+    #post .post .content-footer .arrow{margin-right: 7px;}
     #post #list-comments{padding-top: 20px; margin-top: 20px; border-top: 1px dotted #ccc;}
     #post #list-comments h3{margin-bottom: 15px;color: #222}
     #post #list-comments .comments{padding-top: 10px}
@@ -91,6 +93,10 @@
 
     #post #list-comments .comments .best-comment{}
     #post #list-comments .content-footer{padding-top: 0px;font-size: 11px;color: #666;}
+    
+
+    #post .test-heading{margin-bottom: 17px;font-size: 24px;}
+    #post .test-heading >img{vertical-align: middle;margin-right: 13px;}
     
 
 .signin-up{padding: 25px 0}
